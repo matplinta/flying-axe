@@ -1,0 +1,38 @@
+namespace game {
+
+    export class InputSystem extends ut.ComponentSystem {
+        OnUpdate(): void {
+            this.world.forEach([game.Input], input => {
+                if (ut.Core2D.Input.isTouchSupported()) {
+                    this.HandleTouchInput(input)
+                } else {
+                    this.HandleClassicInput(input)
+                }
+            });
+        }
+
+        HandleTouchInput(input: game.Input): void {
+            
+        }
+
+        HandleClassicInput(input: game.Input): void {
+            this.HandleKeyBoardInput(input);
+            this.HandleMouseInput(input);
+        }
+
+        HandleKeyBoardInput(input: game.Input): void {
+            let movementDir = 0
+            if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.LeftArrow)) {
+                movementDir += -1;
+            } else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.RightArrow)) {
+                movementDir += 1;
+            }
+            input.movementDir = movementDir
+        }
+
+        HandleMouseInput(input: game.Input): void {
+            input.aimDir = ut.Core2D.Input.translateScreenToWorld(this.world, ut.Core2D.Input.getInputPosition());
+            console.log(input.aimDir);
+        }
+    }
+}

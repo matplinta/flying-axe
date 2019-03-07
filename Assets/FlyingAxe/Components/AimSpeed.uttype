@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "8c430d28c9c6490cb820e952824da0a0",
+    "Name": "AimSpeed",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "8c430d28c9c6490cb820e952824da0a0", "Name": "AimSpeed" }
+    }
+}]

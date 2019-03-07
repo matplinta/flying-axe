@@ -1,0 +1,29 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "eeb7fafc04934c8d996f5b2435a9a366",
+    "Name": "Input",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "79a835093d7548c78b41e6babfe6fba2",
+        "Name": "movementDir",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "f8118b134d764130a060a00bbe4196df",
+        "Name": "aimDir",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
+    }
+}]
