@@ -32,7 +32,6 @@ namespace game {
 
         HandleMouseInput(input: game.Input): void {
             input.aimDir = ut.Core2D.Input.translateScreenToWorld(this.world, ut.Core2D.Input.getInputPosition());
-            console.log(input.aimDir);
         }
     }
 }

@@ -6,6 +6,15 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "0169f7e3ea1c4c6aba2d3c1741935e49",
+        "Name": "value",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
         "Type": { "Id": "8c430d28c9c6490cb820e952824da0a0", "Name": "AimSpeed" }
     }

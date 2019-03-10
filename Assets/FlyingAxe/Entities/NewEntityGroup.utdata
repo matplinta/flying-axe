@@ -51,11 +51,14 @@
     "Components": [{
         "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
     }, {
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" }
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
+        "Properties": {
+            "value": 5
+        }
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "0000000000000000f000000000000000", "FileId": 10913, "Type": 0 }
+            "sprite": { "$TypeId": 10, "Guid": "0000000000000000f000000000000000", "FileId": 10911, "Type": 0 }
         }
     }, {
         "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
@@ -75,5 +78,10 @@
         "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
     }, {
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "8c430d28c9c6490cb820e952824da0a0", "Name": "AimSpeed" },
+        "Properties": {
+            "value": 5
+        }
     }]
 }]
