@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "0b6da84b86334b31a4853f697aa0d77b",
+    "Name": "GameContext",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Configuration",
+    "Fields": [{
+        "Id": "db6abcf37fbb467a94ce37d54934f993",
+        "Name": "score",
+        "FieldType": { "Id": "37695933217a49f68ce15db33f63cdf9", "Name": "Int64" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "0b6da84b86334b31a4853f697aa0d77b", "Name": "GameContext" }
+    }
+}]

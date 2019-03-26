@@ -7,6 +7,7 @@ namespace game {
                 let localPosition = transform.position;
                 localPosition.x = transform.position.x + input.movementDir * speed.value * dt;
                 transform.position = localPosition;
+                
             });
         }
     }

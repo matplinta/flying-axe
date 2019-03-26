@@ -12,7 +12,7 @@ namespace game {
         }
 
         HandleTouchInput(input: game.Input): void {
-            
+
         }
 
         HandleClassicInput(input: game.Input): void {
@@ -27,7 +27,7 @@ namespace game {
             } else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.RightArrow)) {
                 movementDir += 1;
             }
-            input.movementDir = movementDir
+            input.movementDir = movementDir;
         }
 
         HandleMouseInput(input: game.Input): void {

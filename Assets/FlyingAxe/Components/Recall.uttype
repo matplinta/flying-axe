@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "aaddc244dbdf48bdbc0c6769d8a84f19",
+    "Name": "Recall",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "26368c53a151431b92f3943b6f671cfb",
+        "Name": "Caller",
+        "FieldType": { "Id": "5a182d9d039d4dfd8fa96132d05f9ee7", "Name": "EntityReference" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "aaddc244dbdf48bdbc0c6769d8a84f19", "Name": "Recall" }
+    }
+}]
