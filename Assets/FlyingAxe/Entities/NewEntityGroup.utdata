@@ -638,7 +638,8 @@
             "pivot": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 3.02
+                    "x": 2.94,
+                    "y": 0.39
                 }
             }
         }
@@ -686,7 +687,8 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 1
+                    "x": 1,
+                    "y": 1
                 }
             }
         }

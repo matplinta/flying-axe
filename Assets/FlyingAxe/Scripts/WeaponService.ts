@@ -3,13 +3,16 @@ namespace game {
         static ThrowWeapon(world: ut.World, axe: ut.Entity) {
             world.usingComponentData(axe, [ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformNode, ut.Core2D.TransformObjectToWorld],
                 (transformLocalRotation, transformLocalScale, transformLocalPosition, transformNode, objectToWorld) => {
-                    let worldMatrix = ut.Core2D.TransformService.computeWorldMatrix(world, axe);
                     let worldPos = new Vector3().setFromMatrixPosition(objectToWorld.matrix);
                     let worldRotation = ut.Core2D.TransformService.computeWorldRotation(world, axe);
-                    let worldScale = new Vector3().setFromMatrixScale(worldMatrix);
+                    let worldScale = transformLocalScale.scale;
+                    world.usingComponentData(transformNode.parent,[ut.Core2D.TransformLocalScale],parentScale=>{
+                        worldScale = worldScale.multiply(parentScale.scale);
+                    });
                     transformNode.parent = ut.NONE;
                     transformLocalPosition.position = worldPos;
                     transformLocalRotation.rotation = worldRotation;
+                    transformLocalScale.scale = worldScale;
                     let right = new Vector3(1, 0, 0);
                     right = right.applyQuaternion(worldRotation);
                     let impulse = new ut.Physics2D.AddImpulse2D;

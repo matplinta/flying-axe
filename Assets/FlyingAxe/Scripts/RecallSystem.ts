@@ -5,8 +5,8 @@ namespace game {
 
         OnUpdate(): void {
             let dt = this.scheduler.deltaTime();
-            this.world.forEach([game.Recall, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformNode, ut.Entity, ut.Core2D.TransformLocalRotation],
-                (recall, transformLocalPosition, transformNode, entity, transformLocalRotation) => {
+            this.world.forEach([game.Recall, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformNode, ut.Entity, ut.Core2D.TransformLocalRotation,ut.Core2D.TransformLocalScale],
+                (recall, transformLocalPosition, transformNode, entity, transformLocalRotation,transformLocalScale) => {
                 let callerEntity = recall.Caller;
                 let callerObjectToWorld = this.world.getComponentData(callerEntity, ut.Core2D.TransformObjectToWorld);
                 let callerWorldPos = new Vector3().setFromMatrixPosition(callerObjectToWorld.matrix);
@@ -15,6 +15,7 @@ namespace game {
                     transformNode.parent = callerEntity;
                     transformLocalPosition.position = new Vector3();
                     transformLocalRotation.rotation = new Quaternion();
+                    transformLocalScale.scale = new Vector3(-4,4,1);
                     this.world.removeComponent(entity, game.Recall);
                     this.world.removeComponent(entity, game.Spin);
                     this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
