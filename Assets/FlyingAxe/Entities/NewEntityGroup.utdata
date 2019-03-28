@@ -6,15 +6,18 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" },
-        { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Player" },
-        { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "Axe" },
         { "$TypeId": 9, "Id": "9bc8f55ec6d94473998e30bb1a411e0d", "Name": "Ground" },
         { "$TypeId": 9, "Id": "705126a4075a4a4687180838b947f657", "Name": "Ground" },
         { "$TypeId": 9, "Id": "f0811b416d33440eb460c25e9140676e", "Name": "Ground" },
         { "$TypeId": 9, "Id": "766bae23d704425a99e024099a593709", "Name": "Ground" },
         { "$TypeId": 9, "Id": "8456739ffc794739a6203fb970c033fc", "Name": "Ground" },
         { "$TypeId": 9, "Id": "e9158ce9d689467986528c7cb39820fb", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "3104d30565d64b6993b00242cc2d4751", "Name": "Ground" }
+        { "$TypeId": 9, "Id": "3104d30565d64b6993b00242cc2d4751", "Name": "Ground" },
+        { "$TypeId": 9, "Id": "6cc95626dd04494193781c3dc124e518", "Name": "Player" },
+        { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" },
+        { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
+        { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
+        { "$TypeId": 9, "Id": "8e470153301a4383b5be811ab0ef780a", "Name": "PlayerView" }
     ]
 },
 {
@@ -47,125 +50,16 @@
             },
             "depth": -1
         }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "4de32c0881e84c13b8f48f37e8363abf",
-    "Name": "Player",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
-        "Properties": {
-            "value": 5
-        }
     }, {
         "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
         "Properties": {
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
+                    "x": 7.25,
+                    "y": 2.58
                 }
             }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -4,
-                    "y": 4,
-                    "z": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
-        "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
-                "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
-        "Type": { "Id": "8c430d28c9c6490cb820e952824da0a0", "Name": "AimSpeed" },
-        "Properties": {
-            "value": 5
-        }
-    }, {
-        "Type": { "Id": "92b07928acfc4bd08a42d1c8d0410fec", "Name": "Axe" }
-    }, {
-        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
-    }, {
-        "Type": { "Id": "efb8f1bb8e61304f4854daecbaeb2747", "Name": "CircleCollider2D" },
-        "Properties": {
-            "radius": 0.01
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "1e839261acf943cb88ae1af686cb627f",
-    "Name": "Axe",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Player" }
-        }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": -0.007,
-                    "y": 0
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
-        "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
-                "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 21300016, "Type": 3 }
         }
     }]
 },
@@ -184,8 +78,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 6.23,
-                    "y": -1.3
+                    "x": 13.49,
+                    "y": 1.28
                 }
             }
         }
@@ -239,8 +133,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0,
-                    "y": 4.9
+                    "x": 7.26,
+                    "y": 7.48
                 }
             }
         }
@@ -294,8 +188,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 3.27,
-                    "y": 2.23
+                    "x": 10.53,
+                    "y": 4.81
                 }
             }
         }
@@ -347,8 +241,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": -4.36,
-                    "y": -1.05
+                    "x": 2.9,
+                    "y": 1.53
                 }
             }
         }
@@ -359,7 +253,7 @@
                 "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
                 "Properties": {
                     "z": -0.3383426,
-                    "w": 0.9410231
+                    "w": 0.941023
                 }
             }
         }
@@ -400,8 +294,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0,
-                    "y": -2.07
+                    "x": 7.26,
+                    "y": 0.51
                 }
             }
         }
@@ -455,8 +349,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 4.19,
-                    "y": -0.87
+                    "x": 11.45,
+                    "y": 1.71
                 }
             }
         }
@@ -508,8 +402,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": -6.23,
-                    "y": -1.3
+                    "x": 1.03,
+                    "y": 1.28
                 }
             }
         }
@@ -545,6 +439,264 @@
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "freezeRotation": false
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "6cc95626dd04494193781c3dc124e518",
+    "Name": "Player",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 6.694,
+                    "y": 1.514
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
+    }, {
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
+        "Properties": {
+            "value": 5
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "176b770af88f4472aa322f3d50c23ab7",
+    "Name": "WeaponHolder",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "8c430d28c9c6490cb820e952824da0a0", "Name": "AimSpeed" },
+        "Properties": {
+            "value": 5
+        }
+    }, {
+        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0.45,
+                    "y": -0.056
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "6cc95626dd04494193781c3dc124e518", "Name": "Player" }
+        }
+    }, {
+        "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },
+        "Properties": {
+            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "4de32c0881e84c13b8f48f37e8363abf",
+    "Name": "Axe",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": -4,
+                    "y": 4,
+                    "z": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" }
+        }
+    }, {
+        "Type": { "Id": "92b07928acfc4bd08a42d1c8d0410fec", "Name": "Weapon" }
+    }, {
+        "Type": { "Id": "efb8f1bb8e61304f4854daecbaeb2747", "Name": "CircleCollider2D" },
+        "Properties": {
+            "radius": 0.01
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "1e839261acf943cb88ae1af686cb627f",
+    "Name": "AxeView",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Player" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 21300016, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "8e470153301a4383b5be811ab0ef780a",
+    "Name": "PlayerView",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 5.85,
+                    "y": 5.85,
+                    "z": 1.4625
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "1f5fe83ba337c904994be4e7a0233c9f", "FileId": 21300154, "Type": 3 }
         }
     }]
 }]

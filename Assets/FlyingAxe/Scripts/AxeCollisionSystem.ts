@@ -12,16 +12,21 @@ namespace game {
                 (colliderContacts, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale) => {
                     let contacts = colliderContacts.contacts;
                     if (contacts.length > 0) {
-                        let other = contacts[0];
-                        let contactPointNormal = this.ComputeNormal(other, transformLocalPosition);
-                        game.AimSystem.LookAt(transformLocalPosition.position.sub(contactPointNormal), transformLocalRotation, transformLocalPosition);
-                        this.world.removeComponent(entity, game.Spin);
-                        this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
-                        let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
-                        this.world.usingComponentData(child, [ut.Core2D.TransformLocalRotation], localRotation => {
-                            localRotation.rotation = new Quaternion(0, 0, 0, 0);
 
-                        });
+                        console.log("collision");
+                        let other = contacts[0];
+                        let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
+                        if (spin.speed < 0 && otherLayer != 1 || spin.speed > 0) {
+                            let contactPointNormal = this.ComputeNormal(other, transformLocalPosition);
+                            game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position);
+                            this.world.removeComponent(entity, game.Spin);
+                            this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
+                            let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
+                            this.world.usingComponentData(child, [ut.Core2D.TransformLocalRotation], localRotation => {
+                                localRotation.rotation = new Quaternion(0, 0, 0, 1);
+
+                            });
+                        }
 
 
                     }

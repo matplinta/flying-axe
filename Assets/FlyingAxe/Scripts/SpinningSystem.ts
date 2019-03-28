@@ -10,7 +10,6 @@ namespace game {
                 let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
                 this.world.usingComponentData(child, [ut.Core2D.TransformLocalRotation], localRotation => {
                     localRotation.rotation = localRotation.rotation.multiply(new Quaternion().setFromAxisAngle(new Vector3(0, 0, 1), spin.speed * dt));
-                    console.log("spin");
                 });
 
             });
