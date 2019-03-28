@@ -18,7 +18,9 @@ namespace game {
                         let other = contacts[0];
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                         if (spin.speed > 0) {
-                            let contactPointNormal = this.ComputeNormal(other, transformLocalPosition);
+                            let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
+                            let contactPoint = contactPointData[0];
+                            let contactPointNormal = contactPointData[1];
                             game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position);
                             this.world.removeComponent(entity, game.Spin);
                             this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
@@ -27,6 +29,10 @@ namespace game {
                                 localRotation.rotation = new Quaternion(0, 0, 0, 1);
 
                             });
+                            let particleEntity = ut.EntityGroup.instantiate(this.world, "game.HitParticle")[0];
+                            let particleTransformPosition = this.world.getComponentData(particleEntity, ut.Core2D.TransformLocalPosition);
+                            particleTransformPosition.position = contactPoint;
+                            this.world.setComponentData(particleEntity,particleTransformPosition);
                         }
                         else if(spin.speed < 0 && otherLayer != 1){
                             console.log("Enemy recall hit");
@@ -37,7 +43,7 @@ namespace game {
                 });
         }
 
-        private ComputeNormal(other, transformLocalPosition) {
+        private ComputeNormalAndContactPoint(other, transformLocalPosition) {
             let otherRotation = this.world.getComponentData(other, ut.Core2D.TransformLocalRotation).rotation;
             let otherPosition = this.world.getComponentData(other, ut.Core2D.TransformLocalPosition);
             let otherScale = this.world.getComponentData(other, ut.Core2D.TransformLocalScale).scale;
@@ -68,7 +74,7 @@ namespace game {
             let contactPoint = otherPosition.position.add(otherRight.multiplyScalar(dir_x)).add(otherUp.multiplyScalar(dir_y));
 
             let contactPointNormal = (transformLocalPosition.position.sub(contactPoint)).normalize();
-            return contactPointNormal;
+            return [contactPoint,contactPointNormal];
         }
     }
 }

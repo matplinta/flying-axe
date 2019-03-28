@@ -1,7 +1,7 @@
 ﻿[{
     "$TypeId": 4,
     "Id": "34303fc5b96a441294a8708c300a3087",
-    "Name": "NewEntityGroup",
+    "Name": "Gameplay",
     "ExportFlags": 0,
     "SerializedVersion": 0,
     "Entities": [
@@ -650,7 +650,10 @@
     }, {
         "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },
         "Properties": {
-            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
+            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
+            "weaponInHandLocalRotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" }
+            }
         }
     }]
 },

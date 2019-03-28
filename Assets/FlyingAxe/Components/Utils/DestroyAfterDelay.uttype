@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "85310479463c49769f6f6df3089bc310",
+    "Name": "DestroyAfterDelay",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "85310479463c49769f6f6df3089bc310", "Name": "DestroyAfterDelay" }
+    }
+}]
