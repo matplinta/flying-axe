@@ -29,9 +29,7 @@ namespace game {
 
             function AttachToCaller(world, transformNode, transformLocalPosition, transformLocalRotation, transformLocalScale, callerEntity, recalledEntity) {
                 transformNode.parent = callerEntity;
-                transformLocalPosition.position = new Vector3();
-                transformLocalRotation.rotation = new Quaternion();
-                transformLocalScale.scale = new Vector3(-4, 4, 1);
+              
                 world.removeComponent(recalledEntity, game.Recall);
                 world.removeComponent(recalledEntity, game.Spin);
                 world.removeComponent(recalledEntity, ut.Physics2D.RigidBody2D);
@@ -43,6 +41,9 @@ namespace game {
 
                 world.usingComponentData(callerEntity, [game.WeaponControl], weaponControl => {
                     weaponControl.isInHand = true;
+                    transformLocalPosition.position = weaponControl.weaponInHandLocalPosition;
+                    transformLocalScale.scale = weaponControl.weaponInHandLocalScale;
+                    transformLocalRotation.rotation = weaponControl.weaponInHandLocalRotation;
                 });
             }
 

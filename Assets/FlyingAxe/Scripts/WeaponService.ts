@@ -55,27 +55,21 @@ namespace game {
         }
 
         static RecallWeapon(world: ut.World, axe: ut.Entity, caller: ut.Entity) {
-            if (!world.hasComponent(axe, game.Recall)) {
-                world.addComponent(axe, game.Recall);
-            }
 
-            if (!world.hasComponent(axe, game.Spin)) {
-                world.addComponent(axe, game.Spin);
-            }
+            let recall = new game.Recall();
+            recall.Caller = caller;
+            recall.speed = 15;
+            world.addComponentData(axe, recall);
 
-            if (!world.hasComponent(axe, ut.Physics2D.RigidBody2D)) {
-                let rb2d = new ut.Physics2D.RigidBody2D();
-                rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
-                rb2d.friction = 1;
-                rb2d.freezeRotation = false;
-                world.addComponentData(axe, rb2d);
-            }
+            let spin = new game.Spin();
+            spin.speed = -40;
+            world.addComponentData(axe, spin);
 
-            world.usingComponentData(axe, [game.Recall, game.Spin], (recall, spin) => {
-                recall.Caller = caller;
-                recall.speed = 15;
-                spin.speed = -40;
-            });
+            let rb2d = new ut.Physics2D.RigidBody2D();
+            rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
+            rb2d.friction = 1;
+            rb2d.freezeRotation = false;
+            world.addComponentData(axe, rb2d);
 
         }
     }

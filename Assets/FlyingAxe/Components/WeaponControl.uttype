@@ -22,6 +22,30 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "dff3dee50f5441a0ba797ea3a6e65c4d",
+        "Name": "weaponInHandLocalPosition",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "91d57d3f8ed74c788b8bc8156bb4f86c",
+        "Name": "weaponInHandLocalScale",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "44231c73d42d47caba8223f53ac947e3",
+        "Name": "weaponInHandLocalRotation",
+        "FieldType": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },

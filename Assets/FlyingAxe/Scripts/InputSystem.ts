@@ -1,5 +1,5 @@
 namespace game {
-
+    @ut.executeBefore(ut.Shared.InputFence)
     export class InputSystem extends ut.ComponentSystem {
         OnUpdate(): void {
             this.world.forEach([game.Input], input => {
@@ -28,6 +28,8 @@ namespace game {
                 movementDir += 1;
             }
             input.movementDir = movementDir;
+            input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space);
+            
         }
 
         HandleMouseInput(input: game.Input): void {

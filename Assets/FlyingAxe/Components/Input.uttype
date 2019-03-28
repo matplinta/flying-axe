@@ -22,6 +22,14 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "9ca2ff9d21d54167ac94646ddf0e981a",
+        "Name": "weaponInteraction",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }

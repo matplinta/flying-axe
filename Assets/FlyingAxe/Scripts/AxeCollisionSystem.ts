@@ -3,6 +3,7 @@ namespace game {
     @ut.executeAfter(ut.Shared.UserCodeStart)
     @ut.requiredComponents(ut.Physics2D.ColliderContacts)
     @ut.executeBefore(ut.Shared.UserCodeEnd)
+
     export class AxeCollisionSystem extends ut.ComponentSystem {
 
         OnUpdate(): void {
