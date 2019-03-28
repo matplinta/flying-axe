@@ -14,8 +14,19 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "6ddca171f182427fb670f9345219110b",
+        "Name": "speed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
-        "Type": { "Id": "aaddc244dbdf48bdbc0c6769d8a84f19", "Name": "Recall" }
+        "Type": { "Id": "aaddc244dbdf48bdbc0c6769d8a84f19", "Name": "Recall" },
+        "Properties": {
+            "speed": 5
+        }
     }
 }]

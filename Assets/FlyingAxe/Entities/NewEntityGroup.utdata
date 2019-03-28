@@ -17,7 +17,8 @@
         { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" },
         { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
         { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
-        { "$TypeId": 9, "Id": "8e470153301a4383b5be811ab0ef780a", "Name": "PlayerView" }
+        { "$TypeId": 9, "Id": "8e470153301a4383b5be811ab0ef780a", "Name": "PlayerView" },
+        { "$TypeId": 9, "Id": "d5c0cffc9ee44c709e29da99151811b1", "Name": "Enemy" }
     ]
 },
 {
@@ -69,7 +70,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -116,6 +117,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -124,7 +130,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -171,6 +177,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -179,7 +190,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -224,6 +235,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -232,7 +248,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -277,6 +293,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -285,7 +306,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -332,6 +353,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -340,7 +366,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -385,6 +411,11 @@
         "Properties": {
             "freezeRotation": false
         }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
     }]
 },
 {
@@ -393,7 +424,7 @@
     "Name": "Ground",
     "Enabled": true,
     "Static": false,
-    "Layer": 0,
+    "Layer": 10,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -439,6 +470,11 @@
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "freezeRotation": false
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
         }
     }]
 },
@@ -598,7 +634,13 @@
     }, {
         "Type": { "Id": "efb8f1bb8e61304f4854daecbaeb2747", "Name": "CircleCollider2D" },
         "Properties": {
-            "radius": 0.01
+            "radius": 0.01,
+            "pivot": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 3.02
+                }
+            }
         }
     }]
 },
@@ -697,6 +739,75 @@
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
             "sprite": { "$TypeId": 10, "Guid": "1f5fe83ba337c904994be4e7a0233c9f", "FileId": 21300154, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "d5c0cffc9ee44c709e29da99151811b1",
+    "Name": "Enemy",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 6.42,
+                    "y": 4.42
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "z": 0.3407724,
+                    "w": 0.9401459
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0.4214516,
+                    "y": 0.524
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 1,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "freezeRotation": false
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 0
         }
     }]
 }]

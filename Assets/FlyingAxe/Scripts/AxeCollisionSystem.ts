@@ -13,10 +13,10 @@ namespace game {
                     let contacts = colliderContacts.contacts;
                     if (contacts.length > 0) {
 
-                        console.log("collision");
+                        
                         let other = contacts[0];
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
-                        if (spin.speed < 0 && otherLayer != 1 || spin.speed > 0) {
+                        if (spin.speed > 0) {
                             let contactPointNormal = this.ComputeNormal(other, transformLocalPosition);
                             game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position);
                             this.world.removeComponent(entity, game.Spin);
@@ -26,6 +26,9 @@ namespace game {
                                 localRotation.rotation = new Quaternion(0, 0, 0, 1);
 
                             });
+                        }
+                        else if(spin.speed < 0 && otherLayer != 1){
+                            console.log("Enemy recall hit");
                         }
 
 

@@ -11,12 +11,13 @@ namespace game {
                 let callerObjectToWorld = this.world.getComponentData(callerEntity, ut.Core2D.TransformObjectToWorld);
                 let callerWorldPos = new Vector3().setFromMatrixPosition(callerObjectToWorld.matrix);
                 let distance = transformLocalPosition.position.distanceTo(callerWorldPos);
-                if (distance < 0.5) {
+                if (distance < 1.0) {
                     transformNode.parent = callerEntity;
                     transformLocalPosition.position = new Vector3();
                     transformLocalRotation.rotation = new Quaternion();
                     this.world.removeComponent(entity, game.Recall);
                     this.world.removeComponent(entity, game.Spin);
+                    this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
                     let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
                     this.world.usingComponentData(child, [ut.Core2D.TransformLocalRotation], localRotation => {
                         localRotation.rotation = new Quaternion(0, 0, 0, 1);
