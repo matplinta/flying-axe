@@ -522,6 +522,11 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "85310479463c49769f6f6df3089bc310", "Name": "DestroyAfterDelay" },
+        "Properties": {
+            "delay": 1
+        }
     }]
 },
 {
