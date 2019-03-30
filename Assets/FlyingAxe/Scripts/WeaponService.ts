@@ -38,8 +38,20 @@ namespace game {
                 rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
                 rb2d.friction = 1;
                 rb2d.freezeRotation = false;
-                world.addComponentData(weapon, rb2d);
-                world.addComponentData(weapon, impulse);
+                if (world.hasComponent(weapon, ut.Physics2D.RigidBody2D)) {
+                    world.setComponentData(weapon,rb2d);
+                }
+                else {
+                      world.addComponentData(weapon, rb2d);
+                }
+
+                if (world.hasComponent(weapon, ut.Physics2D.AddImpulse2D)) {
+                    world.setComponentData(weapon,impulse);
+                }
+                else {
+                      world.addComponentData(weapon, impulse);
+                }
+                
             }
 
             function StartSpinningTowards(right) {
@@ -59,17 +71,38 @@ namespace game {
             let recall = new game.Recall();
             recall.Caller = caller;
             recall.speed = 15;
-            world.addComponentData(axe, recall);
 
-            let spin = new game.Spin();
+            if (world.hasComponent(axe, game.Recall)) {
+                world.setComponentData(axe,recall);
+            }
+            else {
+                world.addComponentData(axe, recall);
+            }
+
+
+              let spin = new game.Spin();
             spin.speed = -40;
-            world.addComponentData(axe, spin);
+           
+            if (world.hasComponent(axe, game.Spin)) {
+                 world.setComponentData(axe, spin);
+            }
+            else {
+                 world.addComponentData(axe, spin);
+            }
+            
 
             let rb2d = new ut.Physics2D.RigidBody2D();
             rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
             rb2d.friction = 1;
             rb2d.freezeRotation = false;
-            world.addComponentData(axe, rb2d);
+
+            if (world.hasComponent(axe, ut.Physics2D.RigidBody2D)) {
+                 world.setComponentData(axe, rb2d);
+            }
+            else {
+                 world.addComponentData(axe, rb2d);
+            }
+           
 
         }
     }
