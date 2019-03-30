@@ -8,14 +8,12 @@ namespace game {
 
         OnUpdate(): void {
 
-            this.world.forEach([ut.Physics2D.ColliderContacts, game.Spin, ut.Entity, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation,
+            this.world.forEach([ut.HitBox2D.HitBoxOverlapResults,game.Spin, ut.Entity, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation,
                     ut.Core2D.TransformLocalScale],
-                (colliderContacts, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale) => {
-                    let contacts = colliderContacts.contacts;
-                    if (contacts.length > 0) {
-
-                        
-                        let other = contacts[0];
+                (overlapResults,spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale) => {
+                  
+                    if (overlapResults.overlaps.length>0) {
+                        let other =overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
@@ -27,18 +25,19 @@ namespace game {
                             let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
                             this.world.usingComponentData(child, [ut.Core2D.TransformLocalRotation], localRotation => {
                                 localRotation.rotation = new Quaternion(0, 0, 0, 1);
-
                             });
                             let particleEntity = ut.EntityGroup.instantiate(this.world, "game.HitParticle")[0];
                             let particleTransformPosition = this.world.getComponentData(particleEntity, ut.Core2D.TransformLocalPosition);
                             particleTransformPosition.position = contactPoint;
                             this.world.setComponentData(particleEntity,particleTransformPosition);
+
+
+                            transformLocalPosition.position = contactPoint;
                         }
                         else if(spin.speed < 0 && otherLayer != 1){
                             console.log("Enemy recall hit");
                         }
-
-
+                        
                     }
                 });
         }
