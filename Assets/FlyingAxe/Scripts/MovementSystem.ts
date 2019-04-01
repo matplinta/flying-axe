@@ -9,10 +9,12 @@ namespace game {
             this.world.forEach([game.MovementSpeed,
                 game.Input,
                 ut.Physics2D.Velocity2D,
-                ut.Entity], 
-                (speed, input, velocity,entity) => {
+                ut.Entity, 
+                ut.Physics2D.RigidBody2D], 
+                (speed, input, velocity, entity, body) => {
                 let setVelocity = new ut.Physics2D.SetVelocity2D;
                 setVelocity.velocity = new Vector2(speed.value * input.movementDir * dt,velocity.velocity.y);
+                // setVelocity.velocity = new Vector2(speed.value * input.movementDir * dt,speed.value * input.heightLevel * dt);
                 this.world.addComponentData(entity,setVelocity);
 
             });

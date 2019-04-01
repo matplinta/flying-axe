@@ -30,6 +30,14 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "94f1849a41ec4414bf91c0697f8a55fe",
+        "Name": "heightLevel",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }

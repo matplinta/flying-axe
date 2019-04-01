@@ -1,0 +1,29 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "de9807207d114c53ad18b17773b63270",
+    "Name": "Health",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "a4e3c4f5d8d44d648f6768df489d5e9b",
+        "Name": "current",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "a4132f7220a34667b787cccc789cd3a7",
+        "Name": "max",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "de9807207d114c53ad18b17773b63270", "Name": "Health" }
+    }
+}]

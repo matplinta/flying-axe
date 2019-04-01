@@ -21,13 +21,18 @@ namespace game {
         }
 
         HandleKeyBoardInput(input: game.Input): void {
-            let movementDir = 0
+            let movementDir = 0;
+            let heightLevel = 0;
             if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.LeftArrow)) {
                 movementDir += -1;
             } else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.RightArrow)) {
                 movementDir += 1;
             }
+            else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.UpArrow)) {
+                heightLevel += 1;
+            }
             input.movementDir = movementDir;
+            input.heightLevel = heightLevel;
             input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space);
             
         }

@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/TinyCache/TinyProject-DoNotEdit.unity
+  isLoaded: 1
+  isActive: 1

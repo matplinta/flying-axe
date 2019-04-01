@@ -1,0 +1,135 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/runtime.js",
+                "Size": 6196610,
+                "CompressedSize": 784949
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 6796,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/Axe.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Axe.jpg",
+                    "Size": 3820,
+                    "CompressedSize": 2835,
+                    "Object": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 2800000, "Type": 3 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Axe_a.png",
+                    "Size": 1704,
+                    "CompressedSize": 1329,
+                    "Object": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/enemies.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/enemies.jpg",
+                    "Size": 25256,
+                    "CompressedSize": 18898,
+                    "Object": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 2800000, "Type": 3 }
+                }
+            }, {
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/enemies_a.png",
+                    "Size": 13360,
+                    "CompressedSize": 10022,
+                    "Object": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/entities.js",
+                "Size": 28817,
+                "CompressedSize": 4890
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "Gameplay",
+                    "Size": 23019,
+                    "CompressedSize": 3885
+                }
+            }, {
+                "Item": {
+                    "Name": "HitParticle",
+                    "Size": 5719,
+                    "CompressedSize": 1372
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/bindings.js",
+                "Size": 135707,
+                "CompressedSize": 11664
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 31505,
+                    "CompressedSize": 5559
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/main.js",
+                "Size": 6317,
+                "CompressedSize": 1551
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}
