@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "3481771f209846c2a2edd1b6f57d97b9",
+    "Name": "GroundTag",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "3481771f209846c2a2edd1b6f57d97b9", "Name": "GroundTag" }
+    }
+}]

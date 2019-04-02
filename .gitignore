@@ -1,2 +1,13 @@
 Assets/TinySamples
+Library
+Logs
+Temp
+Tiny
+TinyExport
+flying-axe.sln
+tsconfig.json
+Packages
+!Packages/manifest.json
+flying-axe.sln.DotSettings.user
+.idea
 .vs
