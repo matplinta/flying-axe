@@ -490,9 +490,9 @@
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }, {
-        "Type": { "Id": "9cd6ed42c80a491aa8a77a2c31a2c846", "Name": "PlayerTag" }
+        "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" }
     }, {
-        "Type": { "Id": "de9807207d114c53ad18b17773b63270", "Name": "Health" }
+        "Type": { "Id": "33617309b6b14da3a7561daa114f066d", "Name": "PlayerTag" }
     }]
 },
 {
@@ -812,8 +812,6 @@
         }
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" }
-    }, {
-        "Type": { "Id": "e1c26bc0ad33494c81ca5b8e6d8bcd36", "Name": "EnemyTag" }
     }]
 },
 {
