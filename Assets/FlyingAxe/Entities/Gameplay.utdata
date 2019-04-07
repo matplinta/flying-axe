@@ -7,17 +7,16 @@
     "Entities": [
         { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" },
         { "$TypeId": 9, "Id": "9bc8f55ec6d94473998e30bb1a411e0d", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "705126a4075a4a4687180838b947f657", "Name": "Ground" },
         { "$TypeId": 9, "Id": "f0811b416d33440eb460c25e9140676e", "Name": "Ground" },
         { "$TypeId": 9, "Id": "8456739ffc794739a6203fb970c033fc", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "3104d30565d64b6993b00242cc2d4751", "Name": "Ground" },
         { "$TypeId": 9, "Id": "6cc95626dd04494193781c3dc124e518", "Name": "Player" },
         { "$TypeId": 9, "Id": "8e470153301a4383b5be811ab0ef780a", "Name": "PlayerView" },
         { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" },
         { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
         { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
-        { "$TypeId": 9, "Id": "d5c0cffc9ee44c709e29da99151811b1", "Name": "Enemy" },
-        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "Enemy" }
+        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "Enemy" },
+        { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
+        { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" }
     ]
 },
 {
@@ -102,16 +101,25 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
                     "x": 0.524,
                     "y": 12.90512
                 }
             }
         }
     }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
-    }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
-    }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "freezeRotation": false
@@ -127,83 +135,21 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
-                }
-            }
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "705126a4075a4a4687180838b947f657",
-    "Name": "Ground",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 10,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 7.26,
-                    "y": 7.48
+                    "x": -0.262,
+                    "y": -6.45256,
+                    "width": 0.524,
+                    "height": 12.90512
                 }
             }
         }
     }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
         "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 12.90512,
-                    "y": 0.524
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
-    }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
-    }, {
-        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
-        "Properties": {
-            "freezeRotation": false
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "layer": 1184453789
-        }
-    }, {
-        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
-        "Properties": {
-            "box": {
-                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
-                "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
+                    "x": 0.524,
+                    "y": 12.90512
                 }
             }
         }
@@ -246,15 +192,24 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 2.968178,
-                    "y": 0.524
+                    "x": 1,
+                    "y": 1
                 }
             }
         }
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
     }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 2.968178,
+                    "y": 0.524
+                }
+            }
+        }
     }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
@@ -271,10 +226,21 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
+                    "x": -1.484089,
+                    "y": -0.262,
+                    "width": 2.968178,
+                    "height": 0.524
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 2.968178,
+                    "y": 0.524
                 }
             }
         }
@@ -319,16 +285,25 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
                     "x": 12.90512,
                     "y": 0.524
                 }
             }
         }
     }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
-    }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
-    }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "freezeRotation": false
@@ -344,83 +319,21 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
-                }
-            }
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "3104d30565d64b6993b00242cc2d4751",
-    "Name": "Ground",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 10,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1.03,
-                    "y": 1.28
+                    "x": -6.45256,
+                    "y": -0.262,
+                    "width": 12.90512,
+                    "height": 0.524
                 }
             }
         }
     }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
         "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 0.524,
-                    "y": 12.90512
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
-    }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" }
-    }, {
-        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
-        "Properties": {
-            "freezeRotation": false
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "layer": 1184453789
-        }
-    }, {
-        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
-        "Properties": {
-            "box": {
-                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
-                "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
+                    "x": 12.90512,
+                    "y": 0.524
                 }
             }
         }
@@ -508,7 +421,7 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0.45,
+                    "x": 0,
                     "y": -0.06,
                     "z": 1
                 }
@@ -737,85 +650,6 @@
 },
 {
     "$TypeId": 5,
-    "Id": "d5c0cffc9ee44c709e29da99151811b1",
-    "Name": "Enemy",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 12.89,
-                    "y": 1.84
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
-        "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
-                "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 0.6648821,
-                    "y": 2.2008
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "color": {
-                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
-                "Properties": {
-                    "r": 1,
-                    "g": 0,
-                    "b": 0,
-                    "a": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "layer": 0
-        }
-    }, {
-        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
-        "Properties": {
-            "box": {
-                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
-                "Properties": {
-                    "x": -0.5,
-                    "y": -0.5,
-                    "width": 1,
-                    "height": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" }
-    }]
-},
-{
-    "$TypeId": 5,
     "Id": "09cb470fb6c644399a21c69fc9a2fbd1",
     "Name": "Enemy",
     "Enabled": true,
@@ -842,8 +676,8 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 1.21149,
-                    "y": 1.42416
+                    "x": 1,
+                    "y": 1
                 }
             }
         }
@@ -869,9 +703,9 @@
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
                     "x": -0.5,
-                    "y": -0.4,
+                    "y": -0.71208,
                     "width": 1,
-                    "height": 0.8
+                    "height": 1.42416
                 }
             }
         }
@@ -887,5 +721,202 @@
         }
     }, {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 1.21149,
+                    "y": 1.42416
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "6090addb6b2b4cafa555adfb84e632b3",
+    "Name": "Ground",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0.79,
+                    "y": 1.28
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.524,
+                    "y": 12.90512
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "freezeRotation": false
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -0.262,
+                    "y": -6.45256,
+                    "width": 0.524,
+                    "height": 12.90512
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.524,
+                    "y": 12.90512
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816",
+    "Name": "Ground",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 7.26,
+                    "y": 7.51
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 12.90512,
+                    "y": 0.524
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "freezeRotation": false
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789
+        }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -6.45256,
+                    "y": -0.262,
+                    "width": 12.90512,
+                    "height": 0.524
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 12.90512,
+                    "y": 0.524
+                }
+            }
+        }
     }]
 }]

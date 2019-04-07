@@ -8,12 +8,12 @@ namespace game {
 
         OnUpdate(): void {
 
-            this.world.forEach([ut.HitBox2D.HitBoxOverlapResults,game.Spin, ut.Entity, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation,
-                    ut.Core2D.TransformLocalScale],
-                (overlapResults,spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale) => {
-                  
-                    if (overlapResults.overlaps.length>0) {
-                        let other =overlapResults.overlaps[0].otherEntity;
+            this.world.forEach([ut.HitBox2D.HitBoxOverlapResults, game.Spin, ut.Entity, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation,
+                    ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode],
+                (overlapResults, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode) => {
+
+                    if (overlapResults.overlaps.length > 0) {
+                        let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
@@ -29,15 +29,23 @@ namespace game {
                             let particleEntity = ut.EntityGroup.instantiate(this.world, "game.HitParticle")[0];
                             let particleTransformPosition = this.world.getComponentData(particleEntity, ut.Core2D.TransformLocalPosition);
                             particleTransformPosition.position = contactPoint;
-                            this.world.setComponentData(particleEntity,particleTransformPosition);
-
+                            this.world.setComponentData(particleEntity, particleTransformPosition);
+                            transformLocalPosition.position = contactPoint;
+                            
+                            let otherLocalMatrix = this.world.getComponentData(other, ut.Core2D.TransformLocal).matrix;
+                            otherLocalMatrix.getInverse(otherLocalMatrix);
+                            contactPoint = contactPoint.applyMatrix4(otherLocalMatrix);
+                            let otherScale = this.world.getComponentData(other, ut.Core2D.TransformLocalScale);
+                            transformNode.parent = other;
+                            transformLocalScale.scale = transformLocalScale.scale.divide(otherScale.scale)
 
                             transformLocalPosition.position = contactPoint;
-                        }
-                        else if(spin.speed < 0 && otherLayer != 1){
+
+
+                        } else if (spin.speed < 0 && otherLayer != 1) {
                             console.log("Enemy recall hit");
                         }
-                        
+
                     }
                 });
         }
@@ -45,7 +53,7 @@ namespace game {
         private ComputeNormalAndContactPoint(other, transformLocalPosition) {
             let otherRotation = this.world.getComponentData(other, ut.Core2D.TransformLocalRotation).rotation;
             let otherPosition = this.world.getComponentData(other, ut.Core2D.TransformLocalPosition);
-            let otherScale = this.world.getComponentData(other, ut.Core2D.TransformLocalScale).scale;
+            let otherScale = this.world.getComponentData(other, ut.Core2D.Sprite2DRendererOptions).size;
 
             let otherUp = new Vector3(0, 1, 0);
             otherUp = otherUp.applyQuaternion(otherRotation);
@@ -73,7 +81,7 @@ namespace game {
             let contactPoint = otherPosition.position.add(otherRight.multiplyScalar(dir_x)).add(otherUp.multiplyScalar(dir_y));
 
             let contactPointNormal = (transformLocalPosition.position.sub(contactPoint)).normalize();
-            return [contactPoint,contactPointNormal];
+            return [contactPoint, contactPointNormal];
         }
     }
 }
