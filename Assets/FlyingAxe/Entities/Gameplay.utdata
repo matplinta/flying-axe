@@ -14,7 +14,8 @@
         { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" },
         { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
         { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
-        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "Enemy" },
+        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "WalkingEnemy" },
+        { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "FlyingEnemy" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" }
     ]
@@ -421,8 +422,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0,
-                    "y": -0.06,
+                    "x": -0.061,
+                    "y": 0.017,
                     "z": 1
                 }
             }
@@ -440,21 +441,21 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 0.9243073,
-                    "y": 1.166624,
-                    "z": 1.4625
+                    "x": 1.051862,
+                    "y": 1.327618,
+                    "z": 1.664325
                 }
             }
         }
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10 },
+            "sprite": { "$TypeId": 10, "Guid": "bbb1b6f390bef86429643db19ee8178d", "FileId": 21300000, "Type": 3 },
             "color": {
                 "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
                 "Properties": {
-                    "r": 0,
-                    "g": 0.08482122,
+                    "r": 1,
+                    "g": 1,
                     "b": 1,
                     "a": 1
                 }
@@ -463,7 +464,7 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 4
+            "order": 0
         }
     }]
 },
@@ -651,7 +652,7 @@
 {
     "$TypeId": 5,
     "Id": "09cb470fb6c644399a21c69fc9a2fbd1",
-    "Name": "Enemy",
+    "Name": "WalkingEnemy",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -685,6 +686,92 @@
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
             "sprite": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 0
+        }
+    }, {
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
+        "Properties": {
+            "value": 0.5
+        }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -0.5,
+                    "y": -0.71208,
+                    "width": 1,
+                    "height": 1.42416
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "a4200ee81f48432aa79fefbd9b7cbd83", "Name": "ChangeOverTime" }
+    }, {
+        "Type": { "Id": "5af1cfdba4b3472aa791a8f1a9d95261", "Name": "Boundaries" },
+        "Properties": {
+            "minX": 1.95,
+            "maxX": 12.63,
+            "minY": 1.41,
+            "maxY": 6.66
+        }
+    }, {
+        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 1.21149,
+                    "y": 1.42416
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "0c8ef7ebb4834223aabc69ac3ea21a06",
+    "Name": "FlyingEnemy",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 11.43,
+                    "y": 5.7
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 21300004, "Type": 3 }
         }
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },

@@ -36,12 +36,14 @@ namespace game {
         OnEntityUpdate():void {
             let localPosition = this.data.position.position;
             let playerPosition = new Vector3(); 
-            this.world.forEach([ut.Core2D.TransformLocalPosition, 
-                game.PlayerTag, 
-                game.Health], 
-                (playerPositionTemp, playerTag, playerHealth) => {
-                playerPosition = playerPositionTemp.position;
-            });
+            let playerEntity = this.world.getEntityByName("Player")
+            // this.world.forEach([ut.Core2D.TransformLocalPosition, 
+            //     game.PlayerTag, 
+            //     game.Health], 
+            //     (playerPositionTemp, playerTag, playerHealth) => {
+            //     playerPosition = playerPositionTemp.position;
+            // });
+            playerPosition = this.world.getComponentData(playerEntity, ut.Core2D.TransformLocalPosition).position; 
             //tutaj zrobic zeby leciał do playera
             let distance = localPosition.distanceTo(playerPosition);
             let delta = new Vector3();
@@ -49,7 +51,7 @@ namespace game {
             delta.normalize();
 
             let moveSpeed = this.data.speed.value * ut.Time.deltaTime();
-            
+
             localPosition = localPosition.add(delta.multiplyScalar(moveSpeed));
             
             
