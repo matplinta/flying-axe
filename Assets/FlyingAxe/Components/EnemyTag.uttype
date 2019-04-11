@@ -6,6 +6,15 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "f2ab1c9a43da417d83f5d4b8945b003f",
+        "Name": "killReward",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
     }

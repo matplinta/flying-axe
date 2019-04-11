@@ -728,7 +728,10 @@
             "maxY": 6.66
         }
     }, {
-        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
+        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
+        "Properties": {
+            "killReward": 10
+        }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
         "Properties": {
@@ -875,7 +878,10 @@
             "maxY": 6.66
         }
     }, {
-        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
+        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
+        "Properties": {
+            "killReward": 20
+        }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
         "Properties": {
@@ -1176,5 +1182,7 @@
         }
     }, {
         "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "2ee37ac3e9fc4b83a8c4347f9f1b89fd", "Name": "Score" }
     }]
 }]

@@ -6,7 +6,7 @@ namespace game {
 
         OnUpdate(): void {
             this.world.forEach([game.EnemyTag, game.Dead], (enemy, dead) => {
-                ScoreSystem.AddScore(this.world, 10);
+                ScoreSystem.AddScore(this.world, enemy.killReward);
             });
 
             this.world.forEach([ut.Entity, game.Dead], (entity, dead) => {
