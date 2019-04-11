@@ -14,14 +14,6 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
-    }, {
-        "Id": "8a3581c0b84641219eb8b5ffdb8821d8",
-        "Name": "direction",
-        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-        "Array": false,
-        "Visibility": 0,
-        "EditorOnly": false,
-        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "db7b10d0ac3d49d9aa21b35a2a42512a", "Name": "Spin" },

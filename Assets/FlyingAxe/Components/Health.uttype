@@ -7,16 +7,16 @@
     "Visibility": 0,
     "TypeCode": "Component",
     "Fields": [{
-        "Id": "f4e4fcc97af646c5b4303399497a4f3a",
-        "Name": "max",
+        "Id": "3bf9e08a8f4c45a7a81fc9f81e3ff3f3",
+        "Name": "current",
         "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
         "Array": false,
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
     }, {
-        "Id": "3bf9e08a8f4c45a7a81fc9f81e3ff3f3",
-        "Name": "current",
+        "Id": "1fbcf5ce5db44e4ba2814fb2fac02cba",
+        "Name": "max",
         "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
         "Array": false,
         "Visibility": 0,

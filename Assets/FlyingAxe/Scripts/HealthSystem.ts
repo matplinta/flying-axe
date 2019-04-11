@@ -8,6 +8,7 @@ namespace game {
 
         OnUpdate(): void {
             this.world.forEach([game.Health, ut.Entity], (health, entity) => {
+                
                 if (health.current <= 0) {
                     if (!this.world.hasComponent(entity, game.Dead)) {
                         this.world.addComponent(entity, game.Dead);

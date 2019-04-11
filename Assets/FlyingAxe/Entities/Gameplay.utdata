@@ -15,7 +15,9 @@
         { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
         { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
         { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "WalkingEnemy" },
+        { "$TypeId": 9, "Id": "0d452f8173b1444ba73145052b48feb8", "Name": "HealthBar" },
         { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "FlyingEnemy" },
+        { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" }
     ]
@@ -404,7 +406,11 @@
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }, {
-        "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" }
+        "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" },
+        "Properties": {
+            "current": 100,
+            "max": 100
+        }
     }, {
         "Type": { "Id": "33617309b6b14da3a7561daa114f066d", "Name": "PlayerTag" }
     }]
@@ -733,6 +739,67 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" },
+        "Properties": {
+            "current": 100,
+            "max": 100
+        }
+    }, {
+        "Type": { "Id": "e9f758b87688464aa6cbdf6016f36bb7", "Name": "HealthVisualization" },
+        "Properties": {
+            "Bar": { "$TypeId": 9, "Id": "0d452f8173b1444ba73145052b48feb8", "Name": "HealthBar" }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "0d452f8173b1444ba73145052b48feb8",
+    "Name": "HealthBar",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "WalkingEnemy" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0.8
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0.09026
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 1,
+                    "b": 0.3616335,
+                    "a": 1
+                }
+            }
+        }
     }]
 },
 {
@@ -816,6 +883,67 @@
                 "Properties": {
                     "x": 1.21149,
                     "y": 1.42416
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" },
+        "Properties": {
+            "current": 100,
+            "max": 100
+        }
+    }, {
+        "Type": { "Id": "e9f758b87688464aa6cbdf6016f36bb7", "Name": "HealthVisualization" },
+        "Properties": {
+            "Bar": { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "343762f77fe143fd960cee454569bce5",
+    "Name": "HealthBar",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0.8
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "FlyingEnemy" }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0.09026
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 1,
+                    "b": 0.3616335,
+                    "a": 1
                 }
             }
         }

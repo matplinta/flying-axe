@@ -9,7 +9,6 @@ namespace game {
         speedChange: game.ChangeOverTime;
         bounds: game.Boundaries;
     }
-
     export class EnemyBehavior extends ut.ComponentBehaviour {
 
         data: EnemyBehaviorFilter;

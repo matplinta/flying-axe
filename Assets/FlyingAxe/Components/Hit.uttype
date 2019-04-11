@@ -6,7 +6,19 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "e42ca1ba5a03474d83211a0edea9c71f",
+        "Name": "Damage",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
-        "Type": { "Id": "3136efc3e7d44d93816bd4095c3d0346", "Name": "Hit" }
+        "Type": { "Id": "3136efc3e7d44d93816bd4095c3d0346", "Name": "Hit" },
+        "Properties": {
+            "Damage": 10
+        }
     }
 }]

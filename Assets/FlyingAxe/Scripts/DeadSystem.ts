@@ -1,19 +1,24 @@
 /// <reference path="HealthSystem.ts"/>
 namespace game {
 
-    @ut.executeAfter(ut.Shared.UserCodeStart)
-    @ut.executeBefore(ut.Shared.UserCodeEnd)
-    @ut.executeAfter(HealthSystem)
+    @ut.executeAfter(ut.Shared.UserCodeEnd)
     export class DeadSystem extends ut.ComponentSystem {
 
         OnUpdate(): void {
             this.world.forEach([ut.Entity, game.Dead], (entity, dead) => {
-                let axe = ut.Core2D.TransformService.getChild(this.world, entity, 0);
-                if (axe.index != ut.NONE.index) {
+                if (this.world.exists(entity)) {
 
-                    WeaponService.DropWeapon(this.world, axe);
+                    let axe = ut.Core2D.TransformService.getChild(this.world, entity, 0);
+
+                    if (this.world.exists(axe) && axe.index != ut.NONE.index) {
+                        WeaponService.DropWeapon(this.world, axe);
+                    }
+
+                    if (!this.world.hasComponent(entity, ut.Disabled)) {
+                        this.world.addComponent(entity, ut.Disabled);
+                    }
+
                 }
-                this.world.destroyEntity(entity);
             });
         }
     }
