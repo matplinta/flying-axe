@@ -5,6 +5,10 @@ namespace game {
     export class DeadSystem extends ut.ComponentSystem {
 
         OnUpdate(): void {
+            this.world.forEach([game.EnemyTag, game.Dead], (enemy, dead) => {
+                ScoreSystem.AddScore(this.world, 10);
+            });
+
             this.world.forEach([ut.Entity, game.Dead], (entity, dead) => {
                 if (this.world.exists(entity)) {
 
