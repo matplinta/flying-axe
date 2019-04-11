@@ -1,6 +1,8 @@
+/// <reference path="WeaponControlSystem.ts"/>
 namespace game {
 
     /** New System */
+    @ut.executeAfter(game.WeaponControlSystem)
     export class RecallSystem extends ut.ComponentSystem {
 
         OnUpdate(): void {
@@ -16,7 +18,7 @@ namespace game {
                     let callerObjectToWorld = this.world.getComponentData(callerEntity, ut.Core2D.TransformObjectToWorld);
                     let callerWorldPos = new Vector3().setFromMatrixPosition(callerObjectToWorld.matrix);
                     let distanceToCaller = transformLocalPosition.position.distanceTo(callerWorldPos);
-                    if (distanceToCaller < 1.0) {
+                    if (distanceToCaller < 3.0) {
                         AttachToCaller(this.world, transformNode, transformLocalPosition, transformLocalRotation, transformLocalScale, callerEntity, recalledEntity);
                     } else {
                         MoveTowardsCaller(transformLocalPosition, callerWorldPos, recall);
@@ -29,7 +31,7 @@ namespace game {
 
             function AttachToCaller(world, transformNode, transformLocalPosition, transformLocalRotation, transformLocalScale, callerEntity, recalledEntity) {
                 transformNode.parent = callerEntity;
-              
+
                 world.removeComponent(recalledEntity, game.Recall);
                 world.removeComponent(recalledEntity, game.Spin);
                 world.removeComponent(recalledEntity, ut.Physics2D.RigidBody2D);

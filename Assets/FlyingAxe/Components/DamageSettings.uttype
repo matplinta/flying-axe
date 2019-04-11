@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "a1efd88232704924be8893759cec70e1",
+    "Name": "DamageSettings",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Configuration",
+    "DefaultValue": {
+        "Type": { "Id": "a1efd88232704924be8893759cec70e1", "Name": "DamageSettings" }
+    }
+}]

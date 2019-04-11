@@ -1,4 +1,5 @@
 namespace game {
+
     export class WeaponService {
         static ThrowWeapon(world: ut.World, weapon: ut.Entity) {
 
@@ -11,7 +12,8 @@ namespace game {
                 (transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode, objectToWorld) => {
                     let right = DetachFromCaller(objectToWorld, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode);
                     ApplyForceInDirection(right);
-                    StartSpinningTowards(right);
+                    WeaponService.SpinWeaponWithSpeed(40, world, weapon);
+
                 });
 
             function DetachFromCaller(objectToWorld, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode) {
@@ -34,16 +36,7 @@ namespace game {
             function ApplyForceInDirection(right) {
                 let impulse = new ut.Physics2D.AddImpulse2D;
                 impulse.impulse = new Vector2(right.x, right.y).multiplyScalar(15);
-                let rb2d = new ut.Physics2D.RigidBody2D();
-                rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
-                rb2d.friction = 1;
-                rb2d.freezeRotation = false;
-                if (world.hasComponent(weapon, ut.Physics2D.RigidBody2D)) {
-                    world.setComponentData(weapon, rb2d);
-                } else {
-                    world.addComponentData(weapon, rb2d);
-                }
-
+                WeaponService.AttachRigidbodyToWeapon(world, weapon);
                 if (world.hasComponent(weapon, ut.Physics2D.AddImpulse2D)) {
                     world.setComponentData(weapon, impulse);
                 } else {
@@ -52,20 +45,37 @@ namespace game {
 
             }
 
-            function StartSpinningTowards(right) {
-                if (!world.hasComponent(weapon, game.Spin)) {
+        }
 
-                    let spin = new game.Spin();
-                    spin.speed = 40;
-                    spin.direction = right;
-                    world.addComponentData(weapon, spin);
+        static SpinWeaponWithSpeed(speed: number, world: ut.World, weapon: ut.Entity) {
+            if (!world.hasComponent(weapon, game.Spin)) {
+                let spin = new game.Spin();
+                spin.speed = speed;
+                world.addComponentData(weapon, spin);
 
-                }
             }
         }
 
-        static RecallWeapon(world: ut.World, axe: ut.Entity, caller: ut.Entity) {
+        static AttachRigidbodyToWeapon(world: ut.World, weapon: ut.Entity) {
+            let rb2d = new ut.Physics2D.RigidBody2D();
+            rb2d.bodyType = ut.Physics2D.BodyType.BulletDynamic;
+            rb2d.friction = 1;
+            rb2d.freezeRotation = false;
+            if (world.hasComponent(weapon, ut.Physics2D.RigidBody2D)) {
+                world.setComponentData(weapon, rb2d);
+            } else {
+                world.addComponentData(weapon, rb2d);
+            }
+        }
 
+        static DropWeapon(world: ut.World, weapon: ut.Entity) {
+            this.DetachFromParent(world, weapon);
+            this.AttachRigidbodyToWeapon(world, weapon);
+            this.SpinWeaponWithSpeed(1,world,weapon);
+
+        }
+
+        static RecallWeapon(world: ut.World, axe: ut.Entity, caller: ut.Entity) {
             let recall = new game.Recall();
             recall.Caller = caller;
             recall.speed = 15;
@@ -97,8 +107,11 @@ namespace game {
             } else {
                 world.addComponentData(axe, rb2d);
             }
-            
-            WeaponService.DetachFromParent(world,axe);
+            let transformNode = world.getComponentData(axe, ut.Core2D.TransformNode);
+
+            if (transformNode.parent.index != ut.NONE.index) {
+                WeaponService.DetachFromParent(world, axe);
+            }
 
         }
 
@@ -114,7 +127,7 @@ namespace game {
                  transformLocalRotation,
                  transformLocalScale,
                  transformNode) => {
-                
+
                     let worldPos = new Vector3().setFromMatrixPosition(objectToWorld.matrix);
                     let worldRotation = ut.Core2D.TransformService.computeWorldRotation(world, entity);
                     let worldScale = transformLocalScale.scale;

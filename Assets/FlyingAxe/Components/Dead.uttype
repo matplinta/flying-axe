@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "bb94bf365e95474895b21a3a1ea21a11",
+    "Name": "Dead",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "bb94bf365e95474895b21a3a1ea21a11", "Name": "Dead" }
+    }
+}]

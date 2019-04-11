@@ -1,5 +1,5 @@
 namespace game {
-
+    @ut.executeAfter(ut.Shared.InputFence)
     @ut.executeAfter(ut.Shared.UserCodeStart)
     @ut.requiredComponents(ut.Physics2D.ColliderContacts)
     @ut.executeBefore(ut.Shared.UserCodeEnd)
@@ -13,8 +13,11 @@ namespace game {
                 (overlapResults, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode) => {
 
                     if (overlapResults.overlaps.length > 0) {
+
+                        let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
+                        let hit = new game.Hit();
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
                             let contactPoint = contactPointData[0];
@@ -31,7 +34,7 @@ namespace game {
                             particleTransformPosition.position = contactPoint;
                             this.world.setComponentData(particleEntity, particleTransformPosition);
                             transformLocalPosition.position = contactPoint;
-                            
+
                             let otherLocalMatrix = this.world.getComponentData(other, ut.Core2D.TransformLocal).matrix;
                             otherLocalMatrix.getInverse(otherLocalMatrix);
                             contactPoint = contactPoint.applyMatrix4(otherLocalMatrix);
@@ -41,9 +44,15 @@ namespace game {
 
                             transformLocalPosition.position = contactPoint;
 
+                            hit.Damage = damageSettings.AxeDamage;
+
 
                         } else if (spin.speed < 0 && otherLayer != 1) {
+                            hit.Damage = damageSettings.AxeRecallDamage;
                             console.log("Enemy recall hit");
+                        }
+                        if (!this.world.hasComponent(other, game.Hit)) {
+                            this.world.addComponentData(other, hit);
                         }
 
                     }
