@@ -22,7 +22,7 @@ namespace game {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
                             let contactPoint = contactPointData[0];
                             let contactPointNormal = contactPointData[1];
-                            game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position);
+                            game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position, transformLocalScale);
                             this.world.removeComponent(entity, game.Spin);
                             this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
                             let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);

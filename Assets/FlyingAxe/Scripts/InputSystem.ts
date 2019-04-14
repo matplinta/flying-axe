@@ -2,32 +2,34 @@ namespace game {
     @ut.executeBefore(ut.Shared.InputFence)
     export class InputSystem extends ut.ComponentSystem {
         OnUpdate(): void {
-            this.world.forEach([game.Input], input => {
+            this.world.forEach([game.Input, game.Movement], (input, movement) => {
                 if (ut.Core2D.Input.isTouchSupported()) {
-                    this.HandleTouchInput(input)
+                    this.HandleTouchInput(input, movement)
                 } else {
-                    this.HandleClassicInput(input)
+                    this.HandleClassicInput(input, movement)
                 }
             });
         }
 
-        HandleTouchInput(input: game.Input): void {
+        HandleTouchInput(input: game.Input, movement: game.Movement): void {
 
         }
 
-        HandleClassicInput(input: game.Input): void {
-            this.HandleKeyBoardInput(input);
+        HandleClassicInput(input: game.Input, movement: game.Movement): void {
+            this.HandleKeyBoardInput(input, movement);
             this.HandleMouseInput(input);
         }
 
-        HandleKeyBoardInput(input: game.Input): void {
-            let movementDir = 0
-            if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.LeftArrow)) {
-                movementDir += -1;
-            } else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.RightArrow)) {
-                movementDir += 1;
+        HandleKeyBoardInput(input: game.Input, movement: game.Movement): void {
+            if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.A)) {
+                input.axis = new Vector2(-1, input.axis.y);
+            } else if (ut.Runtime.Input.getKey(ut.Core2D.KeyCode.D)) {
+                input.axis = new Vector2(1, input.axis.y);
+            } else {
+                input.axis = new Vector2(0, input.axis.y);
             }
-            input.movementDir = movementDir;
+            movement.direction = input.axis;
+            movement.jump = ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W);
             input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space);
             
         }

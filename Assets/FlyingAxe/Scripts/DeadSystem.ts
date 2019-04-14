@@ -17,10 +17,12 @@ namespace game {
                     if (this.world.exists(axe) && axe.index != ut.NONE.index) {
                         WeaponService.DropWeapon(this.world, axe);
                     }
-
+                    
                     if (!this.world.hasComponent(entity, ut.Disabled)) {
+                        this.world.removeComponent(entity, ut.Physics2D.BoxCollider2D)
                         this.world.addComponent(entity, ut.Disabled);
                     }
+                    
 
                 }
             });

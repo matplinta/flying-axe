@@ -14,8 +14,19 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "1a9ca3d9a96a47b8ba5794baada827dd",
+        "Name": "fly",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
-        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" }
+        "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
+        "Properties": {
+            "fly": false
+        }
     }
 }]

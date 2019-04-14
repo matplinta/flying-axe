@@ -8,8 +8,8 @@
     "TypeCode": "Component",
     "Fields": [{
         "Id": "79a835093d7548c78b41e6babfe6fba2",
-        "Name": "movementDir",
-        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Name": "axis",
+        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
         "Array": false,
         "Visibility": 0,
         "EditorOnly": false,
