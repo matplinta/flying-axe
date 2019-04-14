@@ -29,7 +29,10 @@ namespace game {
                 input.axis = new Vector2(0, input.axis.y);
             }
             movement.direction = input.axis;
-            movement.jump = ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W);
+            
+            if(ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W)){
+                movement.shouldJump = true;
+            }
             input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space);
             
         }
