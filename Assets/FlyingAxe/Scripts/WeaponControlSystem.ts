@@ -8,7 +8,7 @@ namespace game {
 
         OnUpdate(): void {
             
-            this.world.forEach([game.WeaponControl,game.Input, ut.Entity], (weaponControl,input, entity) => {
+            this.world.forEach([game.WeaponControl,game.Input, ut.Entity], (weaponControl, input, entity) => {
                 if (input.weaponInteraction) {
                     if (weaponControl.isInHand) {
                         let weaponLocalPosition = this.world.getComponentData(weaponControl.CurrentWeapon,ut.Core2D.TransformLocalPosition);

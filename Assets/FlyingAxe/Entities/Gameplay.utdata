@@ -14,9 +14,9 @@
         { "$TypeId": 9, "Id": "176b770af88f4472aa322f3d50c23ab7", "Name": "WeaponHolder" },
         { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
         { "$TypeId": 9, "Id": "1e839261acf943cb88ae1af686cb627f", "Name": "AxeView" },
-        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "WalkingEnemy" },
+        { "$TypeId": 9, "Id": "09cb470fb6c644399a21c69fc9a2fbd1", "Name": "GroundEnemy" },
         { "$TypeId": 9, "Id": "0d452f8173b1444ba73145052b48feb8", "Name": "HealthBar" },
-        { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "FlyingEnemy" },
+        { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "AirEnemy" },
         { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" },
@@ -344,6 +344,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "3481771f209846c2a2edd1b6f57d97b9", "Name": "GroundTag" }
     }]
 },
 {
@@ -352,7 +354,7 @@
     "Name": "Player",
     "Enabled": true,
     "Static": false,
-    "Layer": 10,
+    "Layer": 0,
     "Components": [{
         "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
     }, {
@@ -379,23 +381,6 @@
             }
         }
     }, {
-        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
-    }, {
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
-        "Properties": {
-            "value": 500
-        }
-    }, {
-        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
-        "Properties": {
-            "size": {
-                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
-                "Properties": {
-                    "x": 0.85
-                }
-            }
-        }
-    }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "bodyType": {
@@ -406,6 +391,32 @@
                 "Value": 2
             },
             "freezeRotation": true
+        }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.96,
+                    "y": 1.28
+                }
+            },
+            "pivot": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "y": 0.5
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
+    }, {
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
+        "Properties": {
+            "speed": 500,
+            "jumpForce": 6,
+            "jump": true
         }
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
@@ -432,8 +443,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": -0.061,
-                    "y": 0.017,
+                    "x": -0.021,
+                    "y": 0.068,
                     "z": 1
                 }
             }
@@ -451,9 +462,9 @@
             "scale": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 1.051862,
-                    "y": 1.327618,
-                    "z": 1.664325
+                    "x": 1.136011,
+                    "y": 1.433828,
+                    "z": 1.797471
                 }
             }
         }
@@ -474,8 +485,12 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 0
+            "order": 5
         }
+    }, {
+        "Type": { "Id": "46e379947eae430b82b1702010c08c92", "Name": "FlipScale" }
+    }, {
+        "Type": { "Id": "eeb7fafc04934c8d996f5b2435a9a366", "Name": "Input" }
     }]
 },
 {
@@ -537,6 +552,8 @@
         "Properties": {
             "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
         }
+    }, {
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" }
     }]
 },
 {
@@ -596,10 +613,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.24,
-                    "y": -0.06,
-                    "width": 0.08,
-                    "height": 0.13
+                    "x": -0.05,
+                    "y": -0.09,
+                    "width": 0.14,
+                    "height": 0.21
                 }
             }
         }
@@ -662,7 +679,7 @@
 {
     "$TypeId": 5,
     "Id": "09cb470fb6c644399a21c69fc9a2fbd1",
-    "Name": "WalkingEnemy",
+    "Name": "GroundEnemy",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -674,8 +691,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 2.06,
-                    "y": 1.55
+                    "x": 2.36,
+                    "y": 2.09
                 }
             }
         }
@@ -700,12 +717,13 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
+            "layer": 0,
             "order": 0
         }
     }, {
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
-            "value": 0.5
+            "speed": 50
         }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
@@ -713,10 +731,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.5,
-                    "y": -0.71208,
-                    "width": 1,
-                    "height": 1.42416
+                    "x": -0.59,
+                    "y": -0.7,
+                    "width": 1.21,
+                    "height": 1.38
                 }
             }
         }
@@ -733,7 +751,8 @@
     }, {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
         "Properties": {
-            "killReward": 10
+            "killReward": 10,
+            "fly": false
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
@@ -757,6 +776,40 @@
         "Properties": {
             "Bar": { "$TypeId": 9, "Id": "0d452f8173b1444ba73145052b48feb8", "Name": "HealthBar" }
         }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 1.2,
+                    "y": 1.4
+                }
+            },
+            "pivot": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.48,
+                    "y": 0.52
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "bodyType": {
+                "$TypeId": 8,
+                "Type": { "Id": "a4afdb83c635db286370870d059ac493", "Name": "BodyType" },
+                "Id": "5602293d3c8f73715a64943669328d32",
+                "Name": "Dynamic",
+                "Value": 2
+            },
+            "freezeRotation": true
+        }
+    }, {
+        "Type": { "Id": "46e379947eae430b82b1702010c08c92", "Name": "FlipScale" }
+    }, {
+        "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }]
 },
 {
@@ -812,7 +865,7 @@
 {
     "$TypeId": 5,
     "Id": "0c8ef7ebb4834223aabc69ac3ea21a06",
-    "Name": "FlyingEnemy",
+    "Name": "AirEnemy",
     "Enabled": true,
     "Static": false,
     "Layer": 0,
@@ -824,8 +877,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 11.43,
-                    "y": 5.7
+                    "x": 11.04,
+                    "y": 5.49
                 }
             }
         }
@@ -853,9 +906,9 @@
             "order": 0
         }
     }, {
-        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "MovementSpeed" },
+        "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
-            "value": 0.5
+            "speed": 50
         }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
@@ -883,7 +936,8 @@
     }, {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
         "Properties": {
-            "killReward": 20
+            "killReward": 20,
+            "fly": true
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
@@ -906,6 +960,33 @@
         "Type": { "Id": "e9f758b87688464aa6cbdf6016f36bb7", "Name": "HealthVisualization" },
         "Properties": {
             "Bar": { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" }
+        }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "bodyType": {
+                "$TypeId": 8,
+                "Type": { "Id": "a4afdb83c635db286370870d059ac493", "Name": "BodyType" },
+                "Id": "5602293d3c8f73715a64943669328d32",
+                "Name": "Dynamic",
+                "Value": 2
+            },
+            "freezeRotation": true
+        }
+    }, {
+        "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
+    }, {
+        "Type": { "Id": "46e379947eae430b82b1702010c08c92", "Name": "FlipScale" }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.7,
+                    "y": 1.17
+                }
+            }
         }
     }]
 },
