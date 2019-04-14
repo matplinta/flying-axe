@@ -44,3 +44,6 @@ TagManager:
   - name: Enviro
     uniqueID: 1184453789
     locked: 0
+  - name: Pickable
+    uniqueID: 265864777
+    locked: 0

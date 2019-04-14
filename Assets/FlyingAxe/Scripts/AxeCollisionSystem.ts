@@ -17,6 +17,9 @@ namespace game {
                         let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
+                        if (otherLayer == 2) {
+                            return;
+                        }
                         let hit = new game.Hit();
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);

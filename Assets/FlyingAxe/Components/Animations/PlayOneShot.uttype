@@ -1,0 +1,29 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "bd3ae82348024dcb99077dc77192fc77",
+    "Name": "PlayOneShot",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "a0b39f5375f6470bb576a7f8de7e6690",
+        "Name": "Length",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "6a7d7fa051c3474ca38240da89153429",
+        "Name": "TimePlayed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "bd3ae82348024dcb99077dc77192fc77", "Name": "PlayOneShot" }
+    }
+}]

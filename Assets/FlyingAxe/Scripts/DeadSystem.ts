@@ -18,9 +18,7 @@ namespace game {
                         WeaponService.DropWeapon(this.world, axe);
                     }
 
-                    if (!this.world.hasComponent(entity, ut.Disabled)) {
-                        this.world.addComponent(entity, ut.Disabled);
-                    }
+                    GameService.setEntityEnabled(this.world, entity, false);
 
                 }
             });

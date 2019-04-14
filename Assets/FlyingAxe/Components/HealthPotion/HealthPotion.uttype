@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "5193f4407366437c9c0b674de589bf07",
+    "Name": "HealthPotion",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "687eed3c3c8f4a4c86f4cd2889902aa0",
+        "Name": "HealthRestore",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "5193f4407366437c9c0b674de589bf07", "Name": "HealthPotion" }
+    }
+}]
