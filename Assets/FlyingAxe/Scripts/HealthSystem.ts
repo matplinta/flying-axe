@@ -8,13 +8,21 @@ namespace game {
 
         OnUpdate(): void {
             this.world.forEach([game.Health, ut.Entity], (health, entity) => {
-                
+
                 if (health.current <= 0) {
-                    if (!this.world.hasComponent(entity, game.Dead)) {
-                        this.world.addComponent(entity, game.Dead);
-                    }
+                    HealthSystem.Die(this.world, entity, 0);
                 }
             });
+        }
+
+
+        static Die(world: ut.World, entity: ut.Entity, dyingTime: number) {
+            if (!world.hasComponent(entity, game.Dead)) {
+                let dead = new game.Dead();
+                dead.elapsedTime = 0;
+                dead.dyingTime = dyingTime;
+                world.addComponentData(entity, dead);
+            }
         }
     }
 }

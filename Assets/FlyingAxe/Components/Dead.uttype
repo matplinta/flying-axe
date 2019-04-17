@@ -6,6 +6,23 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "5aa2a668f3d64ea0b2d1387d63ef59b3",
+        "Name": "elapsedTime",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "0c02c0cbfb09481aa02b3be365da363c",
+        "Name": "dyingTime",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
         "Type": { "Id": "bb94bf365e95474895b21a3a1ea21a11", "Name": "Dead" }
     }

@@ -25,6 +25,16 @@ namespace game {
             if (isEnabled && hasDisabledComponent) {
                 world.removeComponent(entity, ut.Disabled);
             } else if (!isEnabled && !hasDisabledComponent) {
+
+                if (world.hasComponent(entity, game.Animation)) {
+                    let anim = world.getComponentData(entity, game.Animation);
+                    AnimationSystem.DisableAnimations(world, anim);
+
+                }
+                if (world.hasComponent(entity, ut.Physics2D.BoxCollider2D)) {
+                    world.removeComponent(entity, ut.Physics2D.BoxCollider2D);
+                }
+
                 world.addComponent(entity, ut.Disabled);
             }
         }

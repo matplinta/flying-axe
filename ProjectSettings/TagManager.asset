@@ -47,3 +47,6 @@ TagManager:
   - name: Pickable
     uniqueID: 265864777
     locked: 0
+  - name: Player
+    uniqueID: 1376865515
+    locked: 0
