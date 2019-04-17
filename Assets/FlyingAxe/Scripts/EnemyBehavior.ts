@@ -1,4 +1,3 @@
-
 namespace game {
 
     export class EnemyBehaviorFilter extends ut.EntityFilter {
@@ -10,10 +9,12 @@ namespace game {
         speedChange: game.ChangeOverTime;
         bounds: game.Boundaries;
     }
+
     export class EnemyBehavior extends ut.ComponentBehaviour {
 
         data: EnemyBehaviorFilter;
-        OnEntityEnable():void {
+
+        OnEntityEnable(): void {
             let totalTime = ut.Time.time();
             let newSpeed = this.data.movement.speed + (this.data.speedChange.changePerSecond * totalTime);
 
@@ -26,13 +27,13 @@ namespace game {
 
             console.log("enemy initialized. Speed: " + newSpeed);
         }
-        
+
         // this method is called for each entity matching the EnemyBehaviorFilter signature, every frame it's enabled
-        OnEntityUpdate():void {
+        OnEntityUpdate(): void {
             let localPosition = this.data.position.position;
-            let playerPosition = new Vector3(); 
+            let playerPosition = new Vector3();
             let playerEntity = this.world.getEntityByName("Player")
-            playerPosition = this.world.getComponentData(playerEntity, ut.Core2D.TransformLocalPosition).position; 
+            playerPosition = this.world.getComponentData(playerEntity, ut.Core2D.TransformLocalPosition).position;
             //tutaj zrobic zeby leciał do playera
             let distance = localPosition.distanceTo(playerPosition);
             let delta = new Vector3().subVectors(playerPosition, localPosition);
@@ -45,13 +46,13 @@ namespace game {
 
 
             let newVelocity = new ut.Physics2D.SetVelocity2D;
-            if (this.data.tag.fly){
+            if (this.data.tag.fly) {
                 newVelocity.velocity = new Vector2(direction.x, direction.y);
             } else {
                 newVelocity.velocity = new Vector2(direction.x, this.data.velocity.velocity.y);
             }
             this.data.velocity = newVelocity;
-           
+
         }
 
         // this method is called for each entity matching the EnemyBehaviorFilter signature, once when disabled
