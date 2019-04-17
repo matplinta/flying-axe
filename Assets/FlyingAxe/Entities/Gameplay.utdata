@@ -1669,7 +1669,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300000, "Type": 3 }
+            "sprite": { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300000, "Type": 3 }
         }
     }, {
         "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
@@ -1677,14 +1677,14 @@
             "sprites": {
                 "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
                 "Items": [
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300000, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300002, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300004, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300006, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300008, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300010, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300012, "Type": 3 },
-                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300014, "Type": 3 }
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300002, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300004, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300006, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300008, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300010, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300012, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 21300014, "Type": 3 }
                 ]
             },
             "frameRate": 15
