@@ -14,8 +14,19 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "153e669191a54f2d8fee04afb72a6dc9",
+        "Name": "dropRate",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
-        "Type": { "Id": "0b6da84b86334b31a4853f697aa0d77b", "Name": "GameContext" }
+        "Type": { "Id": "0b6da84b86334b31a4853f697aa0d77b", "Name": "GameContext" },
+        "Properties": {
+            "dropRate": 0.25
+        }
     }
 }]

@@ -12,6 +12,9 @@ namespace game {
                         return;
                     }
                     pickable.Picker = other;
+                    if (this.world.hasComponent(entity, ut.Physics2D.RigidBody2D)) {
+                        this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
+                    }
                     HealthSystem.Die(this.world, entity, .86);
 
                 }

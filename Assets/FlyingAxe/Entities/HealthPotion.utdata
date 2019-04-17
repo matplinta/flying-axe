@@ -1,0 +1,258 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "76078175b8984d1bb13417448e3581dd",
+    "Name": "HealthPotion",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "fc1246e09130492cab4fb54b13f74a78", "Name": "HealthPotion" },
+        { "$TypeId": 9, "Id": "f58606b58da04511ab7b3228253ec633", "Name": "Idle" },
+        { "$TypeId": 9, "Id": "4ecfb00ed5fd4606aa93a39ef0a16231", "Name": "PickUp" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "fc1246e09130492cab4fb54b13f74a78",
+    "Name": "HealthPotion",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 4,
+                    "y": 4
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "5193f4407366437c9c0b674de589bf07", "Name": "HealthPotion" },
+        "Properties": {
+            "HealthRestore": 30
+        }
+    }, {
+        "Type": { "Id": "3a8ee88c91e7490baec467dc2b79fce1", "Name": "Animation" },
+        "Properties": {
+            "Idle": { "$TypeId": 9, "Id": "f58606b58da04511ab7b3228253ec633", "Name": "Idle" },
+            "PickUp": { "$TypeId": 9, "Id": "4ecfb00ed5fd4606aa93a39ef0a16231", "Name": "PickUp" }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 265864777
+        }
+    }, {
+        "Type": { "Id": "9bed28eb7bbd480f947bfa2876169dd8", "Name": "Pickable" }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -0.05,
+                    "y": -0.08,
+                    "width": 0.1,
+                    "height": 0.2
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.06,
+                    "y": 0.2
+                }
+            },
+            "pivot": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "y": 0.5
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
+        "Properties": {
+            "bodyType": {
+                "$TypeId": 8,
+                "Type": { "Id": "a4afdb83c635db286370870d059ac493", "Name": "BodyType" },
+                "Id": "5602293d3c8f73715a64943669328d32",
+                "Name": "Dynamic",
+                "Value": 2
+            },
+            "freezeRotation": true,
+            "friction": 10,
+            "restitution": 0.4
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f58606b58da04511ab7b3228253ec633",
+    "Name": "Idle",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "fc1246e09130492cab4fb54b13f74a78", "Name": "HealthOrb" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300002, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300004, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300006, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300008, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300010, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300012, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 21300014, "Type": 3 }
+                ]
+            },
+            "frameRate": 15
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "f58606b58da04511ab7b3228253ec633", "Name": "Idle" },
+            "speed": 1
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "4ecfb00ed5fd4606aa93a39ef0a16231",
+    "Name": "PickUp",
+    "Enabled": false,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "fc1246e09130492cab4fb54b13f74a78", "Name": "HealthOrb" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "07b3b55434cc347ed93d948c152e1b16", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "07b3b55434cc347ed93d948c152e1b16", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "dc71957e1be9a4007b1f3123f4f96080", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "0493baf67f2d0408e9ecf27553de5d75", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "4c76a743df0954224985403e00c078fd", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "e138375bcea664d7fade39a4f879cc4d", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "ef57760455b9d406895f3d20038286b9", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "545f5afb28056415790801a4f86c20b2", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "5b52f3989f5a845a89d22cb3be4ed0c5", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "7bf144b9cf2c9441081e5d25e409e1fb", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "a6ea2a8355b0d4d7fb39d8bdbd882de2", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "f9d9c650590134f5f828a9e9d7c3835e", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "a84411f1d0be04443b84a6155e640bd5", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "c32ca6e0bed66461a91cef7a91f2908d", "FileId": 21300000, "Type": 3 }
+                ]
+            },
+            "frameRate": 15
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "4ecfb00ed5fd4606aa93a39ef0a16231", "Name": "PickUp" },
+            "speed": 1
+        }
+    }]
+}]
