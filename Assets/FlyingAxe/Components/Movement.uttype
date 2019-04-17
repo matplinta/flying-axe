@@ -38,6 +38,22 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "802a7cd3f37f4ed79809887eee24ea74",
+        "Name": "onGround",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "5f1744fb2aa546a491f224cf5429d9e8",
+        "Name": "shouldJump",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" }

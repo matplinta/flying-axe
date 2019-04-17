@@ -269,7 +269,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 7.26,
-                    "y": 0.51
+                    "y": -0.449
                 }
             }
         }
@@ -298,7 +298,10 @@
             }
         }
     }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" }
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "8d3de2274857eb242b435f1a5acc5877", "FileId": 21300000, "Type": 3 }
+        }
     }, {
         "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
         "Properties": {
@@ -306,7 +309,7 @@
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
                     "x": 12.90512,
-                    "y": 0.524
+                    "y": 2.36
                 }
             }
         }
@@ -326,10 +329,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -6.45256,
-                    "y": -0.262,
-                    "width": 12.90512,
-                    "height": 0.524
+                    "x": -6.4,
+                    "y": -0.9,
+                    "width": 12.8,
+                    "height": 2.09
                 }
             }
         }
@@ -340,12 +343,10 @@
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
                     "x": 12.90512,
-                    "y": 0.524
+                    "y": 2.441046
                 }
             }
         }
-    }, {
-        "Type": { "Id": "3481771f209846c2a2edd1b6f57d97b9", "Name": "GroundTag" }
     }]
 },
 {
@@ -364,7 +365,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 6.694,
-                    "y": 2.33
+                    "y": 1.62
                 }
             }
         }
@@ -405,7 +406,7 @@
             "pivot": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "y": 0.5
+                    "y": 0.47
                 }
             }
         }
@@ -414,9 +415,9 @@
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
-            "speed": 500,
+            "speed": 300,
             "jumpForce": 6,
-            "jump": true
+            "jump": false
         }
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
@@ -443,8 +444,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": -0.021,
-                    "y": 0.068,
+                    "x": 0.13,
+                    "y": 0.08,
                     "z": 1
                 }
             }
@@ -613,10 +614,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.05,
-                    "y": -0.09,
-                    "width": 0.14,
-                    "height": 0.21
+                    "x": -0.18,
+                    "y": -0.05,
+                    "width": 0.08,
+                    "height": 0.12
                 }
             }
         }

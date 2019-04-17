@@ -14,16 +14,17 @@ namespace game {
                         setVelocity.velocity = new Vector2(movement.speed * movement.direction.x * dt, velocity.velocity.y);
                         this.world.addComponentData(entity,setVelocity);
                     }                         
-                    if (movement.jump) {
-                        let impulse = new ut.Physics2D.AddImpulse2D;
-                        impulse.impulse = new Vector2(movement.direction.x, movement.jumpForce);
-                        this.world.addComponentData(entity, impulse);
+                    if (movement.shouldJump) {
+                        console.log("Wchodzi pod pierwszego ifa onground:" + movement.onGround);
+                        if (movement.onGround) {
+                            let impulse = new ut.Physics2D.AddImpulse2D;
+                            impulse.impulse = new Vector2(movement.direction.x, movement.jumpForce);
+                            this.world.addComponentData(entity, impulse);
+                            movement.jump = true;
+                        }
                     }
-                
-
+                    movement.shouldJump = false;
             });
         }
-        
-        Set
     }
 }
