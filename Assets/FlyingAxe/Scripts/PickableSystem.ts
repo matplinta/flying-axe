@@ -11,6 +11,7 @@ namespace game {
                     if (otherLayer != 3) {
                         return;
                     }
+                    pickable.Picker = other;
                     HealthSystem.Die(this.world, entity, .86);
 
                 }

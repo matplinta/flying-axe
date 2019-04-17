@@ -71,7 +71,7 @@ namespace game {
         static DropWeapon(world: ut.World, weapon: ut.Entity) {
             this.DetachFromParent(world, weapon);
             this.AttachRigidbodyToWeapon(world, weapon);
-            this.SpinWeaponWithSpeed(1,world,weapon);
+            this.SpinWeaponWithSpeed(1, world, weapon);
 
         }
 
@@ -127,7 +127,6 @@ namespace game {
                  transformLocalRotation,
                  transformLocalScale,
                  transformNode) => {
-
                     let worldPos = new Vector3().setFromMatrixPosition(objectToWorld.matrix);
                     let worldRotation = ut.Core2D.TransformService.computeWorldRotation(world, entity);
                     let worldScale = transformLocalScale.scale;
@@ -138,6 +137,7 @@ namespace game {
                     transformLocalPosition.position = worldPos;
                     transformLocalRotation.rotation = worldRotation;
                     transformLocalScale.scale = worldScale;
+                    console.log("detached");
                 });
         }
     }

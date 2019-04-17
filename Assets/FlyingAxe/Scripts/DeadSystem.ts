@@ -14,27 +14,25 @@ namespace game {
             this.world.forEach([ut.Entity, game.Dead], (entity, dead) => {
                 if (this.world.exists(entity)) {
 
-                    let weapon = ut.Core2D.TransformService.getChild(this.world, entity, 0);
-
-                    if (this.world.exists(weapon) && weapon.index != ut.NONE.index && this.world.hasComponent(weapon, game.Weapon)) {
-                        WeaponService.DropWeapon(this.world, weapon);
-                    }
-
                     if (dead.elapsedTime == 0) {
+
+                        let weapon = ut.Core2D.TransformService.getChild(this.world, entity, 0);
+
+                        if (this.world.exists(weapon) && weapon.index != ut.NONE.index && this.world.hasComponent(weapon, game.Weapon)) {
+
+                            WeaponService.DropWeapon(this.world, weapon);
+                        }
+
                         if (this.world.hasComponent(entity, game.Animation)) {
                             AnimationSystem.PlayOneShot(this.world, entity, .86, 1);
                         }
                     }
 
                     if (dead.elapsedTime >= dead.dyingTime) {
-                        GameService.setEntityEnabled(this.world, entity, false);
+                        ut.Core2D.TransformService.destroyTree(this.world, entity);
+                        //GameService.setEntityEnabled(this.world, entity, false);
                     }
                     dead.elapsedTime += this.scheduler.deltaTime();
-                    
-                    // if (!this.world.hasComponent(entity, ut.Disabled)) {
-                    //     this.world.removeComponent(entity, ut.Physics2D.BoxCollider2D)
-                    //     this.world.addComponent(entity, ut.Disabled);
-                    // }
 
                 }
             });

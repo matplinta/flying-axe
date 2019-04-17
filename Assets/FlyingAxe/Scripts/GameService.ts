@@ -36,6 +36,7 @@ namespace game {
                 }
 
                 world.addComponent(entity, ut.Disabled);
+              
             }
         }
     }
