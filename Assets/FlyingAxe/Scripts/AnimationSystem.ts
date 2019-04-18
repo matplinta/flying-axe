@@ -43,19 +43,12 @@ namespace game {
                 return;
             animations.State = state;
             let animation: ut.Entity = null;
-            switch (state) {
-                case 0:
-                    animation = animations.Idle;
-                    break;
-                case 1:
-                    animation = animations.PickUp;
-                    break;
-            }
+            animation = animations.Animations[state];
 
             this.ResetAnimationTime(world, animation);
-
-            GameService.setEntityEnabled(world, animations.Idle, state == 0);
-            GameService.setEntityEnabled(world, animations.PickUp, state == 1);
+            for (let i = 0; i < animations.Animations.length; i++) {
+                GameService.setEntityEnabled(world, animations.Animations[i], state == i);
+            }
         }
 
         static ResetAnimationTime(world: ut.World, animation: ut.Entity) {
@@ -66,10 +59,13 @@ namespace game {
         }
 
         static DisableAnimations(world: ut.World, animations: game.Animation): void {
-            GameService.setEntityEnabled(world, animations.Idle, false);
-            GameService.setEntityEnabled(world, animations.PickUp, false);
+
+            for (let i = 0; i < animations.Animations.length; i++) {
+                GameService.setEntityEnabled(world, animations.Animations[i], false);
+            }
 
         }
+
 
     }
 }
