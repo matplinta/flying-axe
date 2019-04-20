@@ -3,5 +3,64 @@
     "Id": "82b653886472447c937d207465b7cfea",
     "Name": "Bootstrap",
     "ExportFlags": 0,
-    "SerializedVersion": 0
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" },
+        { "$TypeId": 9, "Id": "2208c293b7414585a16f051d28f6cd77", "Name": "Game" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce",
+    "Name": "Camera",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "12692383f3fef3bb74c209888c5b0939", "Name": "Camera2D" },
+        "Properties": {
+            "backgroundColor": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 1
+                }
+            },
+            "clearFlags": {
+                "$TypeId": 8,
+                "Type": { "Id": "76a06ddd38e99125d930e77c6a287872", "Name": "CameraClearFlags" },
+                "Id": "9faedc246f34513076701ef66b5ad74f",
+                "Name": "SolidColor",
+                "Value": 1
+            },
+            "depth": -1,
+            "layerMask": 1815
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 7.25,
+                    "y": 2.58
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "2208c293b7414585a16f051d28f6cd77",
+    "Name": "Game",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "bf55d13e518a4aaaa8653c19f3ca96c4", "Name": "GameState" }
+    }]
 }]

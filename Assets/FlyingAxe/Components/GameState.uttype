@@ -1,43 +1,21 @@
 ﻿[{
     "$TypeId": 3,
-    "Id": "79668954383147be9d81363be9a483ec",
+    "Id": "bf55d13e518a4aaaa8653c19f3ca96c4",
     "Name": "GameState",
     "ExportFlags": 0,
     "Unlisted": false,
     "Visibility": 0,
-    "TypeCode": "Enum",
-    "BaseType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+    "TypeCode": "Component",
     "Fields": [{
-        "Id": "d1ea49cd70bb4746890256975649e1b6",
-        "Name": "Init",
-        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
-        "Array": false,
-        "Visibility": 0,
-        "EditorOnly": false,
-        "Versioned": true
-    }, {
-        "Id": "a8931020e1cf4e8cb200e418cf537db2",
-        "Name": "Gameplay",
-        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
-        "Array": false,
-        "Visibility": 0,
-        "EditorOnly": false,
-        "Versioned": true
-    }, {
-        "Id": "44ca76cadf45449f9d77e67db7e94d1b",
-        "Name": "Menu",
-        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Id": "15f86f0ec28849a8ab0262dccacbdf2e",
+        "Name": "CurrentState",
+        "FieldType": { "Id": "79668954383147be9d81363be9a483ec", "Name": "GameStateType" },
         "Array": false,
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
     }],
     "DefaultValue": {
-        "Type": { "Id": "79668954383147be9d81363be9a483ec", "Name": "GameState" },
-        "Properties": {
-            "Init": 0,
-            "Gameplay": 1,
-            "Menu": 2
-        }
+        "Type": { "Id": "bf55d13e518a4aaaa8653c19f3ca96c4", "Name": "GameState" }
     }
 }]

@@ -11,6 +11,13 @@ namespace game {
                 }
             });
 
+            this.world.forEach([game.PlayerTag, game.Dead], (player, dead) => {
+                if (dead.elapsedTime == 0) {
+                    GameStateLoadingService.setGameState(this.world, game.GameStateType.GameOver);
+                }
+            });
+
+
             this.world.forEach([ut.Entity, game.Dead], (entity, dead) => {
                 if (this.world.exists(entity)) {
 

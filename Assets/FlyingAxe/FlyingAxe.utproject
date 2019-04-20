@@ -63,9 +63,11 @@
         { "Id": "36f73ad23c8a63c53fa510f0621474f5", "Name": "UTiny.HitBox2D" },
         { "Id": "259902b84b3ed0f7213a1b5e37040709", "Name": "UTiny.Physics2D" },
         { "Id": "0bc66cc14cafcceaaebf78d21c72cede", "Name": "UTiny.Particles" },
-        { "Id": "0b0e260844fa6632977aa15579b42291", "Name": "UTiny.Text" }
+        { "Id": "0b0e260844fa6632977aa15579b42291", "Name": "UTiny.Text" },
+        { "Id": "60feebda86c36292119505b0bd2ac3e9", "Name": "UTiny.UIControls" },
+        { "Id": "251df5ef6819533f94e1cbf3181f722e", "Name": "UTiny.Audio" }
     ],
-    "StartupEntityGroup": { "Id": "34303fc5b96a441294a8708c300a3087", "Name": "NewEntityGroup" }
+    "StartupEntityGroup": { "Id": "82b653886472447c937d207465b7cfea", "Name": "Bootstrap" }
 },
 {
     "$TypeId": 5,
@@ -87,5 +89,7 @@
         "Type": { "Id": "38283a6cef9faa790b5c9936163d59e3", "Name": "Physics2DConfig" }
     }, {
         "Type": { "Id": "a1efd88232704924be8893759cec70e1", "Name": "DamageSettings" }
+    }, {
+        "Type": { "Id": "e816e7b93a13b9e5ddf993486ca79278", "Name": "AudioConfig" }
     }]
 }]

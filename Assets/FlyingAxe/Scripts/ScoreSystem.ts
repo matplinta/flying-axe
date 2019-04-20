@@ -10,14 +10,22 @@ namespace game {
         OnUpdate(): void {
             let context = this.world.getConfigData(game.GameContext);
 
-            this.world.forEach([ut.Entity, ut.Text.Text2DRenderer, game.Score], (entity, textRenderer, score) => {
-                textRenderer.text = context.score.toString();
+            this.world.forEach([ut.Entity, ut.Text.Text2DRenderer, game.Score], (entity, textRenderer, scoreComponent) => {
+                var score = context.score.toString();
+                var text = `Score: ${score}`;
+                textRenderer.text = text;
             });
         }
 
         public static AddScore(world: ut.World, value: number) {
             let context = world.getConfigData(game.GameContext);
             context.score += value;
+            world.setConfigData(context);
+        }
+
+        public static ResetScore(world: ut.World) {
+            let context = world.getConfigData(game.GameContext);
+            context.score = 0;
             world.setConfigData(context);
         }
     }

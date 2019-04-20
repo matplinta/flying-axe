@@ -22,6 +22,14 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "6f42f1ed4b59492a95abca47035ba0a5",
+        "Name": "GameState",
+        "FieldType": { "Id": "79668954383147be9d81363be9a483ec", "Name": "GameStateType" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "0b6da84b86334b31a4853f697aa0d77b", "Name": "GameContext" },

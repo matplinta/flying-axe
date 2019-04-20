@@ -36,8 +36,27 @@ namespace game {
                 }
 
                 world.addComponent(entity, ut.Disabled);
-              
+
             }
+        }
+
+        static gameStateEntity: ut.Entity;
+
+        static clearGameState() {
+            this.gameStateEntity = new ut.Entity();
+        };
+
+        static getGameState(world: ut.World): game.GameState {
+
+            if (!world.exists(this.gameStateEntity)) {
+                this.gameStateEntity = world.getEntityByName("Game");
+                if (!world.exists(this.gameStateEntity)) {
+                    this.gameStateEntity = null;
+                    return null;
+                }
+            }
+
+            return world.getComponentData(this.gameStateEntity, game.GameState);
         }
     }
 }
