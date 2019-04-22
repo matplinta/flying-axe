@@ -25,7 +25,8 @@ namespace game {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
                             let contactPoint = contactPointData[0];
                             let contactPointNormal = contactPointData[1];
-                            game.AimSystem.LookAt(new Vector3().subVectors(transformLocalPosition.position, contactPointNormal), transformLocalRotation, transformLocalPosition.position, transformLocalScale);
+                            let lookAtPoint = new Vector3().subVectors(transformLocalPosition.position, contactPointNormal);
+                            game.AimSystem.LookAt(lookAtPoint, transformLocalRotation, transformLocalPosition.position, transformLocalScale);
                             this.world.removeComponent(entity, game.Spin);
                             this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
                             let child = ut.Core2D.TransformService.getChild(this.world, entity, 0);
@@ -48,6 +49,8 @@ namespace game {
                             transformLocalPosition.position = contactPoint;
 
                             hit.Damage = damageSettings.AxeDamage;
+
+                            WeaponService.ApplyForceInDirection(this.world, other, contactPoint.multiplyScalar(-1), 250,false);
 
 
                         } else if (spin.speed < 0 && otherLayer != 1) {

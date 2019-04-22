@@ -270,7 +270,8 @@
     }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
-            "freezeRotation": false
+            "freezeRotation": false,
+            "friction": 0.5
         }
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
@@ -345,7 +346,9 @@
                 "Name": "Dynamic",
                 "Value": 2
             },
-            "freezeRotation": true
+            "freezeRotation": true,
+            "friction": 0,
+            "density": 0.75
         }
     }, {
         "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
@@ -721,7 +724,7 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 2.3,
+                    "x": 4.339,
                     "y": 2.09
                 }
             }
@@ -834,7 +837,9 @@
                 "Name": "Dynamic",
                 "Value": 2
             },
-            "freezeRotation": true
+            "freezeRotation": true,
+            "friction": 0.5,
+            "density": 100
         }
     }, {
         "Type": { "Id": "46e379947eae430b82b1702010c08c92", "Name": "FlipScale" }
