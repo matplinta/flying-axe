@@ -11,7 +11,7 @@ namespace game {
                     ut.Core2D.TransformObjectToWorld],
                 (transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode, objectToWorld) => {
                     let right = DetachFromCaller(objectToWorld, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode);
-                    ApplyForceInDirection(right);
+                    WeaponService.ApplyForceInDirection(world, weapon, right, 15, true);
                     WeaponService.SpinWeaponWithSpeed(40, world, weapon);
 
                 });
@@ -33,19 +33,23 @@ namespace game {
             }
 
 
-            function ApplyForceInDirection(right) {
-                let impulse = new ut.Physics2D.AddImpulse2D;
-                impulse.impulse = new Vector2(right.x, right.y).multiplyScalar(15);
-                WeaponService.AttachRigidbodyToWeapon(world, weapon);
-                if (world.hasComponent(weapon, ut.Physics2D.AddImpulse2D)) {
-                    world.setComponentData(weapon, impulse);
-                } else {
-                    world.addComponentData(weapon, impulse);
-                }
+        }
 
+
+        static ApplyForceInDirection(world: ut.World, entity: ut.Entity, right: ut.Vector3, force: number, attachRigidbody: boolean) {
+            let impulse = new ut.Physics2D.AddImpulse2D;
+            impulse.impulse = new Vector2(right.x, right.y).multiplyScalar(force);
+            if (attachRigidbody) {
+                WeaponService.AttachRigidbodyToWeapon(world, entity);
+            }
+            if (world.hasComponent(entity, ut.Physics2D.AddImpulse2D)) {
+                world.setComponentData(entity, impulse);
+            } else {
+                world.addComponentData(entity, impulse);
             }
 
         }
+
 
         static SpinWeaponWithSpeed(speed: number, world: ut.World, weapon: ut.Entity) {
             if (!world.hasComponent(weapon, game.Spin)) {
