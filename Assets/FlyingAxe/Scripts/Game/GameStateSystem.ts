@@ -13,6 +13,13 @@ namespace game {
                         this.updateMenu(this.world, gameState);
                         break;
                     case game.GameStateType.GamePlay:
+                        if (ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.E)) {
+                            let ent = ut.EntityGroup.instantiate(this.world, "game.EnemyGroup")[0];
+                            let trans = this.world.getComponentData(ent, ut.Core2D.TransformLocalPosition);
+                            trans.position = new Vector3(GameService.genRandom(2,12), GameService.genRandom(2, 6));
+                            this.world.setComponentData(ent, trans);
+                            console.log("Enemy created!");
+                        }
                         break;
                     case game.GameStateType.GameOver:
                         this.updateGameOver(this.world, gameState);

@@ -22,11 +22,20 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "f44f0b9171174db58f88252290456e25",
+        "Name": "damageToPlayer",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
         "Properties": {
-            "fly": false
+            "fly": false,
+            "damageToPlayer": 10
         }
     }
 }]

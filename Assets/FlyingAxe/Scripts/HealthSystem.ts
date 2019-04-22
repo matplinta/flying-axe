@@ -35,5 +35,17 @@ namespace game {
             health.current = Math.min(health.current + amount, health.max);
             world.setComponentData(entity, health);
         }
+
+        static AdjustHealth(world: ut.World, entity: ut.Entity, value: number) {
+            if (world.hasComponent(entity, game.Health)) {
+                let health = world.getComponentData(entity, game.Health);
+                health.current -= value;
+                console.log(entity, health);
+                world.setComponentData(entity, health);
+                if (health.current <= 0) {
+                    // this.Die(world, entity, 2)
+                }
+            }
+        }
     }
 }

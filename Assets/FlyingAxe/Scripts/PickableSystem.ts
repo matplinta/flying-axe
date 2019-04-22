@@ -9,9 +9,11 @@ namespace game {
                     let other = overlapResults.overlaps[0].otherEntity;
                     let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                     if (otherLayer != 3) {
+                        console.log("Not layer 3 in HitBox Overlap");
                         return;
                     }
                     pickable.Picker = other;
+                    console.log("Picked up pickable");
                     if (this.world.hasComponent(entity, ut.Physics2D.RigidBody2D)) {
                         this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);
                     }

@@ -27,6 +27,8 @@ namespace game {
         static loadGamePlay(world: ut.World) {
             ScoreSystem.ResetScore(world);
             ut.EntityGroup.instantiate(world, "game.GamePlay");
+            ut.EntityGroup.instantiate(world, "game.PlayerGroup");
+            ut.EntityGroup.instantiate(world, "game.EnemyGroup");
         }
 
         static loadGameOver(world: ut.World) {

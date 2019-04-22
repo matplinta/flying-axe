@@ -58,5 +58,13 @@ namespace game {
 
             return world.getComponentData(this.gameStateEntity, game.GameState);
         }
+        
+        static IsFacingEntity(transform1: ut.Core2D.TransformLocalPosition, transform2: ut.Core2D.TransformLocalPosition, transform1Scale: ut.Core2D.TransformLocalScale) {
+            return transform1.position.x > transform2.position.x && transform1Scale.scale.x == -1 || transform1.position.x < transform2.position.x && transform1Scale.scale.x == 1;
+        }
+
+        static genRandom(min, max) {
+            return Math.random() * (max - min + 1) + min;
+        }
     }
 }

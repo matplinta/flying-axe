@@ -12,6 +12,16 @@ namespace game {
             });
 
             this.world.forEach([game.Hit, ut.Entity], (hit, entity) => {
+
+                if (hit.allowImpulse) {
+                    let impulse = new ut.Physics2D.AddImpulse2D();
+                    impulse.impulse = hit.Impulse;
+                    console.log("Applied impulse from hit, force:", hit.ImpulseForce);
+                    console.log("Applied impulse from hit, vector:", hit.Impulse);
+                    
+                    this.world.addComponentData(entity, impulse);
+                }
+                
                 this.world.removeComponent(entity, game.Hit);
             });
         }
