@@ -50,8 +50,8 @@ namespace game {
 
                             hit.Damage = damageSettings.AxeDamage;
 
-                            WeaponService.ApplyForceInDirection(this.world, other, contactPoint.multiplyScalar(-1), 250,false);
-
+                            WeaponService.ApplyForceInDirection(this.world, other, contactPoint.multiplyScalar(-1), 250, false);
+                            ShakeSystem.Shake(this.world, GameService.GetCamera(this.world), .1, .1);
 
                         } else if (spin.speed < 0 && otherLayer != 1) {
                             hit.Damage = damageSettings.AxeRecallDamage;
