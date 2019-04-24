@@ -7,6 +7,7 @@ namespace game {
             world.setComponentData(GameService.gameStateEntity, gameState);
 
             switch (gameStateType) {
+
                 case game.GameStateType.Menu:
                     this.loadMenu(world);
                     break;
@@ -18,9 +19,11 @@ namespace game {
                     break;
 
             }
+            SoundService.playMusic(world);
         }
 
         static loadMenu(world: ut.World) {
+
             ut.EntityGroup.instantiate(world, "game.Menu");
         }
 
@@ -33,6 +36,8 @@ namespace game {
 
         static loadGameOver(world: ut.World) {
             ut.EntityGroup.destroyAll(world, "game.GamePlay");
+            ut.EntityGroup.destroyAll(world, "game.PlayerGroup");
+            ut.EntityGroup.destroyAll(world, "game.EnemyGroup");
             ut.EntityGroup.instantiate(world, "game.GameOver");
 
         }

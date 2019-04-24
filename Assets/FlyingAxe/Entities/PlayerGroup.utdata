@@ -292,7 +292,10 @@
     }, {
         "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },
         "Properties": {
-            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
+            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
+            "weaponInHandLocalRotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" }
+            }
         }
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" }

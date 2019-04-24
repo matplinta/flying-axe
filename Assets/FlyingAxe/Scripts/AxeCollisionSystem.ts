@@ -52,6 +52,7 @@ namespace game {
 
                             WeaponService.ApplyForceInDirection(this.world, other, contactPoint.multiplyScalar(-1), 250, false);
                             ShakeSystem.Shake(this.world, GameService.GetCamera(this.world), .1, .1);
+                            SoundService.play(this.world,"AxeThrow");
 
                         } else if (spin.speed < 0 && otherLayer != 1) {
                             hit.Damage = damageSettings.AxeRecallDamage;

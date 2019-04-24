@@ -1,12 +1,45 @@
 ﻿[{
     "$TypeId": 3,
     "Id": "29370723280042ef87060d3d03b383e5",
-    "Name": "CameraShake",
+    "Name": "Shake",
     "ExportFlags": 0,
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "d5b1faa3fe524088804122660baceead",
+        "Name": "duration",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "4313767e32d1471fafb20259e79c8466",
+        "Name": "amount",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "d7fa32282b874ba2b320445bbb2bf405",
+        "Name": "elapsedTime",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "8b04a6680f744e11b9beaab27a25be79",
+        "Name": "initialPosition",
+        "FieldType": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
-        "Type": { "Id": "29370723280042ef87060d3d03b383e5", "Name": "CameraShake" }
+        "Type": { "Id": "29370723280042ef87060d3d03b383e5", "Name": "Shake" }
     }
 }]

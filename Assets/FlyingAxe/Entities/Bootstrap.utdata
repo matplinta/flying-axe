@@ -6,7 +6,14 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" },
-        { "$TypeId": 9, "Id": "2208c293b7414585a16f051d28f6cd77", "Name": "Game" }
+        { "$TypeId": 9, "Id": "2208c293b7414585a16f051d28f6cd77", "Name": "Game" },
+        { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" },
+        { "$TypeId": 9, "Id": "421d76c3a3bb4dbbaabef62dd53d0f57", "Name": "AxeThrow" },
+        { "$TypeId": 9, "Id": "f508b3628f174c3db8abb1c8283d8f7c", "Name": "AxeRecall" },
+        { "$TypeId": 9, "Id": "474aa29954d540dba83133e7ef22a900", "Name": "MusicMenu" },
+        { "$TypeId": 9, "Id": "df2562ce0fb64787a06494dec1e9e03c", "Name": "MusicGame" },
+        { "$TypeId": 9, "Id": "7cc821dbd8d94b0a93211814b646db73", "Name": "MusicGameOver" },
+        { "$TypeId": 9, "Id": "786161f9cf5c469985bd7459e3bbca2f", "Name": "HealthPotion" }
     ]
 },
 {
@@ -62,5 +69,169 @@
     "Layer": 0,
     "Components": [{
         "Type": { "Id": "bf55d13e518a4aaaa8653c19f3ca96c4", "Name": "GameState" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "a6e1daebb6234a96843dd0aa4229f058",
+    "Name": "Sounds",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "421d76c3a3bb4dbbaabef62dd53d0f57",
+    "Name": "AxeThrow",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "f3bc5eca04a544612b764447c3531874", "FileId": 8300000, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f508b3628f174c3db8abb1c8283d8f7c",
+    "Name": "AxeRecall",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "cd2790ea1755946b8aff3dbbcd86b76e", "FileId": 8300000, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "474aa29954d540dba83133e7ef22a900",
+    "Name": "MusicMenu",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "87d5ab939260341c5b71bae075aef8ba", "FileId": 8300000, "Type": 3 },
+            "loop": true
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "df2562ce0fb64787a06494dec1e9e03c",
+    "Name": "MusicGame",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "ca33cdbb89c984b0f8fc9a6dc8dcb244", "FileId": 8300000, "Type": 3 },
+            "loop": true
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "7cc821dbd8d94b0a93211814b646db73",
+    "Name": "MusicGameOver",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "d727fb88d51844224859d23de32d8293", "FileId": 8300000, "Type": 3 },
+            "loop": true
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "786161f9cf5c469985bd7459e3bbca2f",
+    "Name": "HealthPotion",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
+        "Properties": {
+            "clip": { "$TypeId": 10, "Guid": "d003a74615fb04c23862ac30ee51a462", "FileId": 8300000, "Type": 3 }
+        }
     }]
 }]

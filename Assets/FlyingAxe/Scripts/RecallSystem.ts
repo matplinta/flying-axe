@@ -46,6 +46,7 @@ namespace game {
                     transformLocalPosition.position = weaponControl.weaponInHandLocalPosition;
                     transformLocalScale.scale = weaponControl.weaponInHandLocalScale;
                     transformLocalRotation.rotation = weaponControl.weaponInHandLocalRotation;
+                    SoundService.play(world,"AxeRecall");
                 });
             }
 

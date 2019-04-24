@@ -13,6 +13,7 @@ namespace game {
                         return;
                     }
                     pickable.Picker = other;
+                    SoundService.play(this.world, "PickUp");
                     console.log("Picked up pickable");
                     if (this.world.hasComponent(entity, ut.Physics2D.RigidBody2D)) {
                         this.world.removeComponent(entity, ut.Physics2D.RigidBody2D);

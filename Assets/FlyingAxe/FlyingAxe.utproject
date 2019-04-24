@@ -91,5 +91,7 @@
         "Type": { "Id": "a1efd88232704924be8893759cec70e1", "Name": "DamageSettings" }
     }, {
         "Type": { "Id": "e816e7b93a13b9e5ddf993486ca79278", "Name": "AudioConfig" }
+    }, {
+        "Type": { "Id": "b8fca7e17d744100a5619705fb1d0fb9", "Name": "SoundConfiguration" }
     }]
 }]
