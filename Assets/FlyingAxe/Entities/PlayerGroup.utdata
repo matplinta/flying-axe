@@ -88,13 +88,13 @@
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }, {
+        "Type": { "Id": "33617309b6b14da3a7561daa114f066d", "Name": "PlayerTag" }
+    }, {
         "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" },
         "Properties": {
             "current": 50,
             "max": 100
         }
-    }, {
-        "Type": { "Id": "33617309b6b14da3a7561daa114f066d", "Name": "PlayerTag" }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
         "Properties": {
@@ -292,10 +292,7 @@
     }, {
         "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },
         "Properties": {
-            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
-            "weaponInHandLocalRotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" }
-            }
+            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
         }
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" }
