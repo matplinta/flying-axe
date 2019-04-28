@@ -184,6 +184,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "7714a2dc10c0417095d421f6963d4ef6", "Name": "PlayerViewTag" }
     }]
 },
 {
