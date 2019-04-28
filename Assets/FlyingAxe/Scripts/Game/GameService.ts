@@ -18,8 +18,7 @@ namespace game {
             }
 
         }
-
-
+        
         static setEntityEnabled(world: ut.World, entity: ut.Entity, isEnabled: boolean) {
             let hasDisabledComponent = world.hasComponent(entity, ut.Disabled);
             if (isEnabled && hasDisabledComponent) {

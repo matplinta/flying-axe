@@ -1,6 +1,5 @@
 
 namespace game {
-
     /** New System */
     export class CollisionSystem extends ut.ComponentSystem {
         
@@ -10,14 +9,20 @@ namespace game {
                     movement.onGround = false;
                     let groundHitResult = ut.HitBox2D.HitBox2DService.hitTest(this.world, position.position.sub(new Vector3(0, 0.7, 0)), GameService.GetCamera(this.world));
                     
-                    // if hit with elemen below
+                    // if hit with element below
                     if (!groundHitResult.entityHit.isNone()) {
-                        movement.onGround = true;
-                        movement.jump = false;
+                        // console.log("groundHitResult", this.world.getEntityName(groundHitResult.entityHit));
+                        if(this.world.hasComponent(groundHitResult.entityHit, game.GroundTag)){
+                            movement.onGround = true;
+                            movement.jump = false;
+                        }
                     }
+                    // console.log("Movement.onGround in Collision system: ",movement.onGround );
+                    
                     for (let otherEntity of contacts.contacts) {
                         // console.log(this.world.getEntityName(entity), "collided with ", this.world.getEntityName(otherEntity));
-                        
+
+                     
                         // if this is an enemy that a player is colliding with
                         if (this.world.hasComponent(otherEntity, game.EnemyTag)) {
 
@@ -34,7 +39,7 @@ namespace game {
                                 let distance = enemyPosition.distanceTo(playerPosition);
                                 let delta = new Vector3().subVectors(playerPosition, enemyPosition);
                                 delta.normalize();
-                                hit.ImpulseForce = 4;
+                                hit.ImpulseForce = 10;
                                 let direction = delta.multiplyScalar(hit.ImpulseForce);
                                 let impulseVector = new Vector2(direction.x, direction.y);
                                 hit.Impulse = impulseVector;
