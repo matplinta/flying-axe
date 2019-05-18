@@ -1,0 +1,33 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "9c4eb4d7075a4fa78289d5f295b63026",
+    "Name": "EnemyType",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Enum",
+    "BaseType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+    "Fields": [{
+        "Id": "aaf797a6b171456eb396a9854529dc0a",
+        "Name": "Land",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "fd93c97377974e7daa76a30d366fbb25",
+        "Name": "Air",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "9c4eb4d7075a4fa78289d5f295b63026", "Name": "EnemyType" },
+        "Properties": {
+            "Air": 1
+        }
+    }
+}]

@@ -23,6 +23,8 @@ namespace game {
 
                     if (dead.elapsedTime == 0) {
 
+                        
+
                         let weapon = ut.Core2D.TransformService.getChild(this.world, entity, 0);
 
                         if (this.world.exists(weapon) && weapon.index != ut.NONE.index && this.world.hasComponent(weapon, game.Weapon)) {
@@ -33,9 +35,18 @@ namespace game {
                         if (this.world.hasComponent(entity, game.Animation)) {
                             AnimationSystem.PlayOneShot(this.world, entity, .86, 1);
                         }
+
+                        if (this.world.hasComponent(entity, game.EnemyTag)) {
+                            let spawnerEntity = this.world.getEntityByName("Spawner")
+                            let spawnerConfig = this.world.getComponentData(spawnerEntity, game.Spawner);
+                            spawnerConfig.numOfEnemies -= 1;
+                            this.world.setComponentData(spawnerEntity, spawnerConfig);
+                            console.log("Dead: numOfEnemies:", spawnerConfig.numOfEnemies);
+                        }
                     }
 
                     if (dead.elapsedTime >= dead.dyingTime) {
+                        
                         ut.Core2D.TransformService.destroyTree(this.world, entity);
                         //GameService.setEntityEnabled(this.world, entity, false);
                     }

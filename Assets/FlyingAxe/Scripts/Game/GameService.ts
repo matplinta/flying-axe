@@ -65,5 +65,11 @@ namespace game {
         static genRandom(min, max) {
             return Math.random() * (max - min + 1) + min;
         }
+        
+        static enemyTypeArray = [game.EnemyType.Land, game.EnemyType.Air];
+
+        static AddEnemyTypeToEnemyArray(type: number) {
+            this.enemyTypeArray.push(type);
+        }
     }
 }

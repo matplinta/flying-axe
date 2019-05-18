@@ -1,0 +1,57 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "36520c33655f45c5a80b50ecdf80aeeb",
+    "Name": "Spawner",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "66ba78014fb849d4a45c7df7a4d12ca6",
+        "Name": "isPaused",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "7886bd09734b49d9900425e5ea5852d8",
+        "Name": "time",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "9ef652f0ba444c12b59afe3f2fb1ccba",
+        "Name": "delay",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "f75691d9feba45b48f8ba51ac73444ca",
+        "Name": "maxNumOfEnemies",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "e840e5f606f04355a604f36548a205fd",
+        "Name": "numOfEnemies",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" },
+        "Properties": {
+            "delay": 6,
+            "maxNumOfEnemies": 5
+        }
+    }
+}]

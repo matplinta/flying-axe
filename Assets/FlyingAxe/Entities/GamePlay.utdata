@@ -17,6 +17,7 @@
         { "$TypeId": 9, "Id": "aa37f06dd3d74fdfb3e2a21eafa9d6b6", "Name": "mountains04-512-x-256_008" },
         { "$TypeId": 9, "Id": "25112919d1f94546bea99cfdb8c7ccb9", "Name": "mountains04-512-x-256_009" },
         { "$TypeId": 9, "Id": "9bc8f55ec6d94473998e30bb1a411e0d", "Name": "Ground" },
+        { "$TypeId": 9, "Id": "df28235ed9394ee7b86612ac4bc9b452", "Name": "Spawner" },
         { "$TypeId": 9, "Id": "8456739ffc794739a6203fb970c033fc", "Name": "Ground" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" },
@@ -726,7 +727,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8d3de2274857eb242b435f1a5acc5877", "FileId": 21300000, "Type": 3 },
+            "sprite": { "$TypeId": 10 },
             "color": {
                 "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
                 "Properties": {
@@ -782,6 +783,21 @@
                     "y": 10
                 }
             }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "df28235ed9394ee7b86612ac4bc9b452",
+    "Name": "Spawner",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" },
+        "Properties": {
+            "delay": 6,
+            "maxNumOfEnemies": 5
         }
     }]
 },
@@ -931,7 +947,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8d3de2274857eb242b435f1a5acc5877", "FileId": 21300000, "Type": 3 },
+            "sprite": { "$TypeId": 10 },
             "color": {
                 "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
                 "Properties": {
@@ -1037,7 +1053,7 @@
     }, {
         "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
         "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8d3de2274857eb242b435f1a5acc5877", "FileId": 21300000, "Type": 3 },
+            "sprite": { "$TypeId": 10 },
             "color": {
                 "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
                 "Properties": {

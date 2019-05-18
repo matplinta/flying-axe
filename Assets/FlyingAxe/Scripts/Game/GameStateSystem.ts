@@ -14,7 +14,7 @@ namespace game {
                         break;
                     case game.GameStateType.GamePlay:
                         if (ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.E)) {
-                            let ent = ut.EntityGroup.instantiate(this.world, "game.EnemyGroup")[0];
+                            let ent = ut.EntityGroup.instantiate(this.world, "game.AirEnemy")[0];
                             let trans = this.world.getComponentData(ent, ut.Core2D.TransformLocalPosition);
                             trans.position = new Vector3(GameService.genRandom(2, 12), GameService.genRandom(2, 6));
                             this.world.setComponentData(ent, trans);
@@ -29,7 +29,7 @@ namespace game {
         }
 
         updateInit(world: ut.World, gameState: game.GameState) {
-            SoundService.init(world);
+            // SoundService.init(world);
             GameStateLoadingService.setGameState(world, game.GameStateType.Menu);
         }
 
