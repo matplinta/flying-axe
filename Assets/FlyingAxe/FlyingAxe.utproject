@@ -65,7 +65,8 @@
         { "Id": "0bc66cc14cafcceaaebf78d21c72cede", "Name": "UTiny.Particles" },
         { "Id": "0b0e260844fa6632977aa15579b42291", "Name": "UTiny.Text" },
         { "Id": "60feebda86c36292119505b0bd2ac3e9", "Name": "UTiny.UIControls" },
-        { "Id": "251df5ef6819533f94e1cbf3181f722e", "Name": "UTiny.Audio" }
+        { "Id": "251df5ef6819533f94e1cbf3181f722e", "Name": "UTiny.Audio" },
+        { "Id": "8c6be6e8b11c20a446e356fb3e17ffb1", "Name": "UTiny.Tilemap2D" }
     ],
     "StartupEntityGroup": { "Id": "82b653886472447c937d207465b7cfea", "Name": "Bootstrap" }
 },

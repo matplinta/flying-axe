@@ -5,12 +5,678 @@
     "ExportFlags": 0,
     "SerializedVersion": 0,
     "Entities": [
+        { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" },
+        { "$TypeId": 9, "Id": "a7117030ae224f0aa346b8a344d0a3f4", "Name": "mountains04-512-x-256_000" },
+        { "$TypeId": 9, "Id": "f78c204eea624c16bbbd0067b589e642", "Name": "mountains04-512-x-256_001" },
+        { "$TypeId": 9, "Id": "fa214fea946d41c1ab194965f339b86e", "Name": "mountains04-512-x-256_002" },
+        { "$TypeId": 9, "Id": "2a5eca094ee14f4c9f6bd3dd478880a4", "Name": "mountains04-512-x-256_003" },
+        { "$TypeId": 9, "Id": "2b1582554ec34cdf9a6943e2dcb054a9", "Name": "mountains04-512-x-256_004" },
+        { "$TypeId": 9, "Id": "c1b9ed64b2e74e3b8d58eb54fd6a10c6", "Name": "mountains04-512-x-256_005" },
+        { "$TypeId": 9, "Id": "07797799d34c4bbab1aecd1e3db2c43a", "Name": "mountains04-512-x-256_006" },
+        { "$TypeId": 9, "Id": "06ac20c66e2f4adaaea7f7b313ec40d7", "Name": "mountains04-512-x-256_007" },
+        { "$TypeId": 9, "Id": "aa37f06dd3d74fdfb3e2a21eafa9d6b6", "Name": "mountains04-512-x-256_008" },
+        { "$TypeId": 9, "Id": "25112919d1f94546bea99cfdb8c7ccb9", "Name": "mountains04-512-x-256_009" },
         { "$TypeId": 9, "Id": "9bc8f55ec6d94473998e30bb1a411e0d", "Name": "Ground" },
         { "$TypeId": 9, "Id": "8456739ffc794739a6203fb970c033fc", "Name": "Ground" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "ef0faa0186f947b0b239f1c507e0b892", "Name": "Background" }
+        { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" }
     ]
+},
+{
+    "$TypeId": 5,
+    "Id": "3eedd1363d3e485a9eb3c367ed39bc29",
+    "Name": "Background",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 3.77,
+                    "z": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "a7117030ae224f0aa346b8a344d0a3f4",
+    "Name": "mountains04-512-x-256_000",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "a0c39685c7c1e416ab5cd80b0aa9fbb7", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": 0
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.1
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "f78c204eea624c16bbbd0067b589e642",
+    "Name": "mountains04-512-x-256_001",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "cb615149222ff4942867d2cafc363020", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -1
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.2
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "fa214fea946d41c1ab194965f339b86e",
+    "Name": "mountains04-512-x-256_002",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "733fd2b69c7a94761a332264d448a24b", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -2
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.3
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "2a5eca094ee14f4c9f6bd3dd478880a4",
+    "Name": "mountains04-512-x-256_003",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "78ca780dedec44293bc0d66a36f9b6bc", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -3
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.4
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "2b1582554ec34cdf9a6943e2dcb054a9",
+    "Name": "mountains04-512-x-256_004",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "63beff859cee24c46b15cf242c34ccc2", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -4
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.5
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "c1b9ed64b2e74e3b8d58eb54fd6a10c6",
+    "Name": "mountains04-512-x-256_005",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "4ef6bce6169f140b0845036c736bee17", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -5
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.6
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "07797799d34c4bbab1aecd1e3db2c43a",
+    "Name": "mountains04-512-x-256_006",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "6b8d17ca6c939475d826eec4565db2b1", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -6
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.7
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "06ac20c66e2f4adaaea7f7b313ec40d7",
+    "Name": "mountains04-512-x-256_007",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "072f99328d2e64b5a8a372bcc42ba4eb", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -7
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.8
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "aa37f06dd3d74fdfb3e2a21eafa9d6b6",
+    "Name": "mountains04-512-x-256_008",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "9b5feaa2463c9414faba92f9f3048c1b", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -8
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 0.9
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "25112919d1f94546bea99cfdb8c7ccb9",
+    "Name": "mountains04-512-x-256_009",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 10,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "6f6245cb37179440aaaa9f3b800396ca", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 61.8,
+                    "y": 9.27
+                }
+            },
+            "drawMode": {
+                "$TypeId": 8,
+                "Type": { "Id": "a7ae2ef1f120627af99607cbecca330e", "Name": "DrawMode" },
+                "Id": "0334e5a91225cf998b678224025cf40c",
+                "Name": "ContinuousTiling",
+                "Value": 0
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 1184453789,
+            "order": -9
+        }
+    }, {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" },
+        "Properties": {
+            "Speed": 1
+        }
+    }]
 },
 {
     "$TypeId": 5,
@@ -134,7 +800,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 0,
-                    "y": -3
+                    "y": -2.16
                 }
             }
         }
@@ -183,7 +849,7 @@
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
                     "x": 60,
-                    "y": 6
+                    "y": 3
                 }
             }
         }
@@ -206,9 +872,9 @@
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
                     "x": -30,
-                    "y": -3,
+                    "y": -1.5,
                     "width": 60,
-                    "height": 6
+                    "height": 3
                 }
             }
         }
@@ -219,7 +885,7 @@
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
                     "x": 60,
-                    "y": 6
+                    "y": 3
                 }
             }
         }
@@ -434,83 +1100,6 @@
                 "Properties": {
                     "x": 60,
                     "y": 1
-                }
-            }
-        }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "ef0faa0186f947b0b239f1c507e0b892",
-    "Name": "Background",
-    "Enabled": false,
-    "Static": false,
-    "Layer": 10,
-    "Components": [{
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 7.14,
-                    "y": 3.845
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
-        "Properties": {
-            "rotation": {
-                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
-                "Properties": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "w": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
-        "Properties": {
-            "scale": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 1,
-                    "y": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "8d3de2274857eb242b435f1a5acc5877", "FileId": 21300000, "Type": 3 },
-            "color": {
-                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
-                "Properties": {
-                    "r": 0.745283,
-                    "g": 0.745283,
-                    "b": 0.745283,
-                    "a": 1
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "layer": 1184453789,
-            "order": 0
-        }
-    }, {
-        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
-        "Properties": {
-            "size": {
-                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
-                "Properties": {
-                    "x": 20.44407,
-                    "y": 7.879627
                 }
             }
         }

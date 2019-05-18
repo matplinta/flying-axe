@@ -14,7 +14,8 @@
         { "$TypeId": 9, "Id": "474aa29954d540dba83133e7ef22a900", "Name": "MusicMenu" },
         { "$TypeId": 9, "Id": "df2562ce0fb64787a06494dec1e9e03c", "Name": "MusicGame" },
         { "$TypeId": 9, "Id": "7cc821dbd8d94b0a93211814b646db73", "Name": "MusicGameOver" },
-        { "$TypeId": 9, "Id": "786161f9cf5c469985bd7459e3bbca2f", "Name": "HealthPotion" }
+        { "$TypeId": 9, "Id": "786161f9cf5c469985bd7459e3bbca2f", "Name": "HealthPotion" },
+        { "$TypeId": 9, "Id": "9db079e0c3d7428282165bf30a74ec91", "Name": "HitDetectionCamera" }
     ]
 },
 {
@@ -280,6 +281,46 @@
         "Type": { "Id": "a60aa1b9ad84a83eefb0d5382a4d5967", "Name": "AudioSource" },
         "Properties": {
             "clip": { "$TypeId": 10, "Guid": "d003a74615fb04c23862ac30ee51a462", "FileId": 8300000, "Type": 3 }
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "9db079e0c3d7428282165bf30a74ec91",
+    "Name": "HitDetectionCamera",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 4
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "12692383f3fef3bb74c209888c5b0939", "Name": "Camera2D" },
+        "Properties": {
+            "halfVerticalSize": 400,
+            "rect": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "y": 0,
+                    "width": 1,
+                    "height": 1
+                }
+            },
+            "depth": -2
         }
     }]
 }]

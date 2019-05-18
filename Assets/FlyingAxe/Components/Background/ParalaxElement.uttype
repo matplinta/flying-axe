@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "e16bd24dd1514d36940a93c9d5d297a6",
+    "Name": "ParalaxElement",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "ab10e8c89a754cd4b00af7385501649c",
+        "Name": "Speed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "e16bd24dd1514d36940a93c9d5d297a6", "Name": "ParalaxElement" }
+    }
+}]
