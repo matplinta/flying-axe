@@ -17,11 +17,11 @@
         { "$TypeId": 9, "Id": "aa37f06dd3d74fdfb3e2a21eafa9d6b6", "Name": "mountains04-512-x-256_008" },
         { "$TypeId": 9, "Id": "25112919d1f94546bea99cfdb8c7ccb9", "Name": "mountains04-512-x-256_009" },
         { "$TypeId": 9, "Id": "9bc8f55ec6d94473998e30bb1a411e0d", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "df28235ed9394ee7b86612ac4bc9b452", "Name": "Spawner" },
         { "$TypeId": 9, "Id": "8456739ffc794739a6203fb970c033fc", "Name": "Ground" },
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" },
-        { "$TypeId": 9, "Id": "03b537a1609e4c018304b3a683ecc16e", "Name": "Foreground" }
+        { "$TypeId": 9, "Id": "03b537a1609e4c018304b3a683ecc16e", "Name": "Foreground" },
+        { "$TypeId": 9, "Id": "d2fbf5741f04463795b578e5574fef1b", "Name": "Spawner" }
     ]
 },
 {
@@ -788,21 +788,6 @@
 },
 {
     "$TypeId": 5,
-    "Id": "df28235ed9394ee7b86612ac4bc9b452",
-    "Name": "Spawner",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" },
-        "Properties": {
-            "delay": 6,
-            "maxNumOfEnemies": 5
-        }
-    }]
-},
-{
-    "$TypeId": 5,
     "Id": "8456739ffc794739a6203fb970c033fc",
     "Name": "Ground",
     "Enabled": true,
@@ -860,7 +845,8 @@
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
         "Properties": {
             "freezeRotation": false,
-            "friction": 1
+            "friction": 0.2,
+            "restitution": 0
         }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
@@ -1110,6 +1096,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
 },
 {
@@ -9632,5 +9620,16 @@
         "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
     }, {
         "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "d2fbf5741f04463795b578e5574fef1b",
+    "Name": "Spawner",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" }
     }]
 }]

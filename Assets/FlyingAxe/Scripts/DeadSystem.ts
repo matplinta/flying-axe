@@ -38,10 +38,12 @@ namespace game {
 
                         if (this.world.hasComponent(entity, game.EnemyTag)) {
                             let spawnerEntity = this.world.getEntityByName("Spawner")
-                            let spawnerConfig = this.world.getComponentData(spawnerEntity, game.Spawner);
-                            spawnerConfig.numOfEnemies -= 1;
-                            this.world.setComponentData(spawnerEntity, spawnerConfig);
-                            console.log("Dead: numOfEnemies:", spawnerConfig.numOfEnemies);
+                            if (spawnerEntity) {
+                                let spawnerConfig = this.world.getComponentData(spawnerEntity, game.Spawner);
+                                spawnerConfig.numOfEnemies -= 1;
+                                this.world.setComponentData(spawnerEntity, spawnerConfig);
+                                console.log("Dead: numOfEnemies:", spawnerConfig.numOfEnemies);
+                            }
                         }
                     }
 

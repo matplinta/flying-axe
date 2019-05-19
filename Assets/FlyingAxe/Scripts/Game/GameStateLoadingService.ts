@@ -31,6 +31,11 @@ namespace game {
             ScoreSystem.ResetScore(world);
             ut.EntityGroup.instantiate(world, "game.GamePlay");
             ut.EntityGroup.instantiate(world, "game.PlayerGroup");
+            // let text = ut.Core2D.TransformService.getChild(world, GameService.GetCamera(world), 0);
+            // let text = ut.Core2D.TransformService.countChildren(world, GameService.GetCamera(world));
+            // console.log("children", text);
+            // world.setComponentData(text, ut.E);
+            // world.removeComponent(text, ut.Disabled);
             // ut.EntityGroup.instantiate(world, "game.EnemyGroup");
         }
 

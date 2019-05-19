@@ -39,9 +39,9 @@ namespace game {
                                 let distance = enemyPosition.distanceTo(playerPosition);
                                 let delta = new Vector3().subVectors(playerPosition, enemyPosition);
                                 delta.normalize();
-                                hit.ImpulseForce = 5;
+                                hit.ImpulseForce = 150;
                                 let direction = delta.multiplyScalar(hit.ImpulseForce);
-                                let impulseVector = new Vector2(direction.x, direction.y);
+                                let impulseVector = new Vector2(direction.x, direction.y/2);
                                 hit.Impulse = impulseVector;
                                 hit.allowImpulse = true;
                             }
