@@ -5,6 +5,7 @@
     "ExportFlags": 0,
     "SerializedVersion": 0,
     "Entities": [
+        { "$TypeId": 9, "Id": "9cc13464009d432ba86bf5bcda4e5bc5", "Name": "ScoreText" },
         { "$TypeId": 9, "Id": "3eedd1363d3e485a9eb3c367ed39bc29", "Name": "Background" },
         { "$TypeId": 9, "Id": "a7117030ae224f0aa346b8a344d0a3f4", "Name": "mountains04-512-x-256_000" },
         { "$TypeId": 9, "Id": "f78c204eea624c16bbbd0067b589e642", "Name": "mountains04-512-x-256_001" },
@@ -23,6 +24,50 @@
         { "$TypeId": 9, "Id": "03b537a1609e4c018304b3a683ecc16e", "Name": "Foreground" },
         { "$TypeId": 9, "Id": "d2fbf5741f04463795b578e5574fef1b", "Name": "Spawner" }
     ]
+},
+{
+    "$TypeId": 5,
+    "Id": "9cc13464009d432ba86bf5bcda4e5bc5",
+    "Name": "ScoreText",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "617fd26299c944d58b61164e0c9c9353", "Name": "Text2DRenderer" },
+        "Properties": {
+            "style": { "$TypeId": 9, "Id": "9cc13464009d432ba86bf5bcda4e5bc5", "Name": "ScoreText" },
+            "text": "Score: ${score}"
+        }
+    }, {
+        "Type": { "Id": "ced0260f12f72499bae7fea4e1df92b7", "Name": "Text2DStyle" },
+        "Properties": {
+            "size": 0.5
+        }
+    }, {
+        "Type": { "Id": "0481d22c456081a992e7c7ee42da6c19", "Name": "Text2DStyleBitmapFont" },
+        "Properties": {
+            "font": { "$TypeId": 10, "Guid": "f7fdd39164ea67a4f839f1aa793a2e11", "FileId": 11400000, "Type": 2 }
+        }
+    }, {
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 7
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "2ee37ac3e9fc4b83a8c4347f9f1b89fd", "Name": "Score" }
+    }]
 },
 {
     "$TypeId": 5,
