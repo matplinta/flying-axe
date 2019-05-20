@@ -37,7 +37,7 @@ namespace game {
         static loadGameOver(world: ut.World) {
             ut.EntityGroup.destroyAll(world, "game.GamePlay");
             ut.EntityGroup.destroyAll(world, "game.PlayerGroup");
-            // ut.EntityGroup.destroyAll(world, "game.EnemyGroup");
+            ut.EntityGroup.destroyAll(world, "game.LandEnemy");
             ut.EntityGroup.instantiate(world, "game.GameOver");
 
         }

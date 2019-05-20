@@ -14,12 +14,13 @@ namespace game {
 
                     if (overlapResults.overlaps.length > 0) {
 
+                        console.log(overlapResults.overlaps);   
                         let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
-                        if (otherLayer == 2) {
-                            return;
-                        }
+                        console.log(this.world.getComponentData(other,ut.EntityInformation).name);
+                        console.log("layer " + otherLayer);
+                        if (otherLayer <= 2) {
                         let hit = new game.Hit();
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
@@ -54,14 +55,16 @@ namespace game {
                             ShakeSystem.Shake(this.world, GameService.GetCamera(this.world), .1, .1);
                             SoundService.play(this.world,"AxeThrow");
 
-                        } else if (spin.speed < 0 && otherLayer != 1) {
+                        } else if (spin.speed < 0 && otherLayer == 1) {
                             hit.Damage = damageSettings.AxeRecallDamage;
-                            console.log("Enemy recall hit");
+                            console.log("Enemy recall hit " + hit.Damage.toString());
                         }
                         if (!this.world.hasComponent(other, game.Hit)) {
                             this.world.addComponentData(other, hit);
+                            console.log("Added damage: " + hit.Damage.toString());
                         }
 
+                    }
                     }
                 });
         }

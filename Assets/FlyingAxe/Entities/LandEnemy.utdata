@@ -64,9 +64,9 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.59,
+                    "x": 0.1,
                     "y": -0.7,
-                    "width": 0.85,
+                    "width": 0.39,
                     "height": 1.38
                 }
             }
@@ -138,7 +138,8 @@
                 "Value": 2
             },
             "freezeRotation": true,
-            "friction": 0.7
+            "friction": 0.7,
+            "density": 10
         }
     }, {
         "Type": { "Id": "ae31f47179f649d5a12ca826ab365afb", "Name": "DropItemOnKill" }
