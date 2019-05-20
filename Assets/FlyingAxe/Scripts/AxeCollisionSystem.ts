@@ -14,13 +14,23 @@ namespace game {
 
                     if (overlapResults.overlaps.length > 0) {
 
-                        console.log(overlapResults.overlaps);   
                         let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
-                        console.log(this.world.getComponentData(other,ut.EntityInformation).name);
-                        console.log("layer " + otherLayer);
-                        if (otherLayer <= 2) {
+                        if (otherLayer == 2) {
+                            return;
+                        }
+
+                        let playerEntity = this.world.getEntityByName("Player")
+                        if (!playerEntity) {
+                            return;
+                        }
+                        let playerPosition = this.world.getComponentData(playerEntity, ut.Core2D.TransformLocalPosition).position;
+                        let enemyPosition = this.world.getComponentData(other, ut.Core2D.TransformLocalPosition).position;
+                        let distance = enemyPosition.distanceTo(playerPosition);                //distance to enemy 
+                        let delta = new Vector3().subVectors(playerPosition, enemyPosition);    //vector from player to enemy
+                        delta.normalize();
+                        
                         let hit = new game.Hit();
                         if (spin.speed > 0) {
                             let contactPointData = this.ComputeNormalAndContactPoint(other, transformLocalPosition);
@@ -50,21 +60,22 @@ namespace game {
                             transformLocalPosition.position = contactPoint;
 
                             hit.Damage = damageSettings.AxeDamage;
-
-                            WeaponService.ApplyForceInDirection(this.world, other, contactPoint.multiplyScalar(-1), 250, false);
+                               
+                            let direction = new Vector3(delta.x * -1, delta.y * -1);
+                            WeaponService.ApplyForceInDirection(this.world, other, direction, 500, false);
                             ShakeSystem.Shake(this.world, GameService.GetCamera(this.world), .1, .1);
                             SoundService.play(this.world,"AxeThrow");
 
-                        } else if (spin.speed < 0 && otherLayer == 1) {
+                        } else if (spin.speed < 0 && otherLayer != 1) {
                             hit.Damage = damageSettings.AxeRecallDamage;
-                            console.log("Enemy recall hit " + hit.Damage.toString());
+                            // let direction = new Vector3(delta.x * 1, 0);
+                            // WeaponService.ApplyForceInDirection(this.world, other, direction, 100, false);
+                            console.log("Enemy recall hit");
                         }
                         if (!this.world.hasComponent(other, game.Hit)) {
                             this.world.addComponentData(other, hit);
-                            console.log("Added damage: " + hit.Damage.toString());
                         }
 
-                    }
                     }
                 });
         }
@@ -101,6 +112,15 @@ namespace game {
 
             let contactPointNormal = (transformLocalPosition.position.sub(contactPoint)).normalize();
             return [contactPoint, contactPointNormal];
+        }
+
+        GetVectorFromPlayerToEntity(playerPosition: Vector3, enemyPosition: Vector3, speed: number){
+            let distance = enemyPosition.distanceTo(playerPosition);
+            let delta = new Vector3().subVectors(playerPosition, enemyPosition);
+            delta.normalize();
+            let moveSpeed = speed * ut.Time.deltaTime();
+            let direction = delta.multiplyScalar(moveSpeed)
+            return direction
         }
     }
 }

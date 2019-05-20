@@ -6,7 +6,6 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" },
-        { "$TypeId": 9, "Id": "9cc13464009d432ba86bf5bcda4e5bc5", "Name": "ScoreText" },
         { "$TypeId": 9, "Id": "2208c293b7414585a16f051d28f6cd77", "Name": "Game" },
         { "$TypeId": 9, "Id": "a6e1daebb6234a96843dd0aa4229f058", "Name": "Sounds" },
         { "$TypeId": 9, "Id": "421d76c3a3bb4dbbaabef62dd53d0f57", "Name": "AxeThrow" },
@@ -60,53 +59,6 @@
                 }
             }
         }
-    }]
-},
-{
-    "$TypeId": 5,
-    "Id": "9cc13464009d432ba86bf5bcda4e5bc5",
-    "Name": "ScoreText",
-    "Enabled": true,
-    "Static": false,
-    "Layer": 0,
-    "Components": [{
-        "Type": { "Id": "617fd26299c944d58b61164e0c9c9353", "Name": "Text2DRenderer" },
-        "Properties": {
-            "style": { "$TypeId": 9, "Id": "9cc13464009d432ba86bf5bcda4e5bc5", "Name": "ScoreText" },
-            "text": "Score: ${score}"
-        }
-    }, {
-        "Type": { "Id": "ced0260f12f72499bae7fea4e1df92b7", "Name": "Text2DStyle" },
-        "Properties": {
-            "size": 0.5
-        }
-    }, {
-        "Type": { "Id": "0481d22c456081a992e7c7ee42da6c19", "Name": "Text2DStyleBitmapFont" },
-        "Properties": {
-            "font": { "$TypeId": 10, "Guid": "f7fdd39164ea67a4f839f1aa793a2e11", "FileId": 11400000, "Type": 2 }
-        }
-    }, {
-        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
-        "Properties": {
-            "parent": { "$TypeId": 9, "Id": "25e1e1bf2c8d49fb85a9b135f5e797ce", "Name": "Camera" }
-        }
-    }, {
-        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
-    }, {
-        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
-        "Properties": {
-            "position": {
-                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
-                "Properties": {
-                    "x": 0,
-                    "y": 3
-                }
-            }
-        }
-    }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
-    }, {
-        "Type": { "Id": "2ee37ac3e9fc4b83a8c4347f9f1b89fd", "Name": "Score" }
     }]
 },
 {

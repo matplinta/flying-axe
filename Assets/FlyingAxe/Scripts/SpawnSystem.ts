@@ -40,8 +40,8 @@ namespace game {
 
         static GenRandEnemy() {
             // let enemy = SpawnSystem.GetRandFromArray(GameService.enemyTypeArray);
-            // let enemy = SpawnSystem.GetRandFromArray([0, 1]);
-            let enemy = 0;
+            let enemy = SpawnSystem.GetRandFromArray([0, 1]);
+            // let enemy = 1;
             console.log("GenRandEnemy: enemyType:", enemy);
             switch (enemy) {
                 case game.EnemyType.Land:
