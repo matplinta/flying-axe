@@ -130,12 +130,15 @@
                 "Name": "Dynamic",
                 "Value": 2
             },
-            "freezeRotation": true
+            "freezeRotation": true,
+            "density": 10
         }
     }, {
         "Type": { "Id": "ae31f47179f649d5a12ca826ab365afb", "Name": "DropItemOnKill" }
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
+    }, {
+        "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
 },
 {

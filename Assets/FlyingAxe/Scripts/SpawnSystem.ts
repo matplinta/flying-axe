@@ -10,7 +10,7 @@ namespace game {
         OnUpdate():void {
             this.world.forEach([game.Spawner], (spawner) => {
                 
-                // this.CheckScoreAndAddNewEnemies();
+                
                 this.CheckScoreAndIncreaseDifficulty(spawner);
                 
                 if (spawner.isPaused) {
@@ -23,13 +23,13 @@ namespace game {
 
                 if (time <= 0 && spawner.numOfEnemies < spawner.maxNumOfEnemies) {
                     time += delay;
-                    // this.SpawnEnemy(this.GenRandEnemy());
-                    SpawnSystem.SpawnEnemy(SpawnSystem.GenRandEnemy(), this.world);
-                    // this.SpawnEnemy("game.AirEnemy");
+                    this.CheckScoreAndAddNewEnemies();
+                    SpawnSystem.SpawnEnemy(SpawnSystem.GenRandEnemy(), this.world, spawner.newEnemyKillReward, spawner.newEnemyDamageToPlayer);
                     spawner.numOfEnemies += 1;
+                    this.VerboseSpawner(spawner);
                 }
                 spawner.time = time;
-                // this.VerboseSpawner(spawner);
+                
             });
         }
         
@@ -39,8 +39,8 @@ namespace game {
         
 
         static GenRandEnemy() {
-            // let enemy = SpawnSystem.GetRandFromArray(GameService.enemyTypeArray);
-            let enemy = SpawnSystem.GetRandFromArray([0, 1]);
+            let enemy = SpawnSystem.GetRandFromArray(GameService.enemyTypeArray);
+            // let enemy = SpawnSystem.GetRandFromArray([0, 1]);
             // let enemy = 1;
             console.log("GenRandEnemy: enemyType:", enemy);
             switch (enemy) {
@@ -72,24 +72,27 @@ namespace game {
             }
         }
 
-        static SpawnEnemy(name: string, world: ut.World) {
+        static SpawnEnemy(name: string, world: ut.World, killReward: number, damageToPlayer: number) {
             console.log("SpawnEnemy:",name);
-            ut.EntityGroup.instantiate(world, name)[0];
+            let enemy = ut.EntityGroup.instantiate(world, name)[0];
+            // if killReward and damageToPlayer defined in function call, apply them to enemy;
+            // otherwise use default values
+            if (world.hasComponent(enemy, game.EnemyTag) && killReward != 0 && damageToPlayer != 0) {
+                let enemyTag = world.getComponentData(enemy, game.EnemyTag);
+                enemyTag.killReward = killReward;
+                enemyTag.damageToPlayer = damageToPlayer;
+                world.setComponentData(enemy, enemyTag);
+            }
         }
 
         CheckScoreAndAddNewEnemies() {
-            console.log("1");
             let context = this.world.getConfigData(game.GameContext);
-            // let exists = game.GameService.enemyTypeArray.filter(function(x) {
-            //     return x == game.EnemyType.Air;
-            // });
-            console.log("2");
-            let exists = game.GameService.enemyTypeArray.indexOf(1)
-            // let existsBool = exists.length < 1 ? false : true;
-            // if (context.score > 40 && !exists) {
+            let exists = game.GameService.enemyTypeArray.filter(function(x) {
+                return x == game.EnemyType.Air;
+            });
+            let existsBool = exists.length < 1 ? false : true;
             console.log("CheckScoreAndAddNewEnemies:", exists);
-            if (context.score > 10 && exists == -1) {
-
+            if (context.score > 50 && !existsBool) {
                 game.GameService.enemyTypeArray.push(game.EnemyType.Air);
                 console.log("3");
             }
@@ -99,24 +102,22 @@ namespace game {
 
         CheckScoreAndIncreaseDifficulty(spawner: game.Spawner) {
             let context = this.world.getConfigData(game.GameContext);
-            if (context.score > 100) {
-                spawner.maxNumOfEnemies = 7;
-                spawner.delay = 4;
-            } 
-            else if(context.score > 200){
-                spawner.maxNumOfEnemies = 8;
-                spawner.delay = 3;
-            }
-            else if(context.score > 250){
-                spawner.maxNumOfEnemies = 9;
-                spawner.delay = 2;
-            }
-            else if(context.score > 300){
-                spawner.maxNumOfEnemies = 10;
-                spawner.delay = 1;
-            }
-            //    for new enemies here add them upon score increase
+            
+            let maxNumOfEnemies = Math.round(3 * SpawnSystem.log(1.9, 2 + context.score / 100));
+            let delay = Math.round(-3 * SpawnSystem.log(10, 0.8 + context.score / 100) + 7);
+            let reward = Math.round(3.3 * SpawnSystem.log(1.1, 24 + context.score / 100) -100);
+            let damage = Math.round(3.4 * SpawnSystem.log(1.1, 50 + context.score / 100) -130);
+            
+            if (spawner.maxNumOfEnemies < maxNumOfEnemies) {spawner.maxNumOfEnemies = maxNumOfEnemies;}
+            if (spawner.delay > delay && delay > 0) {spawner.delay = delay;}
+            if (spawner.newEnemyKillReward < reward) {spawner.newEnemyKillReward = reward;}
+            if (spawner.newEnemyDamageToPlayer < damage) {spawner.newEnemyDamageToPlayer = damage;}
+            
         }
+
+        static log(base: number, x: number) {
+            return Math.log(x) / Math.log(base);
+        };
 
         VerboseSpawner(spawner) {
             for (let enemy of game.GameService.enemyTypeArray) {
@@ -124,6 +125,9 @@ namespace game {
             }
             console.log("Spawner: maxNumOfEnemies", spawner.maxNumOfEnemies);
             console.log("Spawner: numOfEnemies", spawner.numOfEnemies);
+            console.log("Spawner: newEnemyKillReward", spawner.newEnemyKillReward);
+            console.log("Spawner: newEnemyDamageToPlayer", spawner.newEnemyDamageToPlayer);
+            
         }
     }
 }

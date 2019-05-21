@@ -829,6 +829,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
 },
 {
@@ -1035,6 +1037,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
 },
 {
