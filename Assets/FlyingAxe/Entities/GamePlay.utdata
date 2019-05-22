@@ -1271,7 +1271,8 @@
     "Components": [{
         "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" },
         "Properties": {
-            "isPaused": false
+            "isPaused": false,
+            "time": 3
         }
     }]
 },

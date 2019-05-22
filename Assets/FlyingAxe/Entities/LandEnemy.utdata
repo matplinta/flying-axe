@@ -24,8 +24,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": -5.98,
-                    "y": 11.35
+                    "x": 19.46,
+                    "y": 14.13
                 }
             }
         }
@@ -76,10 +76,10 @@
     }, {
         "Type": { "Id": "5af1cfdba4b3472aa791a8f1a9d95261", "Name": "Boundaries" },
         "Properties": {
-            "minX": 8,
-            "maxX": 28,
-            "minY": 1,
-            "maxY": 7.076
+            "minX": -10.28,
+            "maxX": 10.59,
+            "minY": 0.83,
+            "maxY": 2.59
         }
     }, {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },
