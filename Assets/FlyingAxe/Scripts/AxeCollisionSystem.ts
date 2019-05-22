@@ -17,6 +17,7 @@ namespace game {
                         let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
+                        console.log(otherLayer);
                         if (otherLayer == 2) {
                             return;
                         }
@@ -66,7 +67,7 @@ namespace game {
                             ShakeSystem.Shake(this.world, GameService.GetCamera(this.world), .1, .1);
                             SoundService.play(this.world,"AxeThrow");
 
-                        } else if (spin.speed < 0 && otherLayer != 1) {
+                        } else if (spin.speed < 0 && otherLayer != -1) {
                             hit.Damage = damageSettings.AxeRecallDamage;
                             // let direction = new Vector3(delta.x * 1, 0);
                             // WeaponService.ApplyForceInDirection(this.world, other, direction, 100, false);
