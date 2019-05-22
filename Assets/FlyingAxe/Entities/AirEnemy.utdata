@@ -6,7 +6,8 @@
     "SerializedVersion": 0,
     "Entities": [
         { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "Enemy" },
-        { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" }
+        { "$TypeId": 9, "Id": "343762f77fe143fd960cee454569bce5", "Name": "HealthBar" },
+        { "$TypeId": 9, "Id": "27ee127afebe4b32b9438c5ddcfb6218", "Name": "Idle" }
     ]
 },
 {
@@ -43,17 +44,6 @@
             }
         }
     }, {
-        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
-        "Properties": {
-            "sprite": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 21300004, "Type": 3 }
-        }
-    }, {
-        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
-        "Properties": {
-            "layer": 731103087,
-            "order": 0
-        }
-    }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
             "speed": 50,
@@ -87,17 +77,6 @@
         "Properties": {
             "killReward": 20,
             "fly": true
-        }
-    }, {
-        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
-        "Properties": {
-            "size": {
-                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
-                "Properties": {
-                    "x": 1.21149,
-                    "y": 1.42416
-                }
-            }
         }
     }, {
         "Type": { "Id": "fd68c5e636064cf4b8b4a1eeed678baf", "Name": "Health" },
@@ -139,7 +118,36 @@
     }, {
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 731103087,
+            "order": 1
+        }
+    }, {
         "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 0.82
+                }
+            }
+        }
     }]
 },
 {
@@ -190,5 +198,70 @@
                 }
             }
         }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "27ee127afebe4b32b9438c5ddcfb6218",
+    "Name": "Idle",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" },
+        "Properties": {
+            "parent": { "$TypeId": 9, "Id": "0c8ef7ebb4834223aabc69ac3ea21a06", "Name": "Enemy" }
+        }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "27ee127afebe4b32b9438c5ddcfb6218", "Name": "Idle" },
+            "speed": 1
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300000, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300002, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300004, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300006, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300008, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 21300010, "Type": 3 }
+                ]
+            },
+            "frameRate": 10
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 1.5,
+                    "y": 1.5
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "layer": 731103087
+        }
+    }, {
+        "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
 }]
