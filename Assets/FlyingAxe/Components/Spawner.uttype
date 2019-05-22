@@ -46,12 +46,30 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "6d57d7f957184f66b7df0e720c403f15",
+        "Name": "newEnemyKillReward",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "89fa3d39cbca421081fd8cb8415de698",
+        "Name": "newEnemyDamageToPlayer",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
         "Type": { "Id": "36520c33655f45c5a80b50ecdf80aeeb", "Name": "Spawner" },
         "Properties": {
             "delay": 6,
-            "maxNumOfEnemies": 5
+            "maxNumOfEnemies": 5,
+            "newEnemyKillReward": 10,
+            "newEnemyDamageToPlayer": 10
         }
     }
 }]

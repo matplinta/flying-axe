@@ -1,0 +1,24 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "cfe63bcf900a4d489578c57579fe4d0d",
+    "Name": "StrengthPotion",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "9f528f40acab47dabb98ad6070ade307",
+        "Name": "StrengthIncrease",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "cfe63bcf900a4d489578c57579fe4d0d", "Name": "StrengthPotion" },
+        "Properties": {
+            "StrengthIncrease": 2
+        }
+    }
+}]

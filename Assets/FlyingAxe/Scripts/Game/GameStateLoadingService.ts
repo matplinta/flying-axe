@@ -38,6 +38,9 @@ namespace game {
             ut.EntityGroup.destroyAll(world, "game.PlayerGroup");
             ut.EntityGroup.destroyAll(world, "game.LandEnemy");
             ut.EntityGroup.instantiate(world, "game.GameOver");
+            ut.EntityGroup.destroyAll(world, "game.ScoreGem");
+            ut.EntityGroup.destroyAll(world, "game.HealthPotion");
+            ut.EntityGroup.destroyAll(world, "game.HealthPotion");
 
         }
     }
