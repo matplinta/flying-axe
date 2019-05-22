@@ -41,6 +41,7 @@ namespace game {
             ut.EntityGroup.destroyAll(world, "game.ScoreGem");
             ut.EntityGroup.destroyAll(world, "game.HealthPotion");
             ut.EntityGroup.destroyAll(world, "game.HealthPotion");
+            ut.EntityGroup.destroyAll(world,"game.AirEnemy");
 
         }
     }
