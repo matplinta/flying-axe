@@ -1,4 +1,6 @@
 namespace game {
+    import LayerSorting = ut.Core2D.LayerSorting;
+
     @ut.executeAfter(ut.Shared.InputFence)
     @ut.executeAfter(ut.Shared.UserCodeStart)
     @ut.requiredComponents(ut.Physics2D.ColliderContacts)
@@ -18,11 +20,14 @@ namespace game {
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                         console.log(otherLayer);
-                        if (otherLayer == 2) {
+                        // Player is on layer 3!
+                        if (otherLayer == 3 || otherLayer == 2) {
                             return;
                         }
 
-                        let playerEntity = this.world.getEntityByName("Player")
+                        let playerEntity = this.world.getEntityByName("Player");
+                        let layerConfig = this.world.getComponentData(playerEntity, ut.Core2D.LayerSorting).layer;
+                        console.log("player layer = ", layerConfig);
                         if (!playerEntity) {
                             return;
                         }

@@ -21,11 +21,7 @@ namespace game {
                 if (this.world.exists(entity)) {
 
                     if (dead.elapsedTime == 0) {
-
-                        if (entity.index == ut.NONE.index) {
-                            console.log("I returned");
-                            return;
-                        }
+                        
                         let weapon = ut.Core2D.TransformService.find(this.world, entity, "Axe");
                         if (this.world.exists(weapon) && weapon.index != ut.NONE.index && this.world.hasComponent(weapon, game.Weapon)) {
                             WeaponService.DropWeapon(this.world, weapon);

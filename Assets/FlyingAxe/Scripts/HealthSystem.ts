@@ -10,7 +10,7 @@ namespace game {
             this.world.forEach([game.Health, ut.Entity], (health, entity) => {
 
                 if (health.current <= 0) {
-                    HealthSystem.Die(this.world, entity, 0.1);
+                    HealthSystem.Die(this.world, entity, 0.05);
                 }
             });
         }

@@ -24,7 +24,7 @@ namespace game {
                 if (time <= 0 && spawner.numOfEnemies < spawner.maxNumOfEnemies) {
                     time += delay;
                     this.CheckScoreAndAddNewEnemies();
-                    SpawnSystem.SpawnEnemy(SpawnSystem.GenRandEnemy(), this.world, spawner.newEnemyKillReward, spawner.newEnemyDamageToPlayer);
+                    SpawnSystem.SpawnEnemy(SpawnSystem.GenRandEnemy(), this.world, spawner.newEnemyKillReward, spawner.newEnemyDamageToPlayer, spawner.enemySpeed);
                     spawner.numOfEnemies += 1;
                     this.VerboseSpawner(spawner);
                 }
@@ -72,16 +72,19 @@ namespace game {
             }
         }
 
-        static SpawnEnemy(name: string, world: ut.World, killReward: number, damageToPlayer: number) {
+        static SpawnEnemy(name: string, world: ut.World, killReward: number, damageToPlayer: number, speed: number) {
             console.log("SpawnEnemy:",name);
             let enemy = ut.EntityGroup.instantiate(world, name)[0];
             // if killReward and damageToPlayer defined in function call, apply them to enemy;
             // otherwise use default values
             if (world.hasComponent(enemy, game.EnemyTag) && killReward != 0 && damageToPlayer != 0) {
                 let enemyTag = world.getComponentData(enemy, game.EnemyTag);
+                let enemyMovement = world.getComponentData(enemy, game.Movement);
                 enemyTag.killReward = killReward;
                 enemyTag.damageToPlayer = damageToPlayer;
+                enemyMovement.speed = speed;
                 world.setComponentData(enemy, enemyTag);
+                world.setComponentData(enemy, enemyMovement);
             }
         }
 
@@ -103,15 +106,17 @@ namespace game {
         CheckScoreAndIncreaseDifficulty(spawner: game.Spawner) {
             let context = this.world.getConfigData(game.GameContext);
             
-            let maxNumOfEnemies = Math.round(3 * SpawnSystem.log(1.9, 2 + context.score / 100));
-            let delay = Math.round(-3 * SpawnSystem.log(10, 0.8 + context.score / 100) + 7);
+            let maxNumOfEnemies = Math.round(3 * SpawnSystem.log(1.9, 2 + context.score / 100) -2 );
+            let delay = Math.round(-3 * SpawnSystem.log(10, 0.8 + context.score / 100) + 3);
             let reward = Math.round(3.3 * SpawnSystem.log(1.1, 24 + context.score / 100) -100);
             let damage = Math.round(3.4 * SpawnSystem.log(1.1, 50 + context.score / 100) -130);
+            let speed = Math.round(-24 * SpawnSystem.log(0.7, 2.5 + context.score / 100) -13);
             
             if (spawner.maxNumOfEnemies < maxNumOfEnemies) {spawner.maxNumOfEnemies = maxNumOfEnemies;}
             if (spawner.delay > delay && delay > 0) {spawner.delay = delay;}
             if (spawner.newEnemyKillReward < reward) {spawner.newEnemyKillReward = reward;}
             if (spawner.newEnemyDamageToPlayer < damage) {spawner.newEnemyDamageToPlayer = damage;}
+            if (spawner.enemySpeed < speed) {spawner.enemySpeed = speed;}
             
         }
 

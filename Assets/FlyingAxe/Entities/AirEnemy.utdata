@@ -24,8 +24,8 @@
             "position": {
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
-                    "x": 11.76,
-                    "y": 11.97
+                    "x": 22.05,
+                    "y": 14.03
                 }
             }
         }
@@ -56,7 +56,8 @@
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
-            "speed": 50
+            "speed": 50,
+            "onGround": false
         }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
@@ -76,10 +77,10 @@
     }, {
         "Type": { "Id": "5af1cfdba4b3472aa791a8f1a9d95261", "Name": "Boundaries" },
         "Properties": {
-            "minX": 8,
-            "maxX": 28,
-            "minY": 6.66,
-            "maxY": 7.076
+            "minX": -10.28,
+            "maxX": 10.59,
+            "minY": 5.61,
+            "maxY": 8.99
         }
     }, {
         "Type": { "Id": "77c18b02b564465aaf079eda4de0919f", "Name": "EnemyTag" },

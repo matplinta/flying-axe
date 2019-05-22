@@ -1,5 +1,7 @@
+/// <reference path="DeadSystem.ts"/>
 namespace game {
     
+    @ut.executeAfter(game.DeadSystem)
     export class EnemyBehaviorFilter extends ut.EntityFilter {
         entity: ut.Entity;
         position: ut.Core2D.TransformLocalPosition;
@@ -21,10 +23,13 @@ namespace game {
             let newSpeed = this.data.movement.speed + (this.data.speedChange.changePerSecond * totalTime);
             this.data.movement.speed = newSpeed;
             let playerPosition = this.world.getComponentData(this.world.getEntityByName("Player"), ut.Core2D.TransformLocalPosition).position;
-            let enemyPosition = new Vector3(SpawnSystem.GetRandFromArray([-1, 1]) * genRandom(8,10) + playerPosition.x, 7.076, playerPosition.z);
+            let enemyPosition = new Vector3();
             
             while (!this.CheckEnemyPositionBoundaries(enemyPosition, playerPosition, this.data.boundaries)){
-                enemyPosition = new Vector3(SpawnSystem.GetRandFromArray([-1, 1]) * genRandom(8,10) + playerPosition.x, 7.076, playerPosition.z);
+                enemyPosition = new Vector3(SpawnSystem.GetRandFromArray(
+                    [-1, 1]) * genRandom(5,15) + playerPosition.x,
+                    genRandom(this.data.boundaries.minY, this.data.boundaries.maxY),
+                    playerPosition.z);
             }
             if (!this.data.tag.fly) {
                 enemyPosition.y = genRandom(1, 3);
