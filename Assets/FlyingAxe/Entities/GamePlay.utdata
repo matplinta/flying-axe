@@ -22,7 +22,8 @@
         { "$TypeId": 9, "Id": "6090addb6b2b4cafa555adfb84e632b3", "Name": "Ground" },
         { "$TypeId": 9, "Id": "3564eb0a3e3c4366b0cf2b7cdceeb816", "Name": "Ground" },
         { "$TypeId": 9, "Id": "d2fbf5741f04463795b578e5574fef1b", "Name": "Spawner" },
-        { "$TypeId": 9, "Id": "f704c6b3744b4de9a21ae4766fc1bc53", "Name": "Foreground" }
+        { "$TypeId": 9, "Id": "f704c6b3744b4de9a21ae4766fc1bc53", "Name": "Foreground" },
+        { "$TypeId": 9, "Id": "3fd0c03eb4d3474382a32f271c5e1c06", "Name": "DamageVignette" }
     ]
 },
 {
@@ -5407,5 +5408,60 @@
         "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
     }, {
         "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "3fd0c03eb4d3474382a32f271c5e1c06",
+    "Name": "DamageVignette",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": 5.76
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 6.5586,
+                    "y": 6.5586,
+                    "z": 6.5586
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "2c965c524ae014e25b4a9a9143a8edb7", "FileId": 21300000, "Type": 3 },
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "556bc1c6877d427e937c54dffebd93c2", "Name": "DamageVignette" },
+        "Properties": {
+            "Duration": 0.1,
+            "ElapsedTime": 0.1
+        }
     }]
 }]
