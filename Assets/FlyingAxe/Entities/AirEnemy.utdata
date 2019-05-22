@@ -148,6 +148,11 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "e66298d1c0dd4c4b971542fceb24d3c2", "Name": "EnemyAttack" },
+        "Properties": {
+            "delayBetweenAttacks": 1
+        }
     }]
 },
 {

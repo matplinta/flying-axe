@@ -43,7 +43,7 @@ namespace game {
                     }
 
                     if (dead.elapsedTime >= dead.dyingTime) {
-                        ut.Core2D.TransformService.destroyTree(this.world, entity);
+                        ut.Core2D.TransformService.destroyTree(this.world, entity, true);
                     }
                     dead.elapsedTime += this.scheduler.deltaTime();
 

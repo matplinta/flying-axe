@@ -19,7 +19,6 @@ namespace game {
 
         OnEntityEnable(): void {
             let totalTime = ut.Time.time();
-            // TODO razy score / 100 v
             let newSpeed = this.data.movement.speed + (this.data.speedChange.changePerSecond * totalTime);
             this.data.movement.speed = newSpeed;
             let playerPosition = this.world.getComponentData(this.world.getEntityByName("Player"), ut.Core2D.TransformLocalPosition).position;
@@ -31,11 +30,11 @@ namespace game {
                     genRandom(this.data.boundaries.minY, this.data.boundaries.maxY),
                     playerPosition.z);
             }
-            if (!this.data.tag.fly) {
-                enemyPosition.y = genRandom(1, 3);
-            }
+            // if (!this.data.tag.fly) {
+            //     enemyPosition.y = genRandom(1, 3);
+            // }
             this.data.position.position = enemyPosition;
-            console.log("EnemyBehaviour:", enemyPosition);
+            // console.log("EnemyBehaviour:", enemyPosition);
         }
 
         // this method is called for each entity matching the EnemyBehaviorFilter signature, every frame it's enabled
@@ -43,7 +42,7 @@ namespace game {
             let gameState = GameService.getGameState(this.world);
             if (gameState.CurrentState == game.GameStateType.GamePlay){
                 
-                let playerEntity = this.world.getEntityByName("Player")
+                let playerEntity = this.world.getEntityByName("Player");
                 if (!playerEntity) {
                     return;
                 }

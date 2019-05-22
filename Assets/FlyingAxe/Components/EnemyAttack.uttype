@@ -1,0 +1,29 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "e66298d1c0dd4c4b971542fceb24d3c2",
+    "Name": "EnemyAttack",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "4cd81c134cab4da0ba113be0f0497d07",
+        "Name": "delayBetweenAttacks",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "5f7a22c7a6984d1399a4c18179b47325",
+        "Name": "lastAttackTime",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "e66298d1c0dd4c4b971542fceb24d3c2", "Name": "EnemyAttack" }
+    }
+}]

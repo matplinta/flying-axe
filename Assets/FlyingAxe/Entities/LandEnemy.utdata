@@ -148,6 +148,11 @@
         "Type": { "Id": "4877aebd4079748a17f940cbbee5d2e6", "Name": "Velocity2D" }
     }, {
         "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
+    }, {
+        "Type": { "Id": "e66298d1c0dd4c4b971542fceb24d3c2", "Name": "EnemyAttack" },
+        "Properties": {
+            "delayBetweenAttacks": 1
+        }
     }]
 },
 {

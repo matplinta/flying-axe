@@ -15,10 +15,10 @@ TagManager:
   - 
   - Grid
   - Cutscene
+  - Player
+  - Pickable
+  - Enemy
   - Enviro
-  - 
-  - 
-  - 
   - 
   - 
   - 
