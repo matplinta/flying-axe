@@ -18,6 +18,13 @@ namespace game {
                             let itemTransformPosition = this.world.getComponentData(itemEntity, ut.Core2D.TransformLocalPosition);
                             itemTransformPosition.position = transformLocalPosition.position.add(new Vector3(0,1,0));
                             this.world.setComponentData(itemEntity, itemTransformPosition);
+
+                            if (this.world.hasComponent(itemEntity, game.Pickable)) {
+                                let pickable = this.world.getComponentData(itemEntity, game.Pickable);
+                                pickable.initTime = ut.Time.time();
+                                this.world.setComponentData(itemEntity, pickable);
+
+                            }
                             break;
                         }
                     }

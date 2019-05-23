@@ -21,7 +21,6 @@ namespace game {
                             HealthSystem.Die(this.world, entity, .86);
                         }
                     }
-                 
                 }
             });
         }

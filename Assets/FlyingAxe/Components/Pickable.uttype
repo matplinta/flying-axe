@@ -14,8 +14,27 @@
         "Visibility": 0,
         "EditorOnly": false,
         "Versioned": true
+    }, {
+        "Id": "e642a0c781f743d09ef6fb55f7debd0b",
+        "Name": "initTime",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }, {
+        "Id": "ea9a31f8d5c1463a962dd1cfc3d76dc5",
+        "Name": "delay",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
     }],
     "DefaultValue": {
-        "Type": { "Id": "9bed28eb7bbd480f947bfa2876169dd8", "Name": "Pickable" }
+        "Type": { "Id": "9bed28eb7bbd480f947bfa2876169dd8", "Name": "Pickable" },
+        "Properties": {
+            "delay": 3
+        }
     }
 }]
