@@ -1003,7 +1003,7 @@
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
                     "x": -30,
-                    "y": -1.5,
+                    "y": -1.56,
                     "width": 60,
                     "height": 3
                 }

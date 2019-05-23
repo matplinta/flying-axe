@@ -57,7 +57,7 @@
             },
             "freezeRotation": true,
             "friction": 0,
-            "density": 15
+            "density": 25
         }
     }, {
         "Type": { "Id": "162ab289c4e402ee5358f3df0a331fa3", "Name": "BoxCollider2D" },
@@ -66,13 +66,13 @@
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
                     "x": 1,
-                    "y": 1.37
+                    "y": 1.22
                 }
             },
             "pivot": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "y": 0.478
+                    "y": 0.54
                 }
             }
         }
@@ -82,7 +82,7 @@
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" },
         "Properties": {
             "speed": 300,
-            "jumpForce": 135,
+            "jumpForce": 220,
             "jump": false
         }
     }, {
@@ -101,10 +101,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.61,
-                    "y": -0.67,
-                    "width": 1.23,
-                    "height": 1.53
+                    "x": -0.55,
+                    "y": -0.71,
+                    "width": 1.09,
+                    "height": 1.33
                 }
             }
         }
@@ -209,7 +209,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 0,
-                    "y": 1
+                    "y": 0.752
                 }
             }
         }
@@ -299,7 +299,10 @@
     }, {
         "Type": { "Id": "ed80d85aa0794fcf94823e05a501b388", "Name": "WeaponControl" },
         "Properties": {
-            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" }
+            "CurrentWeapon": { "$TypeId": 9, "Id": "4de32c0881e84c13b8f48f37e8363abf", "Name": "Axe" },
+            "weaponInHandLocalRotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" }
+            }
         }
     }, {
         "Type": { "Id": "dd4ce105b5724a98bec256ae7094540a", "Name": "Movement" }

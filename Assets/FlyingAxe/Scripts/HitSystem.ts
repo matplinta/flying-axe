@@ -25,16 +25,13 @@ namespace game {
                 if (hit.allowImpulse) {
                     let impulse = new ut.Physics2D.AddImpulse2D();
                     impulse.impulse = hit.Impulse;
-                    // console.log("Applied impulse from hit, force:", hit.ImpulseForce);
-                    // console.log("Applied impulse from hit, vector:", hit.Impulse);
-
-                    if (this.world.hasComponent(entity, ut.Physics2D.AddImpulse2D)) {
-                        this.world.setComponentData(entity, impulse);
-                    } else {
-                        this.world.addComponentData(entity, impulse);
-                    }
+                    this.world.setOrAddComponentData(entity, impulse);
+                    // if (this.world.hasComponent(entity, ut.Physics2D.AddImpulse2D)) {
+                    //     this.world.setComponentData(entity, impulse);
+                    // } else {
+                    //     this.world.addComponentData(entity, impulse);
+                    // }
                 }
-
                 this.world.removeComponent(entity, game.Hit);
             });
         }

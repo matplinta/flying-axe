@@ -90,11 +90,7 @@
     }, {
         "Type": { "Id": "38283a6cef9faa790b5c9936163d59e3", "Name": "Physics2DConfig" }
     }, {
-        "Type": { "Id": "a1efd88232704924be8893759cec70e1", "Name": "DamageSettings" },
-        "Properties": {
-            "AxeRecallDamage": 10000,
-            "AirEnemyDamage": 15
-        }
+        "Type": { "Id": "a1efd88232704924be8893759cec70e1", "Name": "DamageSettings" }
     }, {
         "Type": { "Id": "e816e7b93a13b9e5ddf993486ca79278", "Name": "AudioConfig" }
     }, {

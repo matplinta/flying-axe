@@ -30,11 +30,7 @@ namespace game {
                     genRandom(this.data.boundaries.minY, this.data.boundaries.maxY),
                     playerPosition.z);
             }
-            // if (!this.data.tag.fly) {
-            //     enemyPosition.y = genRandom(1, 3);
-            // }
             this.data.position.position = enemyPosition;
-            // console.log("EnemyBehaviour:", enemyPosition);
         }
 
         // this method is called for each entity matching the EnemyBehaviorFilter signature, every frame it's enabled
@@ -64,7 +60,7 @@ namespace game {
                 } else {
                     newVelocity.velocity = new Vector2(direction.x, this.data.velocity.velocity.y);
                 }
-                if (distance > 0.7){
+                if (distance > 0.3){
                     this.world.addComponentData(this.data.entity, newVelocity);
                 } else{
                     this.world.addComponentData(this.data.entity, new ut.Physics2D.SetVelocity2D(new Vector2(0,0)));

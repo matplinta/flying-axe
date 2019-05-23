@@ -6,7 +6,19 @@
     "Unlisted": false,
     "Visibility": 0,
     "TypeCode": "Component",
+    "Fields": [{
+        "Id": "e7fa112f96b1442cb782767763058329",
+        "Name": "damage",
+        "FieldType": { "Id": "9633c95a0a68473682f09ed6a01194b4", "Name": "Int32" },
+        "Array": false,
+        "Visibility": 0,
+        "EditorOnly": false,
+        "Versioned": true
+    }],
     "DefaultValue": {
-        "Type": { "Id": "92b07928acfc4bd08a42d1c8d0410fec", "Name": "Weapon" }
+        "Type": { "Id": "92b07928acfc4bd08a42d1c8d0410fec", "Name": "Weapon" },
+        "Properties": {
+            "damage": 20
+        }
     }
 }]

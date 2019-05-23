@@ -14,7 +14,6 @@ namespace game {
                     let context = this.world.getConfigData(game.GameContext);
                     for (let item of this.availableItems) {
                         if (Math.random() <= context.dropRate) {
-                            item = "game.StrengthPotion";
                             let itemEntity = ut.EntityGroup.instantiate(this.world, item)[0];
                             let itemTransformPosition = this.world.getComponentData(itemEntity, ut.Core2D.TransformLocalPosition);
                             itemTransformPosition.position = transformLocalPosition.position.add(new Vector3(0,1,0));

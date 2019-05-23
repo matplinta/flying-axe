@@ -17,6 +17,10 @@ namespace game {
 
 
         static Die(world: ut.World, entity: ut.Entity, dyingTime: number) {
+            
+            if (world.hasComponent(entity, ut.HitBox2D.RectHitBox2D)) {
+                world.removeComponent(entity, ut.HitBox2D.RectHitBox2D);
+            }
             if (!world.hasComponent(entity, game.Dead)) {
                 let dead = new game.Dead();
                 dead.elapsedTime = 0;
@@ -24,9 +28,7 @@ namespace game {
                 world.addComponentData(entity, dead);
             }
 
-            if (world.hasComponent(entity, ut.HitBox2D.RectHitBox2D)) {
-                world.removeComponent(entity, ut.HitBox2D.RectHitBox2D);
-            }
+            
         }
 
         static AddHealth(world: ut.World, entity: ut.Entity, amount: number) {

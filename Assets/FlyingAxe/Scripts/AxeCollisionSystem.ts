@@ -11,15 +11,13 @@ namespace game {
         OnUpdate(): void {
 
             this.world.forEach([ut.HitBox2D.HitBoxOverlapResults, game.Spin, ut.Entity, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation,
-                    ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode],
-                (overlapResults, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode) => {
+                    ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, game.Weapon],
+                (overlapResults, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode, weapon) => {
 
                     if (overlapResults.overlaps.length > 0) {
 
-                        let damageSettings = this.world.getConfigData(game.DamageSettings);
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
-                        console.log(otherLayer);
                         // Player is on layer 3!
                         if (otherLayer == 3 || otherLayer == 2) {
                             return;
@@ -27,7 +25,6 @@ namespace game {
 
                         let playerEntity = this.world.getEntityByName("Player");
                         let layerConfig = this.world.getComponentData(playerEntity, ut.Core2D.LayerSorting).layer;
-                        console.log("player layer = ", layerConfig);
                         if (!playerEntity) {
                             return;
                         }
@@ -65,7 +62,7 @@ namespace game {
 
                             transformLocalPosition.position = contactPoint;
 
-                            hit.Damage = damageSettings.AxeDamage;
+                            hit.Damage = weapon.damage;
                                
                             let direction = new Vector3(delta.x * -1, delta.y * -1);
                             WeaponService.ApplyForceInDirection(this.world, other, direction, 500, false);
@@ -73,7 +70,7 @@ namespace game {
                             SoundService.play(this.world,"AxeThrow");
 
                         } else if (spin.speed < 0 && otherLayer != -1) {
-                            hit.Damage = damageSettings.AxeRecallDamage;
+                            hit.Damage = Math.round(weapon.damage * 0.3);
                             // let direction = new Vector3(delta.x * 1, 0);
                             // WeaponService.ApplyForceInDirection(this.world, other, direction, 100, false);
                             console.log("Enemy recall hit");

@@ -15,7 +15,7 @@ namespace game {
                         this.world.addComponentData(entity,setVelocity);
                     }                         
                     if (movement.shouldJump) {
-                        console.log("should jump if on ground:", movement.onGround);
+                        // console.log("should jump if on ground:", movement.onGround);
                         if (movement.onGround) {
                             let impulse = new ut.Physics2D.AddImpulse2D;
                             impulse.impulse = new Vector2(movement.direction.x, movement.jumpForce);

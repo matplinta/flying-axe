@@ -72,10 +72,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.05,
-                    "y": -0.08,
-                    "width": 0.1,
-                    "height": 0.2
+                    "x": -0.055,
+                    "y": -0.095,
+                    "width": 0.11,
+                    "height": 0.19
                 }
             }
         }
@@ -85,8 +85,8 @@
             "size": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 0.06,
-                    "y": 0.2
+                    "x": 0.09,
+                    "y": 0.18
                 }
             },
             "pivot": {

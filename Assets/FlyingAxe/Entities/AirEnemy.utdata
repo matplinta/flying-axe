@@ -26,7 +26,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 22.05,
-                    "y": 14.03
+                    "y": 13.3
                 }
             }
         }
@@ -55,10 +55,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.5,
-                    "y": -0.71208,
-                    "width": 1,
-                    "height": 1.42416
+                    "x": -0.51,
+                    "y": -0.72,
+                    "width": 1.04,
+                    "height": 1.45
                 }
             }
         }

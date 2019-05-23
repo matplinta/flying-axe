@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "f79fd0e519ce41c5bc081b16f327259b",
+    "Name": "Destroy",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "f79fd0e519ce41c5bc081b16f327259b", "Name": "Destroy" }
+    }
+}]

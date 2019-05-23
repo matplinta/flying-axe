@@ -27,7 +27,7 @@
                 "Properties": {
                     "x": 0,
                     "y": 0,
-                    "z": -1
+                    "z": 0
                 }
             }
         }
@@ -68,10 +68,10 @@
             "box": {
                 "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
                 "Properties": {
-                    "x": -0.06,
-                    "y": -0.08,
-                    "width": 0.12,
-                    "height": 0.2
+                    "x": -0.08,
+                    "y": -0.12,
+                    "width": 0.16,
+                    "height": 0.24
                 }
             }
         }
@@ -81,8 +81,8 @@
             "size": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 0.07,
-                    "y": 0.2
+                    "x": 0.04,
+                    "y": 0.18
                 }
             },
             "pivot": {

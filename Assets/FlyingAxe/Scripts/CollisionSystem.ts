@@ -7,37 +7,33 @@ namespace game {
             this.world.forEach([game.Movement, ut.Core2D.TransformLocalPosition, ut.Entity, game.PlayerTag, ut.Physics2D.ColliderContacts],
                 (movement, position, entity, playerTag, contacts) => {
                     movement.onGround = false;
-                    let groundHitResult = ut.HitBox2D.HitBox2DService.hitTest(this.world, position.position.sub(new Vector3(0, 0.7, 0)), GameService.GetCamera(this.world));
+                    let groundHitResult = ut.HitBox2D.HitBox2DService.hitTest(this.world, position.position.sub(new Vector3(0, 0.9, 0)), GameService.GetCamera(this.world));
                     
                     // if hit with element below
                     if (!groundHitResult.entityHit.isNone()) {
-                        // console.log("groundHitResult", this.world.getEntityName(groundHitResult.entityHit));
                         if(this.world.hasComponent(groundHitResult.entityHit, game.GroundTag)){
                             movement.onGround = true;
                             movement.jump = false;
                         }
                     }
                     // console.log("Movement.onGround in Collision system: ",movement.onGround );
-                    
+                    /*
                     for (let otherEntity of contacts.contacts) {
                         // console.log(this.world.getEntityName(entity), "collided with ", this.world.getEntityName(otherEntity));
 
-                     
                         // if this is an enemy that a player is colliding with
-                        if (this.world.hasComponent(otherEntity, game.EnemyTag)) {
+                        if (otherEntity.index != ut.NONE.index && this.world.hasComponent(otherEntity, game.EnemyTag)) {
 
                             let enemyTag = this.world.getComponentData(otherEntity, game.EnemyTag);
                             let enemyAttack = this.world.getComponentData(otherEntity, game.EnemyAttack);
                             let time = ut.Time.time();
                             if(time - enemyAttack.lastAttackTime > enemyAttack.delayBetweenAttacks){
-                                console.log("TIMES: ", time - enemyAttack.lastAttackTime, time, enemyAttack.lastAttackTime);
                                 enemyAttack.lastAttackTime = time;
 
                                 this.world.setComponentData(otherEntity, enemyAttack);
 
                                 let hit = new game.Hit();
                                 hit.Damage = enemyTag.damageToPlayer;
-                                console.log(this.world.getEntityName(otherEntity), "took", hit.Damage, "from Player");
 
                                 // establishing impulse vector of a hit
                                 if (this.world.hasComponent(otherEntity, ut.Core2D.TransformLocalPosition) && this.world.hasComponent(entity, ut.Core2D.TransformLocalPosition)){
@@ -61,7 +57,7 @@ namespace game {
                             }
                             
                         }
-                    }
+                    }*/
                 });
         }
     }
