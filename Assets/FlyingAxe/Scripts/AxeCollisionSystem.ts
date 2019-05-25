@@ -15,7 +15,6 @@ namespace game {
                 (overlapResults, spin, entity, transformLocalPosition, transformLocalRotation, transformLocalScale, transformNode, weapon) => {
 
                     if (overlapResults.overlaps.length > 0) {
-
                         let other = overlapResults.overlaps[0].otherEntity;
                         let otherLayer = this.world.getComponentData(other, ut.Core2D.LayerSorting).layer;
                         // Player is on layer 3!
@@ -112,8 +111,9 @@ namespace game {
             }
 
             let contactPoint = otherPosition.position.add(otherRight.multiplyScalar(dir_x)).add(otherUp.multiplyScalar(dir_y));
-
+            console.log("Contact point: ",contactPoint,"Position: ",transformLocalPosition.position);
             let contactPointNormal = (transformLocalPosition.position.sub(contactPoint)).normalize();
+            
             return [contactPoint, contactPointNormal];
         }
 

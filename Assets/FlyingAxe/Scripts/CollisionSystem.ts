@@ -7,7 +7,7 @@ namespace game {
             this.world.forEach([game.Movement, ut.Core2D.TransformLocalPosition, ut.Entity, game.PlayerTag, ut.Physics2D.ColliderContacts],
                 (movement, position, entity, playerTag, contacts) => {
                     movement.onGround = false;
-                    let groundHitResult = ut.HitBox2D.HitBox2DService.hitTest(this.world, position.position.sub(new Vector3(0, 0.9, 0)), GameService.GetCamera(this.world));
+                    let groundHitResult = ut.HitBox2D.HitBox2DService.hitTest(this.world, position.position.sub(new Vector3(0, .91, 0)), GameService.GetCamera(this.world));
                     
                     // if hit with element below
                     if (!groundHitResult.entityHit.isNone()) {

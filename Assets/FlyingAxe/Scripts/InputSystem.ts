@@ -30,10 +30,10 @@ namespace game {
             }
             movement.direction = input.axis;
             
-            if(ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.W)){
+            if(ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space)){
                 movement.shouldJump = true;
             }
-            input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0) || ut.Runtime.Input.getKeyDown(ut.Core2D.KeyCode.Space);
+            input.weaponInteraction = ut.Runtime.Input.getMouseButtonDown(0);
             
         }
 
