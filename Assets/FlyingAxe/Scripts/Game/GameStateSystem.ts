@@ -36,7 +36,7 @@ namespace game {
         }
 
         updateInit(world: ut.World, gameState: game.GameState) {
-            // SoundService.init(world);
+            SoundService.init(world);
             GameStateLoadingService.setGameState(world, game.GameStateType.Menu);
         }
 
