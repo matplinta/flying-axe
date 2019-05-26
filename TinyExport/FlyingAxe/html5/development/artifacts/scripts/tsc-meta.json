@@ -1,0 +1,674 @@
+{
+    "Success": true,
+    "Diagnostics": [],
+    "Systems": [
+        {
+            "Name": "AimSystem",
+            "QualifiedName": "game.AimSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AimSystem.ts",
+                "Line": 6,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "AnimationSystem",
+            "QualifiedName": "game.AnimationSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AnimationSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "AxeCollisionSystem",
+            "QualifiedName": "game.AxeCollisionSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AxeCollisionSystem.ts",
+                "Line": 9,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart"
+            ],
+            "RequiredComponents": [
+                "ut.Physics2D.ColliderContacts"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "CameraSystem",
+            "QualifiedName": "game.CameraSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/CameraSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "CollisionSystem",
+            "QualifiedName": "game.CollisionSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/CollisionSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "DamageVignetteSystem",
+            "QualifiedName": "game.DamageVignetteSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DamageVignetteSystem.ts",
+                "Line": 6,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "HitSystem",
+            "QualifiedName": "game.HitSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HitSystem.ts",
+                "Line": 9,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart",
+                "game.AxeCollisionSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Hit"
+            ]
+        },
+        {
+            "Name": "HealthSystem",
+            "QualifiedName": "game.HealthSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthSystem.ts",
+                "Line": 7,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart",
+                "game.HitSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Health"
+            ]
+        },
+        {
+            "Name": "DropItemSystem",
+            "QualifiedName": "game.DropItemSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DropItemSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "StrengthPotionSystem",
+            "QualifiedName": "game.StrengthPotionSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/StrengthPotionSystem.ts",
+                "Line": 3,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "DeadSystem",
+            "QualifiedName": "game.DeadSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DeadSystem.ts",
+                "Line": 12,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeEnd",
+                "game.HealthSystem",
+                "game.CollisionSystem",
+                "game.DropItemSystem",
+                "game.StrengthPotionSystem"
+            ]
+        },
+        {
+            "Name": "DestroySystem",
+            "QualifiedName": "game.DestroySystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DestroySystem.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "FlipSystem",
+            "QualifiedName": "game.FlipSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/FlipSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "HealthBarSystem",
+            "QualifiedName": "game.HealthBarSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthBarSystem.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "game.HealthSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "HealthPotionSystem",
+            "QualifiedName": "game.HealthPotionSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthPotionSystem.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "ExecuteBefore": [
+                "game.DeadSystem"
+            ]
+        },
+        {
+            "Name": "InputSystem",
+            "QualifiedName": "game.InputSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/InputSystem.ts",
+                "Line": 3,
+                "Character": 17
+            },
+            "ExecuteBefore": [
+                "ut.Shared.InputFence"
+            ]
+        },
+        {
+            "Name": "MovementSystem",
+            "QualifiedName": "game.MovementSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/MovementSystem.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "ParalaxSystem",
+            "QualifiedName": "game.ParalaxSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ParalaxSystem.ts",
+                "Line": 3,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "PickableHideSystem",
+            "QualifiedName": "game.PickableHideSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PickableHideSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "PickableSystem",
+            "QualifiedName": "game.PickableSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PickableSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "PlayerEnemyCollisionSystem",
+            "QualifiedName": "game.PlayerEnemyCollisionSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PlayerEnemyCollisionSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "PlayerViewFlipSystem",
+            "QualifiedName": "game.PlayerViewFlipSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PlayerViewFlipSystem.ts",
+                "Line": 6,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "WeaponControlSystem",
+            "QualifiedName": "game.WeaponControlSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/WeaponControlSystem.ts",
+                "Line": 7,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence",
+                "ut.Shared.UserCodeStart",
+                "game.AimSystem"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "RecallSystem",
+            "QualifiedName": "game.RecallSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/RecallSystem.ts",
+                "Line": 6,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "game.WeaponControlSystem"
+            ]
+        },
+        {
+            "Name": "ScoreGemSystem",
+            "QualifiedName": "game.ScoreGemSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ScoreGemSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "ScoreSystem",
+            "QualifiedName": "game.ScoreSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ScoreSystem.ts",
+                "Line": 6,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Score"
+            ]
+        },
+        {
+            "Name": "ShakeSystem",
+            "QualifiedName": "game.ShakeSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ShakeSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "SpawnSystem",
+            "QualifiedName": "game.SpawnSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/SpawnSystem.ts",
+                "Line": 8,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeEnd"
+            ],
+            "RequiredComponents": [
+                "game.Score"
+            ]
+        },
+        {
+            "Name": "SpinningSystem",
+            "QualifiedName": "game.SpinningSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/SpinningSystem.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "ExecuteAfter": [
+                "ut.Shared.UserCodeStart"
+            ],
+            "ExecuteBefore": [
+                "game.AxeCollisionSystem",
+                "ut.Shared.UserCodeEnd"
+            ]
+        },
+        {
+            "Name": "Time",
+            "QualifiedName": "ut.Time",
+            "Description": "Placeholder system to provide a UnityEngine.Time like API\n\ne.g.\n  let deltaTime = ut.Time.deltaTime();\n  let time = ut.Time.time();",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Time.ts",
+                "Line": 12,
+                "Character": 17
+            },
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeStart"
+            ]
+        },
+        {
+            "Name": "GameStateSystem",
+            "QualifiedName": "game.GameStateSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Game/GameStateSystem.ts",
+                "Line": 4,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "DestroyAfterDelaySystem",
+            "QualifiedName": "game.DestroyAfterDelaySystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Utils/DestroyAfterDelaySystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        }
+    ],
+    "Filters": [
+        {
+            "Name": "EnemyBehaviorFilter",
+            "QualifiedName": "game.EnemyBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                "Line": 5,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "entity",
+                    "QualifiedName": "ut.Entity",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 5,
+                        "Character": 63
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 6,
+                        "Character": 27
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "scale",
+                    "QualifiedName": "ut.Core2D.TransformLocalScale",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 7,
+                        "Character": 52
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "velocity",
+                    "QualifiedName": "ut.Physics2D.Velocity2D",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 8,
+                        "Character": 46
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "tag",
+                    "QualifiedName": "game.EnemyTag",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 9,
+                        "Character": 43
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "movement",
+                    "QualifiedName": "game.Movement",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 10,
+                        "Character": 28
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "speedChange",
+                    "QualifiedName": "game.ChangeOverTime",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 11,
+                        "Character": 33
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "boundaries",
+                    "QualifiedName": "game.Boundaries",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 12,
+                        "Character": 42
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        }
+    ],
+    "Behaviours": [
+        {
+            "Name": "EnemyBehavior",
+            "QualifiedName": "game.EnemyBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                "Line": 16,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.EnemyBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+                        "Line": 16,
+                        "Character": 63
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate",
+                "CheckEnemyPositionBoundaries",
+                "GetVectorFromEntityToPlayer"
+            ]
+        }
+    ],
+    "Performance": [
+        {
+            "Key": "tsconfig",
+            "Description": "Time taken to read and parse the given tsconfig.json file",
+            "Duration": 189,
+            "Steps": 1
+        },
+        {
+            "Key": "checksum",
+            "Description": "Time taken to compute the MD5 of all inputs",
+            "Duration": 164,
+            "Steps": 1
+        },
+        {
+            "Key": "compile",
+            "Description": "Time taken to compile the TypeScript program",
+            "Duration": 936,
+            "Steps": 47
+        },
+        {
+            "Key": "emit",
+            "Description": "Time taken to generate and write the JavaScript output",
+            "Duration": 241,
+            "Steps": 2
+        },
+        {
+            "Key": "metadata",
+            "Description": "Time taken to reflect Tiny metadata from the compiled program",
+            "Duration": 30,
+            "Steps": 32
+        }
+    ],
+    "SourceFiles": [
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AimSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AnimationSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/AxeCollisionSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/CameraSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/CollisionSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DamageVignetteSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HitSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DropItemSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/StrengthPotionSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DeadSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/DestroySystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/EnemyBehavior.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/FlipSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthBarSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/HealthPotionSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/InputSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/MovementSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ParalaxSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PickableHideSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PickableSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PlayerEnemyCollisionSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/PlayerViewFlipSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/WeaponControlSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/RecallSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ScoreGemSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ScoreSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/ShakeSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/SpawnSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/SpinningSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Time.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/WeaponService.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Game/GameService.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Game/GameStateLoadingService.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Game/GameStateSystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Utils/DestroyAfterDelaySystem.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Utils/SoundService.ts",
+        "C:/Users/Mateusz/flying-axe/Assets/FlyingAxe/Scripts/Utils/UserDataService.ts",
+        "C:/Users/Mateusz/flying-axe/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
+        "C:/Users/Mateusz/flying-axe/Library/PackageCache/com.unity.tiny@0.14.3-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
+    ],
+    "InputHash": "5eb09b140e55d400776f76513c99c1c8",
+    "GeneratedAt": "Thu May 23 2019 02:56:11 GMT+0200 (Środkowoeuropejski czas letni)"
+}

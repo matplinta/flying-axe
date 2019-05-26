@@ -1,0 +1,756 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/runtime.js",
+                "Size": 6196610,
+                "CompressedSize": 784949
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 252425,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/32x32Ghost_Float.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/32x32Ghost_Float.png",
+                    "Size": 1180,
+                    "CompressedSize": 918,
+                    "Object": { "$TypeId": 10, "Guid": "43d64249e542d4ad68aa63a60c1cecbb", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/SFX/AxeThrow.wav",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "f3bc5eca04a544612b764447c3531874", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/AxeThrow.wav",
+                    "Size": 384876,
+                    "CompressedSize": 128430,
+                    "Object": { "$TypeId": 10, "Guid": "f3bc5eca04a544612b764447c3531874", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/SFX/AxeRecall.wav",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "cd2790ea1755946b8aff3dbbcd86b76e", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/AxeRecall.wav",
+                    "Size": 384876,
+                    "CompressedSize": 141011,
+                    "Object": { "$TypeId": 10, "Guid": "cd2790ea1755946b8aff3dbbcd86b76e", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/Music/MenuMusic.mp3",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "87d5ab939260341c5b71bae075aef8ba", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/MenuMusic.mp3",
+                    "Size": 2183868,
+                    "CompressedSize": 1621407,
+                    "Object": { "$TypeId": 10, "Guid": "87d5ab939260341c5b71bae075aef8ba", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/Music/GameMusic.mp3",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "ca33cdbb89c984b0f8fc9a6dc8dcb244", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/GameMusic.mp3",
+                    "Size": 4107316,
+                    "CompressedSize": 3071258,
+                    "Object": { "$TypeId": 10, "Guid": "ca33cdbb89c984b0f8fc9a6dc8dcb244", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/Music/GameOverMusic.mp3",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "d727fb88d51844224859d23de32d8293", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/GameOverMusic.mp3",
+                    "Size": 5141752,
+                    "CompressedSize": 3866468,
+                    "Object": { "$TypeId": 10, "Guid": "d727fb88d51844224859d23de32d8293", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Audio/SFX/HealthPotion.wav",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "d003a74615fb04c23862ac30ee51a462", "FileId": 8300000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/HealthPotion.wav",
+                    "Size": 768876,
+                    "CompressedSize": 421868,
+                    "Object": { "$TypeId": 10, "Guid": "d003a74615fb04c23862ac30ee51a462", "FileId": 8300000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinySamples/MatchThree/Fonts/PixellariExtended.asset",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "f7fdd39164ea67a4f839f1aa793a2e11", "FileId": 11400000, "Type": 2 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/PixellariExtended.png",
+                    "Size": 48668,
+                    "CompressedSize": 36363,
+                    "Object": { "$TypeId": 10, "Guid": "f7fdd39164ea67a4f839f1aa793a2e11", "FileId": 11400000, "Type": 2 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_000.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a0c39685c7c1e416ab5cd80b0aa9fbb7", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_000.png",
+                    "Size": 1340,
+                    "CompressedSize": 742,
+                    "Object": { "$TypeId": 10, "Guid": "a0c39685c7c1e416ab5cd80b0aa9fbb7", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_001.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "cb615149222ff4942867d2cafc363020", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_001.png",
+                    "Size": 1212,
+                    "CompressedSize": 732,
+                    "Object": { "$TypeId": 10, "Guid": "cb615149222ff4942867d2cafc363020", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_002.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "733fd2b69c7a94761a332264d448a24b", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_002.png",
+                    "Size": 1284,
+                    "CompressedSize": 735,
+                    "Object": { "$TypeId": 10, "Guid": "733fd2b69c7a94761a332264d448a24b", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_003.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "78ca780dedec44293bc0d66a36f9b6bc", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_003.png",
+                    "Size": 6556,
+                    "CompressedSize": 4207,
+                    "Object": { "$TypeId": 10, "Guid": "78ca780dedec44293bc0d66a36f9b6bc", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_004.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "63beff859cee24c46b15cf242c34ccc2", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_004.png",
+                    "Size": 12664,
+                    "CompressedSize": 7897,
+                    "Object": { "$TypeId": 10, "Guid": "63beff859cee24c46b15cf242c34ccc2", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_005.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "4ef6bce6169f140b0845036c736bee17", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_005.png",
+                    "Size": 14208,
+                    "CompressedSize": 9038,
+                    "Object": { "$TypeId": 10, "Guid": "4ef6bce6169f140b0845036c736bee17", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_006.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "6b8d17ca6c939475d826eec4565db2b1", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_006.png",
+                    "Size": 25548,
+                    "CompressedSize": 17963,
+                    "Object": { "$TypeId": 10, "Guid": "6b8d17ca6c939475d826eec4565db2b1", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_007.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "072f99328d2e64b5a8a372bcc42ba4eb", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_007.png",
+                    "Size": 38008,
+                    "CompressedSize": 28056,
+                    "Object": { "$TypeId": 10, "Guid": "072f99328d2e64b5a8a372bcc42ba4eb", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_008.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "9b5feaa2463c9414faba92f9f3048c1b", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_008.png",
+                    "Size": 6792,
+                    "CompressedSize": 4662,
+                    "Object": { "$TypeId": 10, "Guid": "9b5feaa2463c9414faba92f9f3048c1b", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/background/mountains04-1920--x-1080_009.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "6f6245cb37179440aaaa9f3b800396ca", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/mountains04-1920--x-1080_009.png",
+                    "Size": 6736,
+                    "CompressedSize": 2940,
+                    "Object": { "$TypeId": 10, "Guid": "6f6245cb37179440aaaa9f3b800396ca", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/vignette-transparent-red-5.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "2c965c524ae014e25b4a9a9143a8edb7", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/vignette-transparent-red-5.png",
+                    "Size": 29768,
+                    "CompressedSize": 22203,
+                    "Object": { "$TypeId": 10, "Guid": "2c965c524ae014e25b4a9a9143a8edb7", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/Items_Hpot.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Items_Hpot.png",
+                    "Size": 676,
+                    "CompressedSize": 555,
+                    "Object": { "$TypeId": 10, "Guid": "202709a89458a4e139cd8fa8e9c0a4a4", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0001.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "07b3b55434cc347ed93d948c152e1b16", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0001.png",
+                    "Size": 512,
+                    "CompressedSize": 419,
+                    "Object": { "$TypeId": 10, "Guid": "07b3b55434cc347ed93d948c152e1b16", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0002.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "dc71957e1be9a4007b1f3123f4f96080", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0002.png",
+                    "Size": 540,
+                    "CompressedSize": 452,
+                    "Object": { "$TypeId": 10, "Guid": "dc71957e1be9a4007b1f3123f4f96080", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0003.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "0493baf67f2d0408e9ecf27553de5d75", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0003.png",
+                    "Size": 672,
+                    "CompressedSize": 551,
+                    "Object": { "$TypeId": 10, "Guid": "0493baf67f2d0408e9ecf27553de5d75", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0006.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "4c76a743df0954224985403e00c078fd", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0006.png",
+                    "Size": 716,
+                    "CompressedSize": 583,
+                    "Object": { "$TypeId": 10, "Guid": "4c76a743df0954224985403e00c078fd", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0008.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "e138375bcea664d7fade39a4f879cc4d", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0008.png",
+                    "Size": 736,
+                    "CompressedSize": 596,
+                    "Object": { "$TypeId": 10, "Guid": "e138375bcea664d7fade39a4f879cc4d", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0011.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "ef57760455b9d406895f3d20038286b9", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0011.png",
+                    "Size": 720,
+                    "CompressedSize": 584,
+                    "Object": { "$TypeId": 10, "Guid": "ef57760455b9d406895f3d20038286b9", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0026.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "545f5afb28056415790801a4f86c20b2", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0026.png",
+                    "Size": 772,
+                    "CompressedSize": 621,
+                    "Object": { "$TypeId": 10, "Guid": "545f5afb28056415790801a4f86c20b2", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0030.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "5b52f3989f5a845a89d22cb3be4ed0c5", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0030.png",
+                    "Size": 908,
+                    "CompressedSize": 726,
+                    "Object": { "$TypeId": 10, "Guid": "5b52f3989f5a845a89d22cb3be4ed0c5", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0041.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "7bf144b9cf2c9441081e5d25e409e1fb", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0041.png",
+                    "Size": 820,
+                    "CompressedSize": 660,
+                    "Object": { "$TypeId": 10, "Guid": "7bf144b9cf2c9441081e5d25e409e1fb", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0053.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a6ea2a8355b0d4d7fb39d8bdbd882de2", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0053.png",
+                    "Size": 672,
+                    "CompressedSize": 536,
+                    "Object": { "$TypeId": 10, "Guid": "a6ea2a8355b0d4d7fb39d8bdbd882de2", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0062.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "f9d9c650590134f5f828a9e9d7c3835e", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0062.png",
+                    "Size": 524,
+                    "CompressedSize": 435,
+                    "Object": { "$TypeId": 10, "Guid": "f9d9c650590134f5f828a9e9d7c3835e", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0069.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a84411f1d0be04443b84a6155e640bd5", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0069.png",
+                    "Size": 352,
+                    "CompressedSize": 307,
+                    "Object": { "$TypeId": 10, "Guid": "a84411f1d0be04443b84a6155e640bd5", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/purple_wisp/frames/frame0075.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "c32ca6e0bed66461a91cef7a91f2908d", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/frame0075.png",
+                    "Size": 260,
+                    "CompressedSize": 219,
+                    "Object": { "$TypeId": 10, "Guid": "c32ca6e0bed66461a91cef7a91f2908d", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/enemies.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/enemies.png",
+                    "Size": 62124,
+                    "CompressedSize": 46908,
+                    "Object": { "$TypeId": 10, "Guid": "2442e8058dc8d004a9cf8d39a52a6443", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/Axe.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Axe.png",
+                    "Size": 6536,
+                    "CompressedSize": 4971,
+                    "Object": { "$TypeId": 10, "Guid": "ea01e45d54862413f954e19240e567ad", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/Items_BlueGem.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Items_BlueGem.png",
+                    "Size": 888,
+                    "CompressedSize": 710,
+                    "Object": { "$TypeId": 10, "Guid": "51cbb72efe1f643cab5b3860cf488ba4", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/FlyingAxe/Textures/Items_Star.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a0f8b01bde5c6455684a4beb1f29af4d", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/Items_Star.png",
+                    "Size": 636,
+                    "CompressedSize": 522,
+                    "Object": { "$TypeId": 10, "Guid": "a0f8b01bde5c6455684a4beb1f29af4d", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x128-Uncompressed-UICommon-66cffeaf",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/sactx-256x128-Uncompressed-UICommon-66cffeaf.png",
+                    "Size": 12776,
+                    "CompressedSize": 9669,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x128-Uncompressed-Gems-c17d2a38",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/sactx-256x128-Uncompressed-Gems-c17d2a38.png",
+                    "Size": 16908,
+                    "CompressedSize": 12791,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x256-Uncompressed-Night-c12709d4",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/sactx-256x256-Uncompressed-Night-c12709d4.png",
+                    "Size": 84736,
+                    "CompressedSize": 64183,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "sactx-256x128-Uncompressed-TileSetAtlas-7a349270",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/assets/sactx-256x128-Uncompressed-TileSetAtlas-7a349270.png",
+                    "Size": 13516,
+                    "CompressedSize": 10209,
+                    "Object": { "$TypeId": 10, "Guid": "00000000000000000000000000000000", "FileId": 2, "Type": 0 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/entities.js",
+                "Size": 198878,
+                "CompressedSize": 23385
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "AirEnemy",
+                    "Size": 7630,
+                    "CompressedSize": 1691
+                }
+            }, {
+                "Item": {
+                    "Name": "Bootstrap",
+                    "Size": 8233,
+                    "CompressedSize": 1548
+                }
+            }, {
+                "Item": {
+                    "Name": "GameOver",
+                    "Size": 13789,
+                    "CompressedSize": 2630
+                }
+            }, {
+                "Item": {
+                    "Name": "GamePlay",
+                    "Size": 112918,
+                    "CompressedSize": 12465
+                }
+            }, {
+                "Item": {
+                    "Name": "HealthPotion",
+                    "Size": 7899,
+                    "CompressedSize": 1488
+                }
+            }, {
+                "Item": {
+                    "Name": "HitParticle",
+                    "Size": 5822,
+                    "CompressedSize": 1403
+                }
+            }, {
+                "Item": {
+                    "Name": "LandEnemy",
+                    "Size": 4977,
+                    "CompressedSize": 1326
+                }
+            }, {
+                "Item": {
+                    "Name": "Menu",
+                    "Size": 11193,
+                    "CompressedSize": 2245
+                }
+            }, {
+                "Item": {
+                    "Name": "PlayerGroup",
+                    "Size": 10529,
+                    "CompressedSize": 2116
+                }
+            }, {
+                "Item": {
+                    "Name": "ScoreGem",
+                    "Size": 7895,
+                    "CompressedSize": 1485
+                }
+            }, {
+                "Item": {
+                    "Name": "StrengthPotion",
+                    "Size": 7932,
+                    "CompressedSize": 1497
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/bindings.js",
+                "Size": 253736,
+                "CompressedSize": 22208
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/FlyingAxe/html5/development/artifacts/scripts/tsc-emit.js",
+                    "Size": 100746,
+                    "CompressedSize": 14868
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/main.js",
+                "Size": 10661,
+                "CompressedSize": 2122
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/FlyingAxe/html5/development/build/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}

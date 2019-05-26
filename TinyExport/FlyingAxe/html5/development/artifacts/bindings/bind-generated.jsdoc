@@ -1,0 +1,1274 @@
+/**
+
+@struct
+@memberof game
+@name EnemyType
+*/
+/**
+
+@member {game.EnemyType}
+@memberof game.EnemyType
+@name Land
+*/
+/**
+
+@member {game.EnemyType}
+@memberof game.EnemyType
+@name Air
+*/
+/**
+
+@struct
+@memberof game
+@name GameStateType
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameStateType
+@name Init
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameStateType
+@name Menu
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameStateType
+@name GamePlay
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameStateType
+@name GameOver
+*/
+/**
+
+@component
+@memberof entities.game.AirEnemy
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.Bootstrap
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.GameOver
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.GamePlay
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.HealthPotion
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.HitParticle
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.LandEnemy
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.Menu
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.PlayerGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.ScoreGem
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.StrengthPotion
+@name Component
+*/
+/**
+
+@component
+@memberof game
+@name AimSpeed
+*/
+/**
+
+@member {float}
+@memberof game.AimSpeed
+@name value
+*/
+/**
+
+@component
+@memberof game
+@name Boundaries
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minY
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxY
+*/
+/**
+
+@component
+@memberof game
+@name ChangeOverTime
+*/
+/**
+
+@member {float}
+@memberof game.ChangeOverTime
+@name changePerSecond
+*/
+/**
+
+@component
+@memberof game
+@name DamageVignette
+*/
+/**
+
+@member {float}
+@memberof game.DamageVignette
+@name Duration
+*/
+/**
+
+@member {float}
+@memberof game.DamageVignette
+@name ElapsedTime
+*/
+/**
+
+@component
+@memberof game
+@name Dead
+*/
+/**
+
+@member {float}
+@memberof game.Dead
+@name elapsedTime
+*/
+/**
+
+@member {float}
+@memberof game.Dead
+@name dyingTime
+*/
+/**
+
+@component
+@memberof game
+@name Destroy
+*/
+/**
+
+@component
+@memberof game
+@name DropItemOnKill
+*/
+/**
+
+@component
+@memberof game
+@name EnemyAttack
+*/
+/**
+
+@member {float}
+@memberof game.EnemyAttack
+@name delayBetweenAttacks
+*/
+/**
+
+@member {float}
+@memberof game.EnemyAttack
+@name lastAttackTime
+*/
+/**
+
+@component
+@memberof game
+@name EnemyTag
+*/
+/**
+
+@member {int32}
+@memberof game.EnemyTag
+@name killReward
+*/
+/**
+
+@member {bool}
+@memberof game.EnemyTag
+@name fly
+*/
+/**
+
+@member {float}
+@memberof game.EnemyTag
+@name damageToPlayer
+*/
+/**
+
+@component
+@memberof game
+@name FlipScale
+*/
+/**
+
+@component
+@memberof game
+@name GameState
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameState
+@name CurrentState
+*/
+/**
+
+@component
+@memberof game
+@name GroundTag
+*/
+/**
+
+@component
+@memberof game
+@name Health
+*/
+/**
+
+@member {float}
+@memberof game.Health
+@name current
+*/
+/**
+
+@member {float}
+@memberof game.Health
+@name max
+*/
+/**
+
+@component
+@memberof game
+@name HealthVisualization
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.HealthVisualization
+@name Bar
+*/
+/**
+
+@component
+@memberof game
+@name Hit
+*/
+/**
+
+@member {float}
+@memberof game.Hit
+@name Damage
+*/
+/**
+
+@member {bool}
+@memberof game.Hit
+@name allowImpulse
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Hit
+@name Impulse
+*/
+/**
+
+@member {int16}
+@memberof game.Hit
+@name ImpulseForce
+*/
+/**
+
+@component
+@memberof game
+@name Input
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Input
+@name axis
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.Input
+@name aimDir
+*/
+/**
+
+@member {bool}
+@memberof game.Input
+@name weaponInteraction
+*/
+/**
+
+@component
+@memberof game
+@name Movement
+*/
+/**
+
+@member {float}
+@memberof game.Movement
+@name speed
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Movement
+@name direction
+*/
+/**
+
+@member {float}
+@memberof game.Movement
+@name jumpForce
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name jump
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name onGround
+*/
+/**
+
+@member {bool}
+@memberof game.Movement
+@name shouldJump
+*/
+/**
+
+@component
+@memberof game
+@name Pickable
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Pickable
+@name Picker
+*/
+/**
+
+@member {float}
+@memberof game.Pickable
+@name initTime
+*/
+/**
+
+@member {float}
+@memberof game.Pickable
+@name delay
+*/
+/**
+
+@component
+@memberof game
+@name PlayerTag
+*/
+/**
+
+@component
+@memberof game
+@name PlayerViewTag
+*/
+/**
+
+@component
+@memberof game
+@name Recall
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.Recall
+@name Caller
+*/
+/**
+
+@member {float}
+@memberof game.Recall
+@name speed
+*/
+/**
+
+@component
+@memberof game
+@name Score
+*/
+/**
+
+@component
+@memberof game
+@name Shake
+*/
+/**
+
+@member {float}
+@memberof game.Shake
+@name duration
+*/
+/**
+
+@member {float}
+@memberof game.Shake
+@name amount
+*/
+/**
+
+@member {float}
+@memberof game.Shake
+@name elapsedTime
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.Shake
+@name initialPosition
+*/
+/**
+
+@component
+@memberof game
+@name Spawner
+*/
+/**
+
+@member {bool}
+@memberof game.Spawner
+@name isPaused
+*/
+/**
+
+@member {float}
+@memberof game.Spawner
+@name time
+*/
+/**
+
+@member {float}
+@memberof game.Spawner
+@name delay
+*/
+/**
+
+@member {int32}
+@memberof game.Spawner
+@name maxNumOfEnemies
+*/
+/**
+
+@member {int32}
+@memberof game.Spawner
+@name numOfEnemies
+*/
+/**
+
+@member {int32}
+@memberof game.Spawner
+@name newEnemyKillReward
+*/
+/**
+
+@member {int32}
+@memberof game.Spawner
+@name newEnemyDamageToPlayer
+*/
+/**
+
+@member {int32}
+@memberof game.Spawner
+@name enemySpeed
+*/
+/**
+
+@component
+@memberof game
+@name Spin
+*/
+/**
+
+@member {float}
+@memberof game.Spin
+@name speed
+*/
+/**
+
+@component
+@memberof game
+@name StrengthPotion
+*/
+/**
+
+@member {int32}
+@memberof game.StrengthPotion
+@name StrengthIncrease
+*/
+/**
+
+@component
+@memberof game
+@name Weapon
+*/
+/**
+
+@member {int32}
+@memberof game.Weapon
+@name damage
+*/
+/**
+
+@component
+@memberof game
+@name WeaponControl
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.WeaponControl
+@name CurrentWeapon
+*/
+/**
+
+@member {bool}
+@memberof game.WeaponControl
+@name isInHand
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.WeaponControl
+@name weaponInHandLocalPosition
+*/
+/**
+
+@member {ut.Math.Vector3}
+@memberof game.WeaponControl
+@name weaponInHandLocalScale
+*/
+/**
+
+@member {ut.Math.Quaternion}
+@memberof game.WeaponControl
+@name weaponInHandLocalRotation
+*/
+/**
+
+@component
+@memberof game
+@name Animation
+*/
+/**
+
+@member {ut.DynamicArray<ut.Entity>}
+@memberof game.Animation
+@name Animations
+*/
+/**
+
+@member {int16}
+@memberof game.Animation
+@name State
+*/
+/**
+
+@component
+@memberof game
+@name PlayOneShot
+*/
+/**
+
+@member {float}
+@memberof game.PlayOneShot
+@name Length
+*/
+/**
+
+@member {float}
+@memberof game.PlayOneShot
+@name TimePlayed
+*/
+/**
+
+@component
+@memberof game
+@name ParalaxElement
+*/
+/**
+
+@member {float}
+@memberof game.ParalaxElement
+@name Speed
+*/
+/**
+
+@component
+@memberof game
+@name HealthPotion
+*/
+/**
+
+@member {float}
+@memberof game.HealthPotion
+@name HealthRestore
+*/
+/**
+
+@component
+@memberof game
+@name ScoreGem
+*/
+/**
+
+@member {int16}
+@memberof game.ScoreGem
+@name scoreGain
+*/
+/**
+
+@component
+@memberof game
+@name GameOver
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.GameOver
+@name TryAgainButton
+*/
+/**
+
+@component
+@memberof game
+@name MainMenu
+*/
+/**
+
+@member {ut.Entity}
+@memberof game.MainMenu
+@name PlayButton
+*/
+/**
+
+@component
+@memberof game
+@name DestroyAfterDelay
+*/
+/**
+
+@member {float}
+@memberof game.DestroyAfterDelay
+@name delay
+*/
+/**
+
+@component
+@memberof game
+@name GameContext
+*/
+/**
+
+@member {int64}
+@memberof game.GameContext
+@name score
+*/
+/**
+
+@member {float}
+@memberof game.GameContext
+@name dropRate
+*/
+/**
+
+@member {game.GameStateType}
+@memberof game.GameContext
+@name GameState
+*/
+/**
+
+@component
+@memberof game
+@name SoundConfiguration
+*/
+/**
+
+@member {bool}
+@memberof game.SoundConfiguration
+@name IsSoundOn
+*/
+/**
+
+@member {bool}
+@memberof game.SoundConfiguration
+@name IsMusicOn
+*/
+/**
+
+@member {string}
+@memberof game.SoundConfiguration
+@name CurrentMusic
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Default
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name TransparentFX
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name IgnoreRaycast
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Water
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name UI
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Grid
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Cutscene
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Player
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Pickable
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Enemy
+*/
+/**
+
+@component
+@memberof ut.Core2D.layers
+@name Enviro
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceAnimationClip
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceAnimationClip
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceAudioClip
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceAudioClip
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceSprite
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceSprite
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceSpriteAtlas
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceSpriteAtlas
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTexture2D
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTexture2D
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTileBase
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTileBase
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name AssetReferenceTMP_FontAsset
+*/
+/**
+
+@member {string}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name guid
+*/
+/**
+
+@member {int64}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name fileId
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.AssetReferenceTMP_FontAsset
+@name type
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name CameraCullingMask
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.CameraCullingMask
+@name mask
+*/
+/**
+
+@component
+@memberof ut.EditorExtensions
+@name EntityLayer
+*/
+/**
+
+@member {int32}
+@memberof ut.EditorExtensions.EntityLayer
+@name layer
+*/
+/**
+
+@component
+@memberof game
+@name EnemyBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.EnemyBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.EnemyBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.EnemyBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.EnemyBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@system
+@memberof game
+@name AimSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name AnimationSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name AxeCollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name CameraSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name CollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DamageVignetteSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name HitSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name HealthSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DropItemSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name StrengthPotionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DeadSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DestroySystemJS
+*/
+/**
+
+@system
+@memberof game
+@name FlipSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name HealthBarSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name HealthPotionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name InputSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name MovementSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ParalaxSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PickableHideSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PickableSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerEnemyCollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerViewFlipSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name WeaponControlSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name RecallSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ScoreGemSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ScoreSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name ShakeSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name SpawnSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name SpinningSystemJS
+*/
+/**
+
+@system
+@memberof ut
+@name TimeJS
+*/
+/**
+
+@system
+@memberof game
+@name GameStateSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name DestroyAfterDelaySystemJS
+*/
+/**
+
+@system
+@memberof game
+@name EnemyBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name EnemyBehavior_OnEntityUpdateJS
+*/
+
+
