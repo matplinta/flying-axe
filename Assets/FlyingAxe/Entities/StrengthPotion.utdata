@@ -108,7 +108,10 @@
             "restitution": 0.4
         }
     }, {
-        "Type": { "Id": "cfe63bcf900a4d489578c57579fe4d0d", "Name": "StrengthPotion" }
+        "Type": { "Id": "cfe63bcf900a4d489578c57579fe4d0d", "Name": "StrengthPotion" },
+        "Properties": {
+            "StrengthIncrease": 16
+        }
     }, {
         "Type": { "Id": "288a861a8ca311346faecf4c20a2da76", "Name": "SortingGroup" }
     }]
